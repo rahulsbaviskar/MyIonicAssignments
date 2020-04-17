@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <img src="assets/icon/Static_Logo.PNG" height="50" width="50" alt="logo"> Goldspot
+    </ion-title>
+    <div slot="end">
+      <div class="dropdown" ngbDropdown>
+
+        <h6 class="btn-sm btn btn-primary dropdown-toggle">Sign Up</h6>
+        <div class="btn-group" ngbDropdownToggle>
+          <div class="dropdown-menu">
+            <!-- <h6 class="dropdown-header">Settings</h6> -->
+            <a class="dropdown-item">Student Sign Up</a>
+            <a class="dropdown-item">Parent Sign Up</a>
+            <a class="dropdown-item">Institute Sign Up</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item">Admin Sign Up</a>
+          </div>
+          
+          <a (click)="login()" class="btn-sm"><h6>Login</h6></a>
+        </div>  
+      </div>
+   
+    </div>
+       
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="col-lg-6 grid-margin stretch-card" >
+    <ion-slides pager="true" [options]="carouselOption1" class="full-width">
+      <ion-slide carouselSlide>
+        <img src="assets/images/carousel/banner_1.jpg" height="100" width="1000">
+      </ion-slide>
+      <ion-slide carouselSlide>
+        <img src="assets/images/carousel/banner_2.jpg" height="100" width="1000">
+      </ion-slide>
+      <ion-slide carouselSlide>
+        <img src="assets/images/carousel/banner_3.jpg" height="100" width="1000">
+      </ion-slide>
+    </ion-slides>
+  </ion-card>
+  
+  <!-- <ion-card>
+    <div class="card-body">
+      <h4 class="card-title">Basic carousel</h4>
+      <owl-carousel-o [options]="carouselOption1" class="full-width">
+        <ng-template carouselSlide>
+          <img src="https://via.placeholder.com/449x312" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="https://via.placeholder.com/449x312" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="https://via.placeholder.com/449x312" alt="image"/>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </ion-card> -->
+  
+  <!-- <div id="container">
+    <ion-button (click)="login()">Login</ion-button>
+  </div> -->
+  <!-- <footer class="footer"> -->
+    
+  <!-- </footer> -->
+</ion-content>
+<ion-footer class="footer">
+  <div class="d-sm-flex justify-content-center justify-content-sm-between">
+    <span></span>
+    <span><img src="assets/icon/Static_Logo.PNG" height="30" width="30" alt="logo">Goldspot</span>
+    <span></span>
+  </div>
+  <div class="text-muted text-center">Copyright © 2020 <a href="" target="_blank">Goldspot</a>. All rights reserved.</div>
+</ion-footer>
