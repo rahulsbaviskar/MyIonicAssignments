@@ -12,6 +12,7 @@ import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { DROPZONE_CONFIG } from 'ngx-dropzone-wrapper';
 import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
 import { ColorPickerModule } from 'ngx-color-picker';
+
 //import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 import { AmazingTimePickerModule } from 'amazing-time-picker';
 import { TagInputModule } from 'ngx-chips';
