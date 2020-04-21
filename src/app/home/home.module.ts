@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    CarouselModule,
     IonicModule,
     RouterModule.forChild([
       {

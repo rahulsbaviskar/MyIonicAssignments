@@ -67,6 +67,18 @@ export class HomePage {
     config.placement = 'bottom-right';
   }
 
+  carouselOption1 = {
+    loop: true,
+    margin: 10,
+    items: 1,
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 5500,
+    navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"]
+  }
+
+  
+
   login(){
     this.navCtrl.navigateForward('login');
   }
