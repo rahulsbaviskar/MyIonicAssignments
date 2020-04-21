@@ -1,0 +1,394 @@
+
+  <!--added code-->
+ 
+  <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+    <a class="navbar-brand brand-logo mr-5"><img src="assets/icon/homelogo.PNG" height="60" width="70" alt="logo"/>Home</a> 
+    <!--  <a class="navbar-brand brand-logo-mini" ><img src="assets/icon/homologo.PNG" alt="logo"/></a> -->
+    </div>
+    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+      <ion-searchbar></ion-searchbar>
+     
+           
+         
+     
+      <ul class="navbar-nav navbar-nav-right">
+        <li class="nav-item dropdown mr-1" ngbDropdown>
+       <!--  <a class="nav-link count-indicator" id="messageDropdown" ngbDropdownToggle> 
+            <i class="ti-email mx-0"></i>
+          </a> --> 
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu pos="bottom-right" aria-labelledby="messageDropdown">
+        <!--    <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p> -->
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+              <!--   <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic"> --> 
+              </div>
+              <div class="preview-item-content flex-grow">
+                <h6 class="preview-subject ellipsis font-weight-normal">David Grey
+                </h6>
+                <p class="font-weight-light small-text text-muted mb-0">
+                  The meeting is cancelled
+                </p>
+              </div>
+            </a>
+         <!--   <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                  <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
+              </div>
+              <div class="preview-item-content flex-grow">
+                <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
+                </h6>
+                <p class="font-weight-light small-text text-muted mb-0">
+                  New product launch
+                </p>
+              </div>
+            </a> -->
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                  <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
+              </div>
+              <div class="preview-item-content flex-grow">
+                <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
+                </h6>
+                <p class="font-weight-light small-text text-muted mb-0">
+                  Upcoming board meeting
+                </p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" ngbDropdownToggle>
+            <i class="ti-bell mx-0"></i>
+            <span class="count"></span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu>
+            <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-success">
+                  <i class="ti-info-alt mx-0"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                <p class="font-weight-light small-text mb-0 text-muted">
+                  Just now
+                </p>
+              </div>
+            </a>
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-warning">
+                  <i class="ti-settings mx-0"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <h6 class="preview-subject font-weight-normal">Settings</h6>
+                <p class="font-weight-light small-text mb-0 text-muted">
+                  Private message
+                </p>
+              </div>
+            </a>
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-info">
+                  <i class="ti-user mx-0"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                <p class="font-weight-light small-text mb-0 text-muted">
+                  2 days ago
+                </p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item nav-profile dropdown" ngbDropdown>
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="profileDropdown" ngbDropdownToggle>
+            <img src="https://via.placeholder.com/40x40" alt="profile"/>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" ngbDropdownMenu>
+            <a class="dropdown-item">
+              <i class="ti-settings text-primary"></i>
+              Settings
+            </a>
+            <a class="dropdown-item">
+              <i class="ti-power-off text-primary"></i>
+              Logout
+            </a>
+          </div>
+        </li>
+       
+      </ul>
+    
+    </div>
+  </nav>
+ 
+<!---old code-->
+  <div class="dropdown" ngbDropdown>
+
+    <h6 class="btn-sm btn btn-primary dropdown-toggle">Sign Up</h6>
+    <div class="btn-group" ngbDropdownToggle>
+      <div class="dropdown-menu">
+        <!-- <h6 class="dropdown-header">Settings</h6> -->
+        <a class="dropdown-item">Student Sign Up</a>
+        <a class="dropdown-item">Parent Sign Up</a>
+        <a class="dropdown-item">Institute Sign Up</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item">Admin Sign Up</a>
+      </div>
+      
+      <a (click)="login()" class="btn-sm"><h6>Login</h6></a>
+    </div>  
+  </div>
+
+
+<ion-content >
+
+
+<div style="position: absolute;top: 50%;left: 16px;font-size: 25px;z-index: 2;" (click)="slidePrev()">
+<ion-icon name="arrow-back"></ion-icon>
+</div>
+<div style="position: absolute;top: 50%;right: 16px;font-size: 25px;z-index: 2;" (click)="slideNext()">
+<ion-icon name="arrow-forward"></ion-icon>
+</div>
+<ion-slides pager="true" [options]="slideOpts" paginationType="bullets" class="full-width">
+  <ion-slide carouselSlide>
+    <img src="assets/images/carousel/banner_1.jpg" height="100" width="1000">
+  </ion-slide>
+  <ion-slide carouselSlide>
+    <img src="assets/images/carousel/banner_2.jpg" height="100" width="1000">
+  </ion-slide>
+  <ion-slide carouselSlide>
+    <img src="assets/images/carousel/banner_3.jpg" height="100" width="1000">
+  </ion-slide>
+</ion-slides> 
+
+
+
+
+<!-- adddd new goldspot subcribtion -->
+
+<div class="row grid-margin">
+<div class="col-lg-12">
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">GoldSpot Subscription</h4>
+    <owl-carousel-o [options]="carouselOption2">
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_2.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_3.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_4.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_5.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_6.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_7.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>
+</div>
+</div>
+
+<!--Student1 subcribtion-->
+<div class="row grid-margin">
+<div class="col-lg-12">
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Student1 subcribtion</h4>
+    <owl-carousel-o [options]="carouselOption2">
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_2.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_3.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_4.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_5.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_6.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_7.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>
+</div>
+</div>
+
+<!--Free subcribtion-->
+<div class="row grid-margin">
+<div class="col-lg-12">
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Free subcribtion</h4>
+    <owl-carousel-o [options]="carouselOption2">
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_2.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_3.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_4.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_5.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_6.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_7.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>
+</div>
+</div>
+
+<!--Public subcribtion-->
+<div class="row grid-margin">
+<div class="col-lg-12">
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Public subcribtion</h4>
+    <owl-carousel-o [options]="carouselOption2">
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_2.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_3.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_4.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_5.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_6.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_7.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>
+</div>
+</div>
+
+<!--Private subcribtion-->
+<div class="row grid-margin">
+<div class="col-lg-12">
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Private subcribtion</h4>
+    <owl-carousel-o [options]="carouselOption2">
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_2.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_3.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_4.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_5.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_6.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+      <ng-template carouselSlide>
+        <img src="assets/images/carousel/banner_7.jpg" height="185" width="200" alt="image"/>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+</ion-content>
+<!--deleted new-->
+
+
+
+
+<!-- <ion-card style="height:100%">
+ <ion-card-header>
+   <h3>corosal</h3>
+   <h3>hellooooo</h3>
+  </ion-card-header>
+ <ion-card-content>
+<h4 class="card-title">Basic carousel</h4>
+  <owl-carousel-o [options]="carouselOption1" class="full-width">
+    <ng-template carouselSlide>
+  
+      <img src="https://via.placeholder.com/449x312" alt="image" />
+    
+    </ng-template>
+    <ng-template carouselSlide>
+     
+      <img src="https://via.placeholder.com/449x312" alt="image" />
+    
+    </ng-template>
+    <ng-template carouselSlide>
+     
+      <img src="https://via.placeholder.com/449x312" alt="image" />
+    
+    </ng-template>
+  </owl-carousel-o>
+ </ion-card-content>
+
+</ion-card> -->
+
+
+<!-- <div id="container">
+<ion-button (click)="login()">Login</ion-button>
+</div> -->
+<!-- <footer class="footer"> -->
+
+<!-- </footer> -->
+
+<ion-footer class="footer">
+<div class="d-sm-flex justify-content-center justify-content-sm-between">
+<span></span>
+<span><img src="assets/icon/Static_Logo.PNG" height="30" width="30" alt="logo">Goldspot</span>
+<span></span>
+</div>
+<div class="text-muted text-center">Copyright © 2020 <a href="" target="_blank">Goldspot</a>. All rights reserved.</div>
+</ion-footer>
