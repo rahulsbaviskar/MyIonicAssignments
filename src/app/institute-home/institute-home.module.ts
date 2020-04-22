@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { StudentDashPageRoutingModule } from './student-dash-routing.module';
+import { InstituteHomePageRoutingModule } from './institute-home-routing.module';
 
-import { StudentDashPage } from './student-dash.page';
+import { InstituteHomePage } from './institute-home.page';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-
 
 @NgModule({
   imports: [
@@ -16,8 +15,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     FormsModule,
     CarouselModule,
     IonicModule,
-    StudentDashPageRoutingModule
+    InstituteHomePageRoutingModule
   ],
-  declarations: [StudentDashPage]
+  declarations: [InstituteHomePage]
 })
-export class StudentDashPageModule {}
+export class InstituteHomePageModule {}

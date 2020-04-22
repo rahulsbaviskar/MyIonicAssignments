@@ -3,14 +3,15 @@ import { NavController, IonSlides } from '@ionic/angular';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
-
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-app-landing',
+  templateUrl: './app-landing.page.html',
+  styleUrls: ['./app-landing.page.scss'],
   providers: [NgbDropdownConfig]
 })
-export class HomePage {
+export class AppLandingPage 
+{
+
   slideOpts = {
     initialSlide: 1,
     autoplay: true,
@@ -84,3 +85,5 @@ export class HomePage {
   }
 
 }
+
+

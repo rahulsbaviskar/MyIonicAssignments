@@ -2,20 +2,32 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
+  { path: '', redirectTo: 'app-landing', pathMatch: 'full' },
+ 
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
-  {
-    path: 'student-dash',
-    loadChildren: () => import('./student-home/student-dash.module').then( m => m.StudentDashPageModule)
-  },
-  {
+ 
+ {
     path: 'parent-home',
     loadChildren: () => import('./parent-home/parent-home.module').then( m => m.ParentHomePageModule)
   },
+  {
+    path: 'student-home',
+    loadChildren: () => import('./student-home/student-home.module').then( m => m.StudentHomePageModule)
+  },
+  {
+    path: 'app-landing',
+    loadChildren: () => import('./app-landing/app-landing.module').then( m => m.AppLandingPageModule)
+  },
+  {
+    path: 'institute-home',
+    loadChildren: () => import('./institute-home/institute-home.module').then( m => m.InstituteHomePageModule)
+  },
+
+
+
   
 
  

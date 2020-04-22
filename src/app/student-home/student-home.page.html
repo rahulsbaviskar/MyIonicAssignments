@@ -3,7 +3,7 @@
  
   <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-    <a class="navbar-brand brand-logo mr-5" href="./parent-home"><img src="assets/icon/Static_Logo.PNG" height="60" width="70" alt="logo"/>Home</a> 
+    <a class="navbar-brand brand-logo mr-5" href="./student-home"><img src="assets/icon/Static_Logo.PNG" height="60" width="70" alt="logo"/>Home</a> 
     <!--  <a class="navbar-brand brand-logo-mini" ><img src="assets/icon/homologo.PNG" alt="logo"/></a> -->
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
@@ -15,52 +15,11 @@
 
       </div>
     
+     
+           
       <ul class="navbar-nav navbar-nav-right">
-        <li class="nav-item dropdown mr-1" ngbDropdown>
-       <!--  <a class="nav-link count-indicator" id="messageDropdown" ngbDropdownToggle> 
-            <i class="ti-email mx-0"></i>
-          </a> --> 
-          <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu pos="bottom-right" aria-labelledby="messageDropdown">
-        <!--    <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p> -->
-            <a class="dropdown-item preview-item">
-              <div class="preview-thumbnail">
-              <!--   <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic"> --> 
-              </div>
-              <div class="preview-item-content flex-grow">
-                <h6 class="preview-subject ellipsis font-weight-normal">David Grey
-                </h6>
-                <p class="font-weight-light small-text text-muted mb-0">
-                  The meeting is cancelled
-                </p>
-              </div>
-            </a>
-         <!--   <a class="dropdown-item preview-item">
-              <div class="preview-thumbnail">
-                  <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
-              </div>
-              <div class="preview-item-content flex-grow">
-                <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
-                </h6>
-                <p class="font-weight-light small-text text-muted mb-0">
-                  New product launch
-                </p>
-              </div>
-            </a> -->
-            <a class="dropdown-item preview-item">
-              <div class="preview-thumbnail">
-                  <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
-              </div>
-              <div class="preview-item-content flex-grow">
-                <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
-                </h6>
-                <p class="font-weight-light small-text text-muted mb-0">
-                  Upcoming board meeting
-                </p>
-              </div>
-            </a>
-          </div>
-        </li>
-        <li class="nav-item dropdown" ngbDropdown>
+      
+       <li class="nav-item dropdown" ngbDropdown>
           <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" ngbDropdownToggle>
             <i class="ti-bell mx-0"></i>
             <span class="count"></span>
@@ -110,7 +69,7 @@
         </li>
         <li class="nav-item nav-profile dropdown" ngbDropdown>
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="profileDropdown" ngbDropdownToggle>
-            <img src="https://via.placeholder.com/40x40" alt="profile"/>
+            <img src="https://via.placeholder.com/40x40" height="40" width="40" alt="profile"/>
           </a>
           <div class="dropdown-menu dropdown-menu-right navbar-dropdown" ngbDropdownMenu>
             <a class="dropdown-item">
@@ -161,7 +120,7 @@
           <div style="position: absolute;top: 30%;right: 16px;font-size: 25px;z-index: 2;" (click)="slideNext()">
             <ion-icon name="arrow-forward"></ion-icon>
           </div>
-          <ion-slides  [options]="slideOpts" paginationType="bullets" class="full-width">
+          <ion-slides  [options]="slideOpts" paginationType="bullets" class="full-width"style="height: 400px;">
             <ion-slide carouselSlide>
               <img src="https://study-eu.s3.amazonaws.com/uploads/image/path/383/wide_fullhd_48144084411_469615a2bc_o.jpg" >
             </ion-slide>
@@ -215,8 +174,8 @@
 <!--Student1 subcribtion-->
 <div class="row grid-margin">
 <div class="col-lg-12">
-    <h4 class="card-title">Student1 Subscriptions</h4>
-    <owl-carousel-o [options]="carouselOption3" class="full-width">
+ <h4 class="card-title">Student1 Subscriptions</h4>
+ <owl-carousel-o [options]="carouselOption3" class="full-width">
       <ng-template carouselSlide>
         <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
       </ng-template>
@@ -310,7 +269,6 @@
 <!--Private subcribtion-->
 <div class="row grid-margin">
 <div class="col-lg-12">
-
     <h4 class="card-title">Private Subscriptions</h4>
     <owl-carousel-o [options]="carouselOption3" class="full-width">
       <ng-template carouselSlide>
