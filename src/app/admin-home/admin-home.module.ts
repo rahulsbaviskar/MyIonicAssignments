@@ -4,21 +4,20 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ParentHomePageRoutingModule } from './parent-home-routing.module';
-
-import { ParentHomePage } from './parent-home.page';
+import { AdminHomePageRoutingModule } from './admin-home-routing.module';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { AdminHomePage } from './admin-home.page';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    CarouselModule,
     IonicModule,
     SharedModule,
-    ParentHomePageRoutingModule
+    CarouselModule,
+    AdminHomePageRoutingModule
   ],
-  declarations: [ParentHomePage]
+  declarations: [AdminHomePage]
 })
-export class ParentHomePageModule {}
+export class AdminHomePageModule {}

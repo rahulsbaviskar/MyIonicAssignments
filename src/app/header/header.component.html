@@ -1,0 +1,113 @@
+<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+  <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+  <a class="navbar-brand brand-logo mr-5" ><img src="assets/icon/Static_Logo.PNG" height="50" width="50" alt="logo"/>Goldspot</a> 
+  <!--  <a class="navbar-brand brand-logo-mini" ><img src="assets/icon/homologo.PNG" alt="logo"/></a> -->
+  </div>
+  <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+  
+ 
+    <ul class="navbar-nav navbar-nav-right">
+     
+    
+      <li class="nav-item nav-profile dropdown" ngbDropdown>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="profileDropdown" ngbDropdownToggle>
+          <h6 class="btn-sm btn btn-primary dropdown-toggle">Sign Up</h6>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" ngbDropdownMenu>
+          <a class="dropdown-item" href="./student-home" >
+            <i class="ti-settings text-primary"></i>
+            Student Sign Up
+          </a>
+          <a class="dropdown-item" href="./parent-home">
+            <i class="ti-power-off text-primary"></i>
+            Parent Sign Up
+          </a>
+          <a class="dropdown-item" href="./parent-home">
+            <i class="ti-power-off text-primary"></i>
+            Institute Sign Up
+          </a>
+          <a class="dropdown-item" href="./parent-home">
+            <i class="ti-power-off text-primary"></i>
+            Admin Sign Up
+          </a>
+         
+          
+        </div>
+        <a (click)="login()" class="btn-sm"><h6>Login</h6></a>
+      </li>
+     
+     
+    </ul>
+  
+  </div>
+</nav>
+
+<div class="dropdown" ngbDropdown>
+
+  <h6 class="btn-sm btn btn-primary dropdown-toggle">Sign Up</h6>
+  <div class="btn-group" ngbDropdownToggle>
+    <div class="dropdown-menu">
+      <!-- <h6 class="dropdown-header">Settings</h6> -->
+      <a class="dropdown-item">Student Sign Up</a>
+      <a class="dropdown-item">Parent Sign Up</a>
+      <a class="dropdown-item">Institute Sign Up</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item">Admin Sign Up</a>
+    </div>
+    
+    <a (click)="login()" class="btn-sm"><h6>Login</h6></a>
+  </div>  
+</div>
+
+
+
+
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <img src="assets/icon/Static_Logo.PNG" height="50" width="50" alt="logo"> Goldspot
+    </ion-title>
+    <div slot="end">
+
+     
+
+
+     <div class="template-demo d-flex justify-content-between flex-wrap">
+      <div class="dropdown" ngbDropdown>
+        <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuIconButton1" ngbDropdownToggle>
+          <i class="ti-world"></i>
+        </button>
+        <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownMenuIconButton1">
+          <h6 class="dropdown-header">Settings</h6>
+          <a class="dropdown-item">Action</a>
+          <a class="dropdown-item">Another action</a>
+          <a class="dropdown-item">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item">Separated link</a>
+        </div>
+      </div>
+     </div>
+
+
+
+      <div class="dropdown" ngbDropdown>
+         <h6 class="btn-sm btn btn-primary dropdown-toggle">Sign Up</h6>
+       
+       <div class="btn-group" ngbDropdownToggle>
+          <div class="dropdown-menu">
+             <h6 class="dropdown-header">Settings</h6> 
+            <a class="dropdown-item">Student Sign Up</a>
+            <a class="dropdown-item">Parent Sign Up</a>
+            <a class="dropdown-item">Institute Sign Up</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item">Admin Sign Up</a>
+          </div> 
+          
+          <a (click)="login()" class="btn-sm"><h6>Login</h6></a>
+        </div>  
+      
+   </div> 
+    </div>
+       
+  </ion-toolbar>
+</ion-header>  -->

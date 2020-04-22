@@ -1,3 +1,5 @@
+<form>
+
 <div class="d-flex align-items-center auth px-0">
   <div class="row w-100 mx-0">
     <div class="col-lg-4 mx-auto">
@@ -9,13 +11,13 @@
         <h6 class="font-weight-light">Sign in to continue.</h6>
         <form class="pt-3">
           <div class="form-group">
-            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+            <input [(ngModel)]="username" [ngModelOptions]="{standalone: true}" name="username"  type="text" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
           </div>
           <div class="form-group">
-            <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+            <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
           </div>
           <div class="mt-3">
-            <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" routerLink="/parent-home">SIGN IN</a>
+            <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" (click)="login()">SIGN IN</a>
           </div>
           <div class="my-2 d-flex justify-content-between align-items-center">
             <div class="form-check">
@@ -38,7 +40,7 @@
 
     <br>
 <div></div>
-     <div align="center">
+     <div style="align-content: center;">
         <span class="added-box"><a href="#"> Terms  </a> </span> 
         <span class="added-box"><a href="#"> Privacy  </a> </span> 
         <span class="added-box"><a href="#"> Security  </a> </span> 
@@ -49,3 +51,5 @@
     </div>
   </div>
 </div> 
+
+</form>

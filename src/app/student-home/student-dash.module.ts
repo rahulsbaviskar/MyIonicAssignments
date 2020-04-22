@@ -8,6 +8,7 @@ import { StudentDashPageRoutingModule } from './student-dash-routing.module';
 
 import { StudentDashPage } from './student-dash.page';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     CommonModule,
     FormsModule,
     CarouselModule,
+    SharedModule,
     IonicModule,
     StudentDashPageRoutingModule
   ],

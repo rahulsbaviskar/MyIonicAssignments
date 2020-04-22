@@ -6,12 +6,14 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     CarouselModule,
+    SharedModule,
     IonicModule,
     RouterModule.forChild([
       {

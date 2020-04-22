@@ -8,8 +8,8 @@ import { NavController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  public username : String;
-  public password : String;
+  username : String = "";
+  password : String = "";
 
 
   constructor(private navCtrl: NavController) { }
@@ -19,13 +19,22 @@ export class LoginPage implements OnInit {
   
   login(){
 
-    if(this.username == "Parent" && this.password == "Parent")
+    if(this.username == "parent" && this.password == "parent")
     {
       this.navCtrl.navigateForward('parent-home');
-    }else if(this.username == "Student" && this.password == "Student")
+    }else if(this.username == "student" && this.password == "student")
      {
       this.navCtrl.navigateForward('student-dash');
-     }else {
+     }
+     else if(this.username == "admin" && this.password == "admin")
+     {
+      this.navCtrl.navigateForward('admin-home');
+     }
+     else if(this.username == "institute" && this.password == "institute")
+     {
+      this.navCtrl.navigateForward('institute-home');
+     }
+     else {
 
      console.log("wrong user name password");
      }
