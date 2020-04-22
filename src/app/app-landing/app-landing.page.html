@@ -1,7 +1,7 @@
-<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+<!-- <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
   <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
   <a class="navbar-brand brand-logo mr-5" ><img src="assets/icon/Static_Logo.PNG" height="50" width="50" alt="logo"/>Goldspot</a> 
-  <!--  <a class="navbar-brand brand-logo-mini" ><img src="assets/icon/homologo.PNG" alt="logo"/></a> -->
+  <!--  <a class="navbar-brand brand-logo-mini" ><img src="assets/icon/homologo.PNG" alt="logo"/></a> 
   </div>
   <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
   
@@ -40,15 +40,18 @@
     </ul>
   
   </div>
-</nav>
+</nav> -->
 
 <!---old code-->
-<div class="dropdown" ngbDropdown>
+
+<app-header></app-header>
+
+<!-- <div class="dropdown" ngbDropdown>
 
   <h6 class="btn-sm btn btn-primary dropdown-toggle">Sign Up</h6>
   <div class="btn-group" ngbDropdownToggle>
     <div class="dropdown-menu">
-      <!-- <h6 class="dropdown-header">Settings</h6> -->
+      <!-- <h6 class="dropdown-header">Settings</h6>
       <a class="dropdown-item">Student Sign Up</a>
       <a class="dropdown-item">Parent Sign Up</a>
       <a class="dropdown-item">Institute Sign Up</a>
@@ -58,7 +61,7 @@
     
     <a (click)="login()" class="btn-sm"><h6>Login</h6></a>
   </div>  
-</div>
+</div> -->
 
 
 
@@ -142,9 +145,9 @@
   </ion-row> -->
 
   <ion-grid>
-<ion-row>
+<ion-row >
   <ion-col>
-    <ion-card>
+    <ion-card style="height: 76.33%;">
       <div style="position: absolute;top: 30%;left: 16px;font-size: 25px;z-index: 2;" (click)="slidePrev()">
         <ion-icon name="arrow-back"></ion-icon>
       </div>
@@ -225,20 +228,20 @@
   <!-- <footer class="footer"> -->
     
   <!-- </footer> -->
+  <!-- <div class="myImg">
+    <div >
+      
+      <img src="assets/icon/Static_Logo.PNG" height="30" width="30" alt="logo">
+      
+    </div>
+    <br>
+         <div style="align-content: center;">
+            <span class="added-box"><a href="#"> Terms  </a> </span> 
+            <span class="added-box"><a href="#"> Privacy  </a> </span> 
+            <span class="added-box"><a href="#"> Security  </a> </span> 
+            <span class="text">  Contact Goldspot</span>
+            </div>
+   
+          </div> -->
+          <app-footer></app-footer>
 </ion-content>
-<ion-footer class="footer">
-  <div class="d-sm-flex justify-content-center justify-content-sm-between">
-    <span></span>
-    <span><img src="assets/icon/Static_Logo.PNG" height="30" width="30" alt="logo"></span>
-    <span></span>
-  </div>
-  <br>
-  <div></div>
-       <div align="center">
-          <span class="added-box"><a href="#"> Terms  </a> </span> 
-          <span class="added-box"><a href="#"> Privacy  </a> </span> 
-          <span class="added-box"><a href="#"> Security  </a> </span> 
-          <span class="text">  Contact Goldspot</span>
-          </div>
- 
-</ion-footer>

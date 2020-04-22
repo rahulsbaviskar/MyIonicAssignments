@@ -1,0 +1,152 @@
+
+  <!--added code-->
+ 
+  <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+    <a class="navbar-brand brand-logo mr-5" routerLink=""><img src="assets/icon/Static_Logo.PNG" height="60" width="70" alt="logo"/>Home</a> 
+    <!--  <a class="navbar-brand brand-logo-mini" ><img src="assets/icon/homologo.PNG" alt="logo"/></a> -->
+    </div>
+    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+      <!-- <ion-searchbar style="width: 500px;"></ion-searchbar> -->
+     
+      <form action="" class="search-form">
+        <div class="form-group has-feedback">
+        <label for="search" class="sr-only">Search</label>
+        <input type="text" class="form-control" name="search" id="search" placeholder="search">
+          <span class="glyphicon glyphicon-search form-control-feedback"></span>
+      </div>
+    </form>
+      <!-- <input type="text" placeholder="Search.."> -->
+         
+     
+      <ul class="navbar-nav navbar-nav-right">
+        <li class="nav-item dropdown mr-1" ngbDropdown>
+       <!--  <a class="nav-link count-indicator" id="messageDropdown" ngbDropdownToggle> 
+            <i class="ti-email mx-0"></i>
+          </a> --> 
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu pos="bottom-right" aria-labelledby="messageDropdown">
+        <!--    <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p> -->
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+              <!--   <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic"> --> 
+              </div>
+              <div class="preview-item-content flex-grow">
+                <h6 class="preview-subject ellipsis font-weight-normal">David Grey
+                </h6>
+                <p class="font-weight-light small-text text-muted mb-0">
+                  The meeting is cancelled
+                </p>
+              </div>
+            </a>
+         <!--   <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                  <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
+              </div>
+              <div class="preview-item-content flex-grow">
+                <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
+                </h6>
+                <p class="font-weight-light small-text text-muted mb-0">
+                  New product launch
+                </p>
+              </div>
+            </a> -->
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                  <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
+              </div>
+              <div class="preview-item-content flex-grow">
+                <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
+                </h6>
+                <p class="font-weight-light small-text text-muted mb-0">
+                  Upcoming board meeting
+                </p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown" ngbDropdown>
+          <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" ngbDropdownToggle>
+            <i class="ti-bell mx-0"></i>
+            <span class="count"></span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" ngbDropdownMenu>
+            <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-success">
+                  <i class="ti-info-alt mx-0"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                <p class="font-weight-light small-text mb-0 text-muted">
+                  Just now
+                </p>
+              </div>
+            </a>
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-warning">
+                  <i class="ti-settings mx-0"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <h6 class="preview-subject font-weight-normal">Settings</h6>
+                <p class="font-weight-light small-text mb-0 text-muted">
+                  Private message
+                </p>
+              </div>
+            </a>
+            <a class="dropdown-item preview-item">
+              <div class="preview-thumbnail">
+                <div class="preview-icon bg-info">
+                  <i class="ti-user mx-0"></i>
+                </div>
+              </div>
+              <div class="preview-item-content">
+                <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                <p class="font-weight-light small-text mb-0 text-muted">
+                  2 days ago
+                </p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item nav-profile dropdown" ngbDropdown>
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="profileDropdown" ngbDropdownToggle>
+            <img src="https://via.placeholder.com/40x40" alt="profile"/>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" ngbDropdownMenu>
+            <a class="dropdown-item">
+              <i class="ti-settings text-primary"></i>
+              Settings
+            </a>
+            <a class="dropdown-item" (click)="logout()">
+              <i class="ti-power-off text-primary"></i>
+              Logout
+            </a>
+          </div>
+        </li>
+       
+      </ul>
+    
+    </div>
+  </nav>
+ 
+<!---old code-->
+  <div class="dropdown" ngbDropdown>
+
+    <h6 class="btn-sm btn btn-primary dropdown-toggle">Sign Up</h6>
+    <div class="btn-group" ngbDropdownToggle>
+      <div class="dropdown-menu">
+        <!-- <h6 class="dropdown-header">Settings</h6> -->
+        <a class="dropdown-item">Student Sign Up</a>
+        <a class="dropdown-item">Parent Sign Up</a>
+        <a class="dropdown-item">Institute Sign Up</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item">Admin Sign Up</a>
+      </div>
+      
+      <a (click)="login()" class="btn-sm"><h6>Login</h6></a>
+    </div>  
+  </div>

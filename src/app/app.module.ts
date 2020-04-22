@@ -42,6 +42,7 @@ import { CustomFormsModule } from 'ng2-validation'
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
   // Change this to your upload POST address:
    url: 'https://httpbin.org/post',
@@ -53,6 +54,8 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
   //entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    SharedModule,
     HttpClientModule,
     NgbModule,
     DragulaModule.forRoot(),

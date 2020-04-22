@@ -26,11 +26,6 @@ const routes: Routes = [
     loadChildren: () => import('./institute-home/institute-home.module').then( m => m.InstituteHomePageModule)
   },
 
-
-
-  
-
- 
 ];
 
 @NgModule({

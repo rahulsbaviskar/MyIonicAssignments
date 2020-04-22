@@ -8,6 +8,7 @@ import { ParentHomePageRoutingModule } from './parent-home-routing.module';
 
 import { ParentHomePage } from './parent-home.page';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     FormsModule,
     CarouselModule,
     IonicModule,
+    SharedModule,
     ParentHomePageRoutingModule
   ],
   declarations: [ParentHomePage]

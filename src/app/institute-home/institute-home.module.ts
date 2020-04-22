@@ -8,12 +8,14 @@ import { InstituteHomePageRoutingModule } from './institute-home-routing.module'
 
 import { InstituteHomePage } from './institute-home.page';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     CarouselModule,
+    SharedModule,
     IonicModule,
     InstituteHomePageRoutingModule
   ],
