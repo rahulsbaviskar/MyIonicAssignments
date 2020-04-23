@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 
-import { HomePage } from './home.page';
+import { IonicModule } from '@ionic/angular';
+
+import { StudentHomePageRoutingModule } from './student-home-routing.module';
+
+import { StudentHomePage } from './student-home.page';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SharedModule } from '../shared/shared.module';
 
@@ -15,13 +17,8 @@ import { SharedModule } from '../shared/shared.module';
     CarouselModule,
     SharedModule,
     IonicModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: HomePage
-      }
-    ])
+    StudentHomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [StudentHomePage]
 })
-export class HomePageModule {}
+export class StudentHomePageModule {}

@@ -47,6 +47,7 @@ carouselOption1 = {
 carouselOption2 = {
   center: true,
   items: 2,
+  dots : false,
   loop: true,
   margin: 10,
   autoplay: true,
@@ -58,6 +59,22 @@ carouselOption2 = {
   }
 }
 
+carouselOption3 = {
+  center: true,
+  items: 2,
+  nav: true,
+  dots : false,
+  loop: true,
+  margin: 10,
+  autoplay: true,
+  autoplayTimeout: 5500,
+  navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"],
+  responsive: {
+    600: {
+      items: 4
+    }
+  }
+}
 
 slidePrev() {
   this.slider.slidePrev();

@@ -15,5 +15,10 @@ export class HomeHeaderComponent implements OnInit {
   login(){
     this.navCtrl.navigateForward('login');
   }
+  logout()
+  {
+    this.navCtrl.navigateForward('login');
+
+  }
 
 }

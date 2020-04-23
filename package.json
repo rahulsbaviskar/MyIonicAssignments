@@ -14,7 +14,8 @@
     "go": "node --max_old_space_size=8192 ./node_modules/@angular/cli/bin/ng serve",
     "electron": "electron .",
     "electron-serve": "ng build && electron .",
-    "windows-release": "electron-packager . Goldspot --overwrite --asar=true --platform=win32 --arch=x64 --prune=true --out=release-builds "
+    "windows-release": "electron-packager . Goldspot --overwrite --asar=true --platform=win32 --arch=x64 --prune=true --out=release-builds ",
+    "windows-build": "node build.js"
   },
   "private": true,
   "dependencies": {
@@ -56,6 +57,10 @@
     "datatables.net": "^1.10.20",
     "datatables.net-dt": "^1.10.20",
     "dragula": "^3.7.2",
+    "electron": "^8.2.3",
+    "electron-installer-dmg": "^3.0.0",
+    "electron-packager": "^14.2.1",
+    "electron-winstaller": "^4.0.0",
     "flag-icon-css": "^3.4.6",
     "font-awesome": "^4.7.0",
     "fullcalendar": "^3.10.1",

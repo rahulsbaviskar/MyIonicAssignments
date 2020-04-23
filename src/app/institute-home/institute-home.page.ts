@@ -3,16 +3,16 @@ import { NavController, IonSlides } from '@ionic/angular';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-student-dash',
-  templateUrl: './student-dash.page.html',
-  styleUrls: ['./student-dash.page.scss'],
+  selector: 'app-institute-home',
+  templateUrl: './institute-home.page.html',
+  styleUrls: ['./institute-home.page.scss'],
   providers: [NgbDropdownConfig]
 })
-export class StudentDashPage  {
-
+export class InstituteHomePage 
+{
   public iconOnlyToggled = false;
   public sidebarToggled = false;
-
+  
   slideOpts = {
     initialSlide: 1,
     autoplay: true,
@@ -21,8 +21,8 @@ export class StudentDashPage  {
     centeredSlides: true,
     speed: 400
   };
- 
- @ViewChild(IonSlides) slider: IonSlides;
+  
+  @ViewChild(IonSlides) slider: IonSlides;
   // carouselOption1 = {
   //   loop: true,
   //   margin: 10,
@@ -41,12 +41,13 @@ export class StudentDashPage  {
     nav: true,
     autoplay: true,
     autoplayTimeout: 5500,
-  //  navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"]
+    navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"]
   }
-
+  
   carouselOption2 = {
     center: true,
     items: 2,
+    dots : false,
     loop: true,
     margin: 10,
     autoplay: true,
@@ -57,7 +58,24 @@ export class StudentDashPage  {
       }
     }
   }
-
+  
+  carouselOption3 = {
+    center: true,
+    items: 2,
+    nav: true,
+    dots : false,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 5500,
+    navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"],
+    responsive: {
+      600: {
+        items: 4
+      }
+    }
+  }
+  
   
   slidePrev() {
     this.slider.slidePrev();
@@ -83,20 +101,20 @@ export class StudentDashPage  {
       }
     }
   }
-
+  
   closeSettingsSidebar() {
     document.querySelector('#right-sidebar').classList.toggle('open');
   }
-
+  
   focusInput() {
     const navbarSearchInput = <HTMLElement>document.querySelector('#navbar-search-input');
     navbarSearchInput.focus();
   }
-
+  
   toggleRightSidebar() {
     document.querySelector('.sidebar-offcanvas').classList.toggle('active');
   }
-
+  
   // customOptions: OwlOptions = {
   //   loop: true,
   //   mouseDrag: false,
@@ -125,9 +143,10 @@ export class StudentDashPage  {
   constructor(private navCtrl: NavController, config: NgbDropdownConfig) {
     config.placement = 'bottom-right';
   }
-
+  
   login(){
     this.navCtrl.navigateForward('login');
   }
-
-}
+  
+  }
+  
