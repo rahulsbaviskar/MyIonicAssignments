@@ -20,5 +20,9 @@ export class HomeHeaderComponent implements OnInit {
     this.navCtrl.navigateForward('login');
 
   }
+  onClick(){
+    window.location.reload();
+    // window.document.location.reload();
+  }
 
 }
