@@ -5,112 +5,96 @@
 <ion-content >
 
 
-  <ion-grid>
-    <ion-row >
-      <ion-col>
-        <ion-card style="height: 76.33%;">
-          <div style="position: absolute;top: 30%;left: 16px;font-size: 25px;z-index: 2;" (click)="slidePrev()">
-            <ion-icon name="arrow-back"></ion-icon>
-          </div>
-          <div style="position: absolute;top: 30%;right: 16px;font-size: 25px;z-index: 2;" (click)="slideNext()">
-            <ion-icon name="arrow-forward"></ion-icon>
-          </div>
-          <ion-slides  [options]="slideOpts" paginationType="bullets" class="full-width">
-            <ion-slide carouselSlide>
-              <img src="https://study-eu.s3.amazonaws.com/uploads/image/path/383/wide_fullhd_48144084411_469615a2bc_o.jpg" >
-            </ion-slide>
-            <ion-slide carouselSlide>
-              <img src="https://study-eu.s3.amazonaws.com/uploads/image/path/383/wide_fullhd_48144084411_469615a2bc_o.jpg " >
-            </ion-slide>
-            <ion-slide carouselSlide>
-              <img src="https://study-eu.s3.amazonaws.com/uploads/image/path/383/wide_fullhd_48144084411_469615a2bc_o.jpg  " >
-            </ion-slide>
-          </ion-slides> 
-        </ion-card>
-     </ion-col>
-    </ion-row>
-      </ion-grid>
+  <ion-card style="height: 60.33%;margin-top: 20px;">
+    <div style="position: absolute;top: 30%;left: 16px;font-size: 25px;z-index: 2;" (click)="slidePrev()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </div>
+    <div style="position: absolute;top: 30%;right: 16px;font-size: 25px;z-index: 2;" (click)="slideNext()">
+      <ion-icon name="arrow-forward"></ion-icon>
+    </div>
+    <ion-slides  [options]="slideOpts" paginationType="bullets" class="full-width">
+      <ion-slide carouselSlide>
+        <img src="https://study-eu.s3.amazonaws.com/uploads/image/path/383/wide_fullhd_48144084411_469615a2bc_o.jpg" >
+      </ion-slide>
+      <ion-slide carouselSlide>
+        <img src="https://study-eu.s3.amazonaws.com/uploads/image/path/383/wide_fullhd_48144084411_469615a2bc_o.jpg " >
+      </ion-slide>
+      <ion-slide carouselSlide>
+        <img src="https://study-eu.s3.amazonaws.com/uploads/image/path/383/wide_fullhd_48144084411_469615a2bc_o.jpg  " >
+      </ion-slide>
+    </ion-slides> 
+  </ion-card>
+
 
 
 <!-- adddd new goldspot subcribtion -->
-<ion-grid>
-  <ion-row >
-    <ion-col>
-      <ion-card >
-<div class="row grid-margin">
-<div class="col-lg-12">
-    <h5 class="card-title">GoldSpot Subscriptions</h5>
+
+<div class="row grid-margin" style="margin-left: 20px;">
+  <div class="col-lg-12">
+      <h5 style="color:gray">GoldSpot Subscriptions</h5>
+      <owl-carousel-o [options]="carouselOption3" class="full-width">
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_2.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_3.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_4.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_5.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_6.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_7.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
   
-    <owl-carousel-o [options]="carouselOption3" class="full-width">
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_2.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_3.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_4.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_5.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_6.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_7.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-    </owl-carousel-o>
+  
+  
+  
+  <!--Student1 subcribtion-->
+  
+          <div class="row grid-margin" style="margin-left: 20px;">
+  <div class="col-lg-12">
+   <h5 style="color:gray">Student1 Subscriptions</h5>
+   <owl-carousel-o [options]="carouselOption3" class="full-width">
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_2.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_3.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_4.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_5.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_6.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+        <ng-template carouselSlide>
+          <img src="assets/images/carousel/banner_7.jpg" height="185" width="200" alt="image"/>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
   </div>
-</div>
-</ion-card>
-</ion-col>
-</ion-row>
-</ion-grid>
-
-
-<!--Student1 subcribtion-->
-<ion-grid>
-  <ion-row >
-    <ion-col>
-      <ion-card >
-<div class="row grid-margin">
-<div class="col-lg-12">
-    <h5 class="card-title">Student1 Subscriptions</h5>
-    <owl-carousel-o [options]="carouselOption3" class="full-width">
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_2.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_3.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_4.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_5.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_6.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-      <ng-template carouselSlide>
-        <img src="assets/images/carousel/banner_7.jpg" height="185" width="200" alt="image"/>
-      </ng-template>
-    </owl-carousel-o>
-  </div>
-</div>
-</ion-card>
-</ion-col>
-</ion-row>
-</ion-grid>
-
-
+  
+  
+  
+  
 
 <hr>
 <app-footer></app-footer>

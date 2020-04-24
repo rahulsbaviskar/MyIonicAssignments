@@ -15,11 +15,37 @@ export class AppLandingPage
   slideOpts = {
     initialSlide: 1,
     autoplay: true,
+    dots:true,
     slidesPerView: 1,
     spaceBetween: 0,
+    nav:true,
     centeredSlides: true,
-    speed: 400
-  };
+    speed: 400,
+    navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"],
+    responsive: {
+      600: {
+        items: 4
+      }
+    }
+};
+
+  carouselOption3 = {
+    initialSlide:1,
+    center: true,
+    nav: true,
+    dots : false,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 5500,
+    navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"],
+    responsive: {
+      600: {
+        items: 4
+      }
+    }
+  }
+
  @ViewChild(IonSlides) slider: IonSlides;
   // carouselOption1 = {
   //   loop: true,
