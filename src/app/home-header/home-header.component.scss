@@ -1,19 +1,20 @@
 .main {
     position:relative;
-    left: 100%;
-    width: 138%;
+    left: 90%;
+    width: 90%;
     margin: 50px auto;
 }
 
 .has-search .form-control {
     padding-left: 2.375rem;
+    width: 145px;
 }
 
 .has-search .form-control-feedback {
     position: absolute;
     z-index: 2;
     display: block;
-    width: 2.375rem;
+    width: 2.340rem;
     height: 2.375rem;
     line-height: 2.375rem;
     text-align: center;
