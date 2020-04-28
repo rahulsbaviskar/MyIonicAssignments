@@ -17,7 +17,9 @@ export class HomeHeaderComponent implements OnInit {
   }
   logout()
   {
-    this.navCtrl.navigateForward('app-landing');
+   // this.navCtrl.navigateForward('app-landing');
+   this.navCtrl.navigateForward('carousel');
+   
 
   }
   onClick(){

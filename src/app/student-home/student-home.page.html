@@ -5,17 +5,17 @@
 <ion-content >
 
 
+
       
-        <ion-grid> 
-          <ion-row>
-            <ion-col>
-              <ion-card style="margin-top: 80px;">
-                <div style="position: absolute;top: 30%;left: 16px;font-size: 25px;z-index: 2;" (click)="slidePrev()">
-                  <ion-icon name="arrow-back"></ion-icon>
-                </div>
-                <div style="position: absolute;top: 30%;right: 16px;font-size: 25px;z-index: 2;" (click)="slideNext()">
-                  <ion-icon name="arrow-forward"></ion-icon>
-                </div>
+        
+              <ion-card style="margin-top: 80px;height: 52%;">
+                <button style="position: absolute;top: 40%;left: 16px;font-size: 25px;z-index: 2;" class="button" (click)="slidePrev()">
+                  <i class='ti-angle-left' style="color: white;"></i>
+                </button>
+                <button style="position: absolute;top: 40%;right: 16px;font-size: 25px;z-index: 2;" class="button" (click)="slideNext()">
+                 
+                  <i class='ti-angle-right' style="color: white;"></i>
+                </button>
                 <ion-slides  [options]="slideOpts" paginationType="bullets" class="full-width">
                   <ion-slide carouselSlide>
                     <img src="https://study-eu.s3.amazonaws.com/uploads/image/path/383/wide_fullhd_48144084411_469615a2bc_o.jpg" >
@@ -28,13 +28,125 @@
                   </ion-slide>
                 </ion-slides> 
               </ion-card>
+         
+
+
+
+
+
+        <ion-grid > 
+          <ion-row  >
+            <ion-col >
+              <ion-card >
+                <h5 style="color:gray">GoldSpot Subscriptions</h5>
+                <button style="position: absolute;top: 40%;left: 16px;font-size: 25px;z-index: 2;background: transparent;"  (click)="slidePrev()">
+                  <i class='ti-angle-left' style="color: rgb(6, 88, 121);font-size: 40px;stroke-width: 2px;"></i>
+                </button>
+                <button style="position: absolute;top: 40%;right: 1px;font-size: 25px;z-index: 2;background: transparent;"  (click)="slideNext()">
+                 
+                  <i class='ti-angle-right' style="color: rgb(6, 88, 121);font-size: 40px;stroke-width: 2px;"></i>
+                </button>
+                <ion-slides  [options]="slideOpts1" paginationType="bullets" class="full-width">
+                  <ion-slide carouselSlide>
+                    <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
+                  </ion-slide>
+                  <ion-slide carouselSlide>
+                    <img src="assets/images/carousel/banner_2.jpg" height="185" width="200" alt="image"/>
+                  </ion-slide>
+                  <ion-slide carouselSlide>
+                    <img src="assets/images/carousel/banner_3.jpg" height="185" width="200" alt="image"/>
+                  </ion-slide>
+                </ion-slides> 
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+
+        <ion-grid > 
+          <ion-row  >
+            <ion-col >
+              <ion-card >
+                <h5 style="color:gray">GoldSpot Subscriptions</h5>
+                <button style="position: absolute;top: 40%;left: 16px;font-size: 25px;z-index: 2;background: transparent;"  (click)="slidePrev()">
+                  <i class='ti-angle-left' style="color: rgb(6, 88, 121);font-size: 40px;stroke-width: 2px;"></i>
+                </button>
+                <button style="position: absolute;top: 40%;right: 1px;font-size: 25px;z-index: 2;background: transparent;"  (click)="slideNext()">
+                 
+                  <i class='ti-angle-right' style="color: rgb(6, 88, 121);font-size: 40px;stroke-width: 2px;"></i>
+                </button>
+                <ion-slides  [options]="slideOpts1" paginationType="bullets" class="full-width">
+                  <ion-slide carouselSlide>
+                    <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
+                  </ion-slide>
+                  <ion-slide carouselSlide>
+                    <img src="assets/images/carousel/banner_2.jpg" height="185" width="200" alt="image"/>
+                  </ion-slide>
+                  <ion-slide carouselSlide>
+                    <img src="assets/images/carousel/banner_3.jpg" height="185" width="200" alt="image"/>
+                  </ion-slide>
+                </ion-slides> 
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-grid > 
+          <ion-row  >
+            <ion-col >
+              <ion-card >
+                <h5 style="color:gray">GoldSpot Subscriptions</h5>
+                <button style="position: absolute;top: 40%;left: 16px;font-size: 25px;z-index: 2;background: transparent;"  (click)="slidePrev()">
+                  <i class='ti-angle-left' style="color: rgb(6, 88, 121);font-size: 40px;stroke-width: 2px;"></i>
+                </button>
+                <button style="position: absolute;top: 40%;right: 1px;font-size: 25px;z-index: 2;background: transparent;"  (click)="slideNext()">
+                 
+                  <i class='ti-angle-right' style="color: rgb(6, 88, 121);font-size: 40px;stroke-width: 2px;"></i>
+                </button>
+                <ion-slides  [options]="slideOpts1" paginationType="bullets" class="full-width">
+                  <ion-slide carouselSlide>
+                    <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
+                  </ion-slide>
+                  <ion-slide carouselSlide>
+                    <img src="assets/images/carousel/banner_2.jpg" height="185" width="200" alt="image"/>
+                  </ion-slide>
+                  <ion-slide carouselSlide>
+                    <img src="assets/images/carousel/banner_3.jpg" height="185" width="200" alt="image"/>
+                  </ion-slide>
+                </ion-slides> 
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-grid > 
+          <ion-row  >
+            <ion-col >
+              <ion-card >
+                <h5 style="color:gray">GoldSpot Subscriptions</h5>
+                <button style="position: absolute;top: 40%;left: 16px;font-size: 25px;z-index: 2;background: transparent;"  (click)="slidePrev()">
+                  <i class='ti-angle-left' style="color: rgb(6, 88, 121);font-size: 40px;stroke-width: 2px;"></i>
+                </button>
+                <button style="position: absolute;top: 40%;right: 1px;font-size: 25px;z-index: 2;background: transparent;"  (click)="slideNext()">
+                 
+                  <i class='ti-angle-right' style="color: rgb(6, 88, 121);font-size: 40px;stroke-width: 2px;"></i>
+                </button>
+                <ion-slides  [options]="slideOpts1" paginationType="bullets" class="full-width">
+                  <ion-slide carouselSlide>
+                    <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
+                  </ion-slide>
+                  <ion-slide carouselSlide>
+                    <img src="assets/images/carousel/banner_2.jpg" height="185" width="200" alt="image"/>
+                  </ion-slide>
+                  <ion-slide carouselSlide>
+                    <img src="assets/images/carousel/banner_3.jpg" height="185" width="200" alt="image"/>
+                  </ion-slide>
+                </ion-slides> 
+              </ion-card>
             </ion-col>
           </ion-row>
         </ion-grid>
    
-
-
-
 
 <!-- adddd new goldspot subcribtion -->
 

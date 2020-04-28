@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'app-landing', pathMatch: 'full' },
  
@@ -29,6 +30,7 @@ const routes: Routes = [
     path: 'admin-home',
     loadChildren: () => import('./admin-home/admin-home.module').then( m => m.AdminHomePageModule)
   },
+  
 
 ];
 
