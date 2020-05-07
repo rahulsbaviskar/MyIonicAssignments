@@ -17,8 +17,12 @@ export class HomeHeaderComponent implements OnInit {
   }
   logout()
   {
-    this.navCtrl.navigateForward('login');
+    this.navCtrl.navigateForward('app-landing');
 
+  }
+  onClick(){
+    window.location.reload();
+    // window.document.location.reload();
   }
 
 }

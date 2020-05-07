@@ -1,6 +1,6 @@
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-  <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-  <a class="navbar-brand brand-logo mr-5" ><img src="assets/icon/Static_Logo.PNG" height="50" width="50" alt="logo"/>Goldspot</a> 
+  <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-right">
+  <a ><img src="assets/icon/Static_Logo.PNG" height="50" width="50" alt="logo" style="margin-left: 20px;"/></a> 
   <!--  <a class="navbar-brand brand-logo-mini" ><img src="assets/icon/homologo.PNG" alt="logo"/></a> -->
   </div>
   <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
@@ -11,7 +11,7 @@
     
       <li class="nav-item nav-profile dropdown" ngbDropdown>
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="profileDropdown" ngbDropdownToggle>
-          <h6 class="btn-sm btn btn-primary dropdown-toggle">Sign Up</h6>
+          <h6 class="dropdown-toggle">Sign Up</h6>
         </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" ngbDropdownMenu>
           <a class="dropdown-item" href="./student-home" >
@@ -22,18 +22,19 @@
             <i class="ti-power-off text-primary"></i>
             Parent Sign Up
           </a>
-          <a class="dropdown-item" href="./parent-home">
+          <a class="dropdown-item" href="./institute-home">
             <i class="ti-power-off text-primary"></i>
             Institute Sign Up
           </a>
-          <a class="dropdown-item" href="./parent-home">
+          <a class="dropdown-item" href="./admin-home">
             <i class="ti-power-off text-primary"></i>
             Admin Sign Up
           </a>
          
           
         </div>
-        <a (click)="login()" class="btn-sm"><h6>Login</h6></a>
+        <span></span>
+        <a (click)="login()" class="btn-sm"><h6 style="margin-left: 5px;color:blue;">Sign In</h6></a>
       </li>
      
      
@@ -44,7 +45,7 @@
 
 <div class="dropdown" ngbDropdown>
 
-  <h6 class="btn-sm btn btn-primary dropdown-toggle">Sign Up</h6>
+  <h6 class="btn-sm btn btn-primary dropdown-toggle" style="margin-right: 50px;">Sign Up</h6>
   <div class="btn-group" ngbDropdownToggle>
     <div class="dropdown-menu">
       <!-- <h6 class="dropdown-header">Settings</h6> -->

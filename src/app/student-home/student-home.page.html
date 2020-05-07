@@ -5,10 +5,8 @@
 <ion-content >
 
 
-  <ion-grid>
-    <ion-row >
-      <ion-col>
-        <ion-card style="height: 76.33%;">
+  
+        <ion-card style="height: 60.33%;margin-top: 20px;">
           <div style="position: absolute;top: 30%;left: 16px;font-size: 25px;z-index: 2;" (click)="slidePrev()">
             <ion-icon name="arrow-back"></ion-icon>
           </div>
@@ -27,18 +25,16 @@
             </ion-slide>
           </ion-slides> 
         </ion-card>
-     </ion-col>
-    </ion-row>
-      </ion-grid>
+   
 
 
 
 
 <!-- adddd new goldspot subcribtion -->
 
-<div class="row grid-margin">
+<div class="row grid-margin" style="margin-left: 20px;margin-right: 0.5px;">
 <div class="col-lg-12">
-    <h4 class="card-title">GoldSpot Subscriptions</h4>
+    <h5 style="color:gray">GoldSpot Subscriptions</h5>
     <owl-carousel-o [options]="carouselOption3" class="full-width">
       <ng-template carouselSlide>
         <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
@@ -66,10 +62,13 @@
 </div>
 
 
+
+
 <!--Student1 subcribtion-->
-<div class="row grid-margin">
+
+<div class="row grid-margin" style="margin-left: 20px;margin-right: 0.5px;">
 <div class="col-lg-12">
- <h4 class="card-title">Student1 Subscriptions</h4>
+ <h5 style="color:gray">My Subscriptions</h5>
  <owl-carousel-o [options]="carouselOption3" class="full-width">
       <ng-template carouselSlide>
         <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
@@ -97,11 +96,13 @@
 </div>
 
 
+
 <!--Free subcribtion-->
-<div class="row grid-margin">
+
+<div class="row grid-margin" style="margin-left: 20px;margin-right: 0.5px;">
 <div class="col-lg-12">
 
-    <h4 class="card-title">Free Subscriptions</h4>
+    <h5 style="color:gray">Free Subscriptions</h5>
     <owl-carousel-o [options]="carouselOption3" class="full-width">
       <ng-template carouselSlide>
         <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
@@ -127,13 +128,16 @@
     </owl-carousel-o>
   </div>
 </div>
+
+
 
 
 <!--Public subcribtion-->
-<div class="row grid-margin">
+
+<div class="row grid-margin" style="margin-left: 20px;margin-right: 0.5px;">
 <div class="col-lg-12">
 
-    <h4 class="card-title">Public Subscriptions</h4>
+    <h5 style="color:gray" >Public Subscriptions</h5>
     <owl-carousel-o [options]="carouselOption3" class="full-width">
       <ng-template carouselSlide>
         <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
@@ -158,13 +162,16 @@
       </ng-template>
     </owl-carousel-o>
   </div>
-</div>
+  </div>
+
+
 
 
 <!--Private subcribtion-->
-<div class="row grid-margin">
+
+<div class="row grid-margin" style="margin-left: 20px;margin-right: 0.5px;">
 <div class="col-lg-12">
-    <h4 class="card-title">Private Subscriptions</h4>
+    <h5 style="color:gray">Private Subscriptions</h5>
     <owl-carousel-o [options]="carouselOption3" class="full-width">
       <ng-template carouselSlide>
         <img src="assets/images/carousel/banner_1.jpg" height="185" width="200" alt="image"/>
@@ -192,6 +199,7 @@
 </div>
 
 
+<hr>
 <app-footer></app-footer>
 
 </ion-content>
