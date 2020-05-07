@@ -1,0 +1,72 @@
+
+<app-home-header></app-home-header>
+<ion-content>
+  <!-- <br>
+  <div class="col-md grid-margin stretch-card" style="margin-top: 4%; color: blue;">
+    <div class="card-body">
+        <div> 
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-custom bg-inverse-primary">
+              <li class="breadcrumb-item" ><a >Home</a></li>
+              <li class="breadcrumb-item"><a>Course Management</a></li>
+              <li class="breadcrumb-item active"><a>Course Category</a></li> 
+            </ol>
+          </nav>
+        </div>
+     </div>
+  </div> -->
+
+  <app-breadcrumb></app-breadcrumb>
+
+
+  <table class="row-border hover" datatable [dtOptions]="dtOptions" >
+  
+    <thead class="scrollit">
+      <tr>
+        <th><a style="color: skyblue;">Select </a> </th>
+        <th><a style="color: skyblue;">Course Category</a></th>
+        <th><a style="color: skyblue;">Show/Hide</a></th>
+        <th><a style="color: skyblue;">Action</a></th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let group of data" class="scrollit">
+           <td><ion-checkbox style="color: skyblue;"></ion-checkbox></td>
+           <td><ion-icon (click)="show()" class="mdi mdi-plus-circle-outline" style="color: green;margin-right: 10px;"></ion-icon>{{group.name}}</td>
+           <td><ion-toggle checked="true"></ion-toggle></td>
+           <td><ion-icon class="mdi mdi-plus-circle-outline" style="font-size: 30px;color: skyblue;"></ion-icon> 
+            <ion-icon class="mdi mdi-border-color"  style="font-size: 30px;color: skyblue;"></ion-icon>
+            <ion-icon class="mdi mdi-chevron-up" style="font-size: 30px;color: skyblue;" ></ion-icon>
+            <ion-icon class="mdi mdi-chevron-down" style="font-size: 30px;color: skyblue; border-color: skyblue;"></ion-icon>
+          </td>
+       </tr>
+    </tbody>
+  </table>
+  
+  <div>
+    <span class="table-add float-right mb-3 mr-2">
+      <a class="text-success" (click)="add()">
+       <ion-button>+ Add Course Category</ion-button>
+  
+      </a>
+    </span>
+    <ion-button>Move Up</ion-button>
+    <ion-button>Move Down</ion-button>
+    <ion-button>Move to course Category</ion-button>
+  <div>
+    
+    <span >
+      <a class="text-success" (click)="remove(data)">
+       <ion-button>Delete</ion-button>
+  
+      </a>
+    </span>
+    <span >
+      <a class="text-success" (click)="undo(data)">
+       <ion-button>Undo</ion-button>
+    </a>
+    </span>
+  </div>
+  </div>
+  
+</ion-content>

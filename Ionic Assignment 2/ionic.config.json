@@ -1,0 +1,7 @@
+{
+  "name": "Goldspot-Admin",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
