@@ -1,0 +1,8 @@
+{
+  "name": "Goldspot",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}
