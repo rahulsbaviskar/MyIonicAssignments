@@ -14,7 +14,7 @@ export class AdminHomePage implements OnInit {
   }
 
   onClick(){
-    this.navCtrl.navigateBack("coursemanagement");
+    this.navCtrl.navigateForward("admin-home/coursemanagement");
   }
 
 }
