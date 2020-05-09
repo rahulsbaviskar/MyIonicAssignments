@@ -23,14 +23,14 @@ const routes: Routes = [
     }
   },
   {
-    path: 'coursemanagement',
+    path: 'admin-home/coursemanagement',
     loadChildren: () => import('./coursemanagement/coursemanagement.module').then( m => m.CoursemanagementPageModule),
     data: {
       breadcrumbs: 'Course Management'
     }
   },
   {
-    path: 'coursecategory',
+    path: 'admin-home/coursemanagement/coursecategory',
     loadChildren: () => import('./coursecategory/coursecategory.module').then( m => m.CoursecategoryPageModule),
     data: {
       breadcrumbs: 'Course Category'

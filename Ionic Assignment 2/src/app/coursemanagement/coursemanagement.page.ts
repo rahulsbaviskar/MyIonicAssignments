@@ -14,7 +14,7 @@ export class CoursemanagementPage implements OnInit {
   }
 
   onClick(){
-    this.navCtrl.navigateBack("coursecategory");
+    this.navCtrl.navigateForward("admin-home/coursemanagement/coursecategory");
   }
 
 }

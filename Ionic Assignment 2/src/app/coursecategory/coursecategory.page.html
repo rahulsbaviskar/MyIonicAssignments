@@ -30,9 +30,47 @@
       </tr>
     </thead>
     <tbody>
-     <tr *ngFor="let group of data" class="scrollit">
+  
+      <ng-container *ngFor="let data of data1">
+        <tr (click)="data.expanded = !data.expanded">
+          <td><ion-checkbox style="color: skyblue;"></ion-checkbox></td>
+          <td> {{ data.expanded ? '&ndash;' : '+'}} {{data.name}} </td>
+         <!--  <td><ion-toggle checked="true"></ion-toggle></td> -->
+          <td><ion-toggle checked="true" (click)="showMyContainer=!showMyContainer">Show/Hide</ion-toggle></td>
+
+           <td> <div  *ngIf="showMyContainer">  <ion-icon class="mdi mdi-plus-circle-outline" style="font-size: 30px;color: skyblue;"></ion-icon> 
+            <ion-icon class="mdi mdi-border-color"  style="font-size: 30px;color: skyblue;"></ion-icon>
+            <ion-icon class="mdi mdi-chevron-up" style="font-size: 30px;color: skyblue;" ></ion-icon>
+            <ion-icon class="mdi mdi-chevron-down" style="font-size: 30px;color: skyblue; border-color: skyblue;"></ion-icon>
+          </div>
+          </td>
+        <!--   <td> {{data.hobbies}} </td>
+          <td> {{data.profession}} </td> -->
+        </tr>
+      
+        <ng-container *ngIf="data.expanded">
+          <tr *ngFor="let data of findDetails(data)">
+            <td><ion-checkbox style="color: skyblue;"></ion-checkbox></td>
+            <td style="padding-left: 12px"> {{data.datades.name}} </td>
+         <!--     <td><ion-toggle checked="true"></ion-toggle></td> -->
+         <td><ion-toggle checked="true" (click)="showMyContainer1=!showMyContainer1">Show/Hide</ion-toggle></td>
+            <td> <div  *ngIf="showMyContainer1" >   <ion-icon class="mdi mdi-plus-circle-outline" style="font-size: 30px;color: skyblue;"></ion-icon> 
+             <ion-icon class="mdi mdi-border-color"  style="font-size: 30px;color: skyblue;"></ion-icon>
+             <ion-icon class="mdi mdi-chevron-up" style="font-size: 30px;color: skyblue;" ></ion-icon>
+             <ion-icon class="mdi mdi-chevron-down" style="font-size: 30px;color: skyblue; border-color: skyblue;"></ion-icon>
+            </div>
+            </td>
+          </tr>
+        </ng-container>
+      </ng-container>
+        </tbody>
+      </table>
+  
+  
+  
+   <!--   <tr *ngFor="let group of data1" class="scrollit">
            <td><ion-checkbox style="color: skyblue;"></ion-checkbox></td>
-           <td><ion-icon (click)="show()" class="mdi mdi-plus-circle-outline" style="color: green;margin-right: 10px;"></ion-icon>{{group.name}}</td>
+           <td><ion-icon  class="mdi mdi-plus-circle-outline" style="color: green;margin-right: 10px;"></ion-icon>{{group.name}}</td>
            <td><ion-toggle checked="true"></ion-toggle></td>
            <td><ion-icon class="mdi mdi-plus-circle-outline" style="font-size: 30px;color: skyblue;"></ion-icon> 
             <ion-icon class="mdi mdi-border-color"  style="font-size: 30px;color: skyblue;"></ion-icon>
@@ -41,32 +79,37 @@
           </td>
        </tr>
     </tbody>
-  </table>
+  </table>  -->
   
   <div>
     <span class="table-add float-right mb-3 mr-2">
-      <a class="text-success" (click)="add()">
+       <a class="text-success" (click)="add()">
        <ion-button>+ Add Course Category</ion-button>
   
-      </a>
+     </a>
     </span>
     <ion-button>Move Up</ion-button>
     <ion-button>Move Down</ion-button>
+    <span>
+    <a class="text-success" (click)="load()" >
     <ion-button>Move to course Category</ion-button>
+  </a>
+</span>
   <div>
     
     <span >
-      <a class="text-success" (click)="remove(data)">
+      <a class="text-success" (click)="remove(data1)"> 
        <ion-button>Delete</ion-button>
   
-      </a>
+  </a>
     </span>
     <span >
-      <a class="text-success" (click)="undo(data)">
+    <!--   <a class="text-success" (click)="undo(data)"> -->
        <ion-button>Undo</ion-button>
-    </a>
+   
     </span>
   </div>
   </div>
+
   
 </ion-content>
