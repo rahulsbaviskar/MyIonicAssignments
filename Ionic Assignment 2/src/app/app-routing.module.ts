@@ -36,6 +36,10 @@ const routes: Routes = [
       breadcrumbs: 'Course Category'
     }
   },
+ 
+
+  
+
 ];
 
 @NgModule({
