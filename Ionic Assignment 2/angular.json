@@ -51,7 +51,8 @@
               "node_modules/ace-builds/src-min/mode-html.js",
               "node_modules/ace-builds/src-min/mode-javascript.js",
               "node_modules/raphael/raphael.js",
-              "node_modules/datatables.net/js/jquery.dataTables.js"
+              "node_modules/datatables.net/js/jquery.dataTables.js",
+              "src/custom.js"
             ]
           },
           "configurations": {

@@ -32,3 +32,4 @@ npm-debug.log*
 /installer
 /release-builds
 /android
+/.vs

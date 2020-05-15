@@ -25,6 +25,7 @@ export class AdminHomePage implements OnInit {
   onClick(){
     window.location.reload();
     // window.document.location.reload();
+    this.navCtrl.navigateForward("admin-home/coursemanagement");
   }
 
   login(){

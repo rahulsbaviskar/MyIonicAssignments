@@ -14,7 +14,7 @@ import { DropzoneModule } from 'ngx-dropzone-wrapper';
 import { DROPZONE_CONFIG } from 'ngx-dropzone-wrapper';
 import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
 import { ColorPickerModule } from 'ngx-color-picker';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AmazingTimePickerModule } from 'amazing-time-picker';
 import { TagInputModule } from 'ngx-chips';
 import { FormWizardModule } from 'angular2-wizard';
@@ -60,6 +60,7 @@ import { MenuService } from './menu.service';
     SharedModule,
     HttpClientModule,
     NgbModule,
+    Ng2SearchPipeModule,
     DragulaModule.forRoot(),
     ClipboardModule,
     ContextMenuModule.forRoot(),
