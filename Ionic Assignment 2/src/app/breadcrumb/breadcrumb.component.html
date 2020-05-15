@@ -20,10 +20,14 @@
   </ul>
 </div>   -->
 
-<div class="col" style="margin-top: 4%;">
-  <ol class='breadcrumb breadcrumb-custom bg-inverse-primary'>
-    <li class="breadcrumb-item" *ngFor='let item of breadcrumbList; let i = index' [class.active]="i===breadcrumbList.length-1">
-      <a routerLink="item.path" *ngIf="i===breadcrumbList.length-1">{{ item.name }}</a>
+
+<div class="col" style="margin-top: 0.5%;" aria-label="breadcrumb" class="template-demo">
+  <ol class='breadcrumb bg-primary'>
+    <li class="breadcrumb-item" *ngFor='let breadcrumb of breadcrumbs;'>
+      <!-- <a routerLink="breadcrumb.url" routerLinkActive="router-link-active">
+        {{ breadcrumb.label }}
+      </a> -->
+      <a routerLink="[breadcrumb.url, breadcrumb.params]" routerLinkActive='active' routerLinkActiveOptions = "{exact: true}">{{ breadcrumb.label }}</a>
     </li>
   </ol>
 </div>  

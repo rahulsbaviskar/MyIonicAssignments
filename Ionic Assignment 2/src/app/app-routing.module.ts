@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { CoursemanagementPage } from './coursemanagement/coursemanagement.page';
+import { AdminHomePage } from './admin-home/admin-home.page';
+import { CoursecategoryPage } from './coursecategory/coursecategory.page';
 
 const routes: Routes = [
   {
@@ -17,22 +20,55 @@ const routes: Routes = [
   },
   {
     path: 'admin-home',
-    loadChildren: () => import('./admin-home/admin-home.module').then( m => m.AdminHomePageModule),
+    component: AdminHomePage,
     data: {
-      breadcrumbs: 'Home'
-    }
+      breadcrumb: 'Home'
+    },
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./admin-home/admin-home.module').then( m => m.AdminHomePageModule),
+      },
+      {
+        path: 'coursemanagement',
+        component: CoursemanagementPage,
+        data: {
+          breadcrumb: 'Course Management'
+        },
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('./coursemanagement/coursemanagement.module').then( m => m.CoursemanagementPageModule),
+          },
+          {
+            path: 'coursecategory',
+            component: CoursecategoryPage,
+            children: [
+              {
+                path: '',
+                loadChildren: () => import('./coursecategory/coursecategory.module').then( m => m.CoursecategoryPageModule),
+                data: {
+                  breadcrumb: 'Course Category'
+                },
+              },
+            ]
+          },
+        ]
+      }
+
+    ]
   },
-  {
-    path: 'admin-home/coursemanagement/coursecategory',
-    loadChildren: () => import('./coursecategory/coursecategory.module').then( m => m.CoursecategoryPageModule),
-    data: {
-      breadcrumbs: 'Course Category'
-    }
-  },
-  {
-    path: 'admin-home/coursemanagement',
-    loadChildren: () => import('./coursemanagement/coursemanagement.module').then( m => m.CoursemanagementPageModule)
-  },
+  // {
+  //   path: 'admin-home/coursemanagement/coursecategory',
+  //   loadChildren: () => import('./coursecategory/coursecategory.module').then( m => m.CoursecategoryPageModule),
+  //   data: {
+  //     breadcrumbs: 'Course Category'
+  //   }
+  // },
+  // {
+  //   path: 'admin-home/coursemanagement',
+  //   loadChildren: () => import('./coursemanagement/coursemanagement.module').then( m => m.CoursemanagementPageModule)
+  // },
 ];
 
 @NgModule({

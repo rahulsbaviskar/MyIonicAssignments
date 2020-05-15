@@ -1,11 +1,16 @@
 
   
-    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-left">
-      <a  (click)="onClick()"><img src="assets/icon/Static_Logo.PNG" height="50" width="50" style="margin-left: 15px;" alt="logo"/><span style="font-size: 20px ;color: blue;margin-top: 10px;">Home</span></a> 
-      <!--  <a class="navbar-brand brand-logo-mini" ><img src="assets/icon/homologo.PNG" alt="logo"/></a> -->
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+    <div class="navbar col-lg-12 d-flex">
+      <ul class="navbar-nav px-3">
+          <li >
+        
+           <a  (click)="onClick()"><img src="assets/icon/Static_Logo.PNG" height="50" width="50" style="margin-left: 0px;" alt="logo"/><span style="font-size: 20px ;color: blue;margin-top: 10px;">Home</span></a> 
+        <!--  <a class="navbar-brand brand-logo-mini" ><img src="assets/icon/homologo.PNG" alt="logo"/></a> -->
+          </li>
+        </ul>
+      
+      
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end container-fluid">
         <!-- <ion-searchbar style="width: 500px;"></ion-searchbar> -->
        
   
@@ -21,7 +26,7 @@
         </ul> -->
            
        
-        <ul class="navbar-nav navbar-nav-right">
+        <ul class="navbar-nav navbar-nav-right" style="margin-right: -26px;">
         
            <!--   <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
@@ -101,7 +106,7 @@
         -->
        
        
-          <li class="form-group has-search" style="margin-top: 13px; margin-right: 50px; align-content: center;">
+          <li class="form-group has-search" style="margin-top: 15px; margin-right: 22px; align-content: center;">
             <span class="fa fa-search form-control-feedback"></span>      
             <input type="text" class="form-control" size="40" placeholder="Search">
           </li> 
@@ -147,5 +152,5 @@
         </ul>
       
       </div>
-    </nav>
+    </div>
   
