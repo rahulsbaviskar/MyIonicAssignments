@@ -45,8 +45,9 @@ export class BreadcrumbComponent implements OnInit{
     // If the route is dynamic route such as ':id', remove it
     const lastRoutePart = path.split('/').pop();
     const isDynamicRoute = lastRoutePart.startsWith(':');
-    if(isDynamicRoute && !!route.snapshot) {
+    if(isDynamicRoute && route.snapshot) {
       const paramName = lastRoutePart.split(':')[1];
+      const storedPath = paramName;
       path = path.replace(lastRoutePart, route.snapshot.params[paramName]);
       label = route.snapshot.params[paramName];
     }

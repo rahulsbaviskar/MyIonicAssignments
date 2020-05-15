@@ -18,14 +18,14 @@ export class AdminHomePage implements OnInit {
     
   }
 
-  // onClick1(){
-  //   this.router.navigate(['/', 'coursemanagement']);
-  // }
+  onClick1(){
+    this.navCtrl.navigateForward('login/admin-home/coursemanagement');
+  }
 
   onClick(){
     window.location.reload();
     // window.document.location.reload();
-    this.navCtrl.navigateForward("admin-home/coursemanagement");
+    // this.navCtrl.navigateForward("admin-home/coursemanagement");
   }
 
   login(){
