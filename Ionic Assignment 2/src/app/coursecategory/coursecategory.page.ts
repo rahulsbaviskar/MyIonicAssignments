@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 import {filter} from 'rxjs/operators'
 import { last } from 'lodash';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { templateJitUrl } from '@angular/compiler';
 //import {Filter} from '
 
 /** function hello() {
@@ -58,7 +59,13 @@ export class CoursecategoryPage implements OnInit {
   addEmployee() {
     this.data1.push(this.model);
     this.model = {};
+    
   }
+
+  addEmployee1() {
+    this.data4.push(this.model);
+    this.model = {};
+    }
 
   addNewEmployeeBtn() {
     this.newEmployeeClicked = !this.newEmployeeClicked;
@@ -66,6 +73,19 @@ export class CoursecategoryPage implements OnInit {
 
 expandContent = true;
 data1 = [{
+  'name': 'Medical Entrance Exam',
+  'expanded': false
+}, {
+  'name': 'Engineering Entrance Exam',
+  'expanded': false
+}, {
+  'name': 'Architect Entrance Exam',
+  'expanded': false
+},
+
+] 
+
+data4 = [{
   'name': 'Medical Entrance Exam',
   'expanded': false
 }, {
@@ -344,7 +364,7 @@ moveDown1(value, index) {
     }
 
 
-moveup()
+moveup( )
 {
   var atleastOneSelected = this.checkboxes.some(checkbox => checkbox === true);
 
@@ -360,9 +380,12 @@ moveup()
     return;
   }
 
-  
-
+if(atleastOneSelected && this.index < this.values.length) {
+  const tmp = this.values[this.index + 1];
+  this.values[this.index + 1] = this.values[this.index];
+  this.values[this.index]  = tmp;
 }
+  }
 
 moveDown(){
   var atleastOneSelected = this.checkboxes.some(checkbox => checkbox === true);

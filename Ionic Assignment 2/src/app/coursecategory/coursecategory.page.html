@@ -62,7 +62,8 @@
         id="name"
         name="name"
         [(ngModel)]="model.name"
-        placeholder="Add New Course Category"></p>
+        placeholder="Add New Course Category" ngModel name="requried" #requried="ngModel" ></p>
+        <p class="alert alert-danger" *ngIf="requried?.errors?.required">required</p>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-primary" (click)="addEmployee()">Submit</button>
@@ -144,8 +145,12 @@
         
          
         <!--  <td> <div style="height: 10px;align-items: center;">   <ion-toggle checked="true" (click)="showMyContainer=!showMyContainer">Show/Hide</ion-toggle> </div> </td>  --> 
-          <td><div style="height: 30px;align-content: center;">  <ion-icon class="mdi mdi-toggle-switch" style="font-size: 30px; color: rgb(44, 93, 228)" > </ion-icon> </div></td>
-
+        <!--   <td><div style="height: 30px;align-content: center;">  <ion-icon class="mdi mdi-toggle-switch" style="font-size: 30px; color: rgb(44, 93, 228)" > </ion-icon> </div></td> -->
+ 
+        <td>  <ion-icon (click)="showMyContainer=!showMyContainer" *ngIf="showMyContainer" class="mdi mdi-toggle-switch"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
+          <ion-icon *ngIf="!showMyContainer" (click)="showMyContainer=!showMyContainer" class="mdi mdi-toggle-switch-off"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
+          </td>
+          
            <td> <div style="height: 30px;align-items: center;" *ngIf="showMyContainer">  <ion-icon class="icon-plus" style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
             <ion-icon (click)="data.isEditable=!data.isEditable" *ngIf="!data.isEditable" class="icon-note"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
             <ion-icon *ngIf="data.isEditable" (click)="data.isEditable=!data.isEditable" class="ti-check-box"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
@@ -202,11 +207,11 @@
     </div>
   
     
-
+   
   <div style="margin-left: 100px;margin-right: 100px;margin-top: 20px;">
 
 
-    <span>
+    <span >
       <a >
          <nav>
              <ul class="pagination flex-wrap pagination-rounded floatright" style="margin-right: 160px;" >
