@@ -3,6 +3,11 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 import {filter} from 'rxjs/operators'
 import { last } from 'lodash';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+// import { SwalComponent } from '@toverux/ngx-sweetalert2';
+import swal from 'sweetalert2/dist/sweetalert2.js'
+ 
+import 'sweetalert2/src/sweetalert2.scss'
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 //import {Filter} from '
 
 /** function hello() {
@@ -16,7 +21,13 @@ class RedoUndo<T> {
 
 const redoUndo = new RedoUndo();
 
-
+// swal({
+//    type: "warning",
+//     title: "Are you sure?",
+//      text: "you wont be able to revert this!",
+//       showCancelButton: "true",
+//        cancelButtonClass: "btn btn-danger"
+// });
 
 @Component({
   selector: 'app-coursecategory',
@@ -45,6 +56,8 @@ export class CoursecategoryPage implements OnInit {
   index
 
   newEmployeeClicked = false;
+
+  // @ViewChild('autoSwal') private autoSwal: SwalComponent;
 
   @ViewChild('modalClose') modalClose:ElementRef;
 
@@ -406,6 +419,25 @@ delete() {
 
   // Remove entries from checkboxes array.
   this.checkboxes = this.checkboxes.filter(checkbox => checkbox === false);
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Course Category Deleted Successfully',
+    showConfirmButton: true,
+    
+  })
 }
 
+// swal.fire('hello');
+
+// Swal({
+//   #warningWithCancel,
+//    type="warning",
+//     title="Are you sure?",
+//      text="you wont be able to revert this!",
+//       showCancelButton="true",
+//        cancelButtonClass="btn btn-danger
+// // });
+// swal.fire('Hello');
+  // swal("hello");
 }

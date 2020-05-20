@@ -249,10 +249,31 @@
   <div style="margin-top: 10px;">
     
     <span >
-      <a class="text-success" (click)="delete()"   > 
-        <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 210px;" type="button" >  
+      <a class="text-success"  > 
+        <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 210px;" type="button" [swal]= "warningWithCancel">  
         <i class="icon-trash" style="margin-right: 26%; margin-left: -35%; background-color: white;color: blue;"></i>
        Delete</button>
+       <swal #warningWithCancel
+         icon= 'warning'
+         type= 'warning'
+         html= '<form >  
+          <div class="form-check">
+            <label >
+              <input type="radio" class="form-check-input" name="optradio">Delete Selected Entity and all its children?
+            </label>
+          </div>
+          <div class="form-check">
+            <label >
+              <input type="radio" class="form-check-input" name="optradio" style="align-left: 10%" >Delete Selected Entity but move all of its &nbsp; &nbsp;  <br>children to another entity?
+            </label>
+          </div>
+          
+        </form>'
+         showCancelButton= 'true'
+         cancelButtonClass= 'btn btn-danger'
+         (confirm) = 'delete()'
+        >
+      </swal>
     </a>
     </span>
    

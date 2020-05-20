@@ -9,8 +9,10 @@ import { SharedModule } from '../shared/shared.module';
 import { SearchPipe } from './SearchPipe';
 import { DatePipe } from '@angular/common'
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
- 
+//  import Swal from 'sweetalert2/dist/sweetalert2';
   import {filter} from 'rxjs/operators'
+// import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
   
 
 
@@ -23,7 +25,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     SharedModule,
     ReactiveFormsModule,
     DataTablesModule,
-    CoursecategoryPageRoutingModule
+    CoursecategoryPageRoutingModule,
+    SweetAlert2Module
   ],
   declarations: [CoursecategoryPage,SearchPipe]
 })

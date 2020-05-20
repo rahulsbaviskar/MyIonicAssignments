@@ -88,6 +88,10 @@ const routes: Routes = [
       breadcrumb: 'Course Management'
     }
   },
+  {
+    path: 'add-course-category',
+    loadChildren: () => import('./add-course-category/add-course-category.module').then( m => m.AddCourseCategoryPageModule)
+  },
 ];
 
 @NgModule({

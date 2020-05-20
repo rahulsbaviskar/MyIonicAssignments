@@ -28,7 +28,7 @@ import { CodemirrorModule } from 'ng2-codemirror';
 import { MorrisJsModule } from 'angular-morris-js';
 import { ChartistModule } from 'ng-chartist';
 //import { DataTablesModule } from 'angular-datatables';
-//import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ToastrModule } from 'ngx-toastr';
 import { AgmCoreModule } from '@agm/core';
 import { BarRatingModule } from "ngx-bar-rating";
@@ -107,7 +107,7 @@ import { MenuService } from './menu.service';
     MorrisJsModule,
     ChartistModule,
     //DataTablesModule,
-  //  SweetAlert2Module.forRoot(),
+   SweetAlert2Module.forRoot(),
     ToastrModule.forRoot(),
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyCnT63XUjqjPgXZ0lFTU_pdpfUX7swzTTM' }),
     BarRatingModule,
