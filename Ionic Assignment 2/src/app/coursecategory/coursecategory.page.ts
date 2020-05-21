@@ -48,7 +48,7 @@ export class CoursecategoryPage implements OnInit {
   selectedRow: number;
   checkboxes: boolean[];
 
-  showMyContainer: boolean = true;
+  showMyContainer: boolean = false;
   showMyContainer1: boolean = true;
 
   state = 0;
@@ -86,7 +86,7 @@ data1 = [{
   'expanded': false
 }, {
   'name': 'Architect Entrance Exam',
-  'expanded': false
+  
 },
 
 ] 
@@ -362,20 +362,30 @@ moveup()
   var atleastOneSelected = this.checkboxes.some(checkbox => checkbox === true);
 
   var allSelected = this.checkboxes.every(checkbox => checkbox === true);
-
   if (!atleastOneSelected) {
     alert("No rows selected.")
     return;
   }
-
   if (allSelected) {
     alert("At least one row should be present.")
     return;
   }
-
+  for (let i = this.checkboxes.length-1; i >= 0; i--) {
+   // let i = this.checkboxes.length-1; i >= 0; i--
+    // If selected, then move up that row.
+    if (i > 0) {
+      
+     const temp = this.data1[i - 1];
+     this.data1[i - 1] = this.data1[i];
+     this.data1[i] = temp;
+     
+     
+     
+ }
   
-
 }
+}
+
 
 moveDown(){
   var atleastOneSelected = this.checkboxes.some(checkbox => checkbox === true);
@@ -392,6 +402,18 @@ moveDown(){
     return;
   }
   
+  for (let i = 0;i <= this.checkboxes.length-1; i++) {
+    
+    // If selected, then move up that row.
+    if (i > 0) {
+      
+     const temp = this.data1[i - 1];
+     this.data1[i - 1] = this.data1[i];
+     this.data1[i] = temp;
+     
+  }
+  
+  }
 
 }
 

@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { CoursemanagementPageRoutingModule } from './coursemanagement-routing.module';
-
+import {NgxSummernoteModule} from 'ngx-summernote';
 import { CoursemanagementPage } from './coursemanagement.page';
 import { SharedModule } from '../shared/shared.module';
 
@@ -13,6 +13,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     FormsModule,
+    NgxSummernoteModule,
     IonicModule,
     SharedModule,
     CoursemanagementPageRoutingModule

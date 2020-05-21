@@ -12,6 +12,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 //  import Swal from 'sweetalert2/dist/sweetalert2';
   import {filter} from 'rxjs/operators'
 // import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
+import {NgxSummernoteModule} from 'ngx-summernote';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
   
 
@@ -20,6 +21,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
   imports: [
     CommonModule,
     FormsModule,
+    NgxSummernoteModule,
     IonicModule,
     Ng2SearchPipeModule,
     SharedModule,
