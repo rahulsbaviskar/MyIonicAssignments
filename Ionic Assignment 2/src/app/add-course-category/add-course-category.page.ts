@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-add-course-category',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCourseCategoryPage implements OnInit {
 
-  constructor() { }
+  // date: Date = new Date();
+  // datePickerSettings = {
+  //   bigBanner: true,
+  //   timePicker: true,
+  //   format: 'dd-mm-yyyy',
+  //   defaultOpen: false
+  // }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
+  }
+
+  next(){
+    this.navCtrl.navigateBack('login/admin-home/coursemanagement/coursecategory');
   }
 
 }

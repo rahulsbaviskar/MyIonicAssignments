@@ -90,7 +90,10 @@ const routes: Routes = [
   },
   {
     path: 'add-course-category',
-    loadChildren: () => import('./add-course-category/add-course-category.module').then( m => m.AddCourseCategoryPageModule)
+    loadChildren: () => import('./add-course-category/add-course-category.module').then( m => m.AddCourseCategoryPageModule),
+    data: {
+      breadcrumb: 'Add Course Category'
+    }
   },
 ];
 

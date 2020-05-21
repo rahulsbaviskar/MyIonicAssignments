@@ -8,6 +8,8 @@ import swal from 'sweetalert2/dist/sweetalert2.js'
  
 import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2.js';
+import { NavController } from '@ionic/angular';
+import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 //import {Filter} from '
 
 /** function hello() {
@@ -57,7 +59,7 @@ export class CoursecategoryPage implements OnInit {
 
   newEmployeeClicked = false;
 
-  // @ViewChild('autoSwal') private autoSwal: SwalComponent;
+  @ViewChild('autoSwal') private autoSwal: SwalComponent;
 
   @ViewChild('modalClose') modalClose:ElementRef;
 
@@ -169,8 +171,10 @@ findDetails(data: { name: string; }) {
   return this.data2.filter(x => x.whoseData === data.name);
 }
 
-openSmallModal( smallModalContent ) {
-  this.modalService.open( smallModalContent, { size : 'sm' } );
+openSmallModal() {
+  // smallModalContent
+  // this.modalService.open( smallModalContent, { size : 'sm' } );
+  this.navCtrl.navigateForward('add-course-category');
 }
 
 
@@ -250,7 +254,7 @@ itemCount = 0;
 params = {offset: 0, limit: 10}; //Static can be changed as per your need
 formFlag = 'add';
 
-  constructor(private modalService: NgbModal){
+  constructor(private modalService: NgbModal, private navCtrl: NavController){
     redoUndo.past = [...redoUndo.past, this.state];
     this.state = this.state + 1;
 
