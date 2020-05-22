@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd, PRIMARY_OUTLET } from '@angular/router';
 import { MenuController } from '@ionic/angular';
-import { MenuService } from '../menu.service';
-import { IBreadCrumb } from '../../interface/breadcrumb.interface';
+import { MenuService } from '../../menu.service';
+import { IBreadCrumb } from '../../../interface/breadcrumb.interface';
 
 import { filter, distinctUntilChanged } from 'rxjs/operators';
 

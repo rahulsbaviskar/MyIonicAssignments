@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: CoursemanagementPage
+  },  {
+    path: 'add-course-section',
+    loadChildren: () => import('./coursesection/add-course-section/add-course-section.module').then( m => m.AddCourseSectionPageModule)
   }
+
 ];
 
 @NgModule({
