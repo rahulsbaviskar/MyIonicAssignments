@@ -89,6 +89,9 @@
   
  
   <div >
+    <span style="margin-right: 15px;margin-top: 10px;">  <ion-icon  class="icon-settings" style="font-size: 20px;margin-top: 10px;margin-bottom: -3px; color: rgb(99, 197, 236);margin-left: 15px;"
+           
+      ></ion-icon></span>
      <span ><label>
       show
       <select name="order-listing_length" aria-controls="order-listing" class >
@@ -111,7 +114,7 @@
       <a class="text-success" style="width: 200px;" >
       <button  (click)="openSmallModal()" class="btn btn-primary btn-icon-text" style="margin-left: 30px;width: 220px;" type="button" >
       <i class="ion-reply"   style="margin-inline-start: 1px;"></i>
-       +   Add Course Category</button>
+       +   Add Course</button>
       </a>
     </span>
 
@@ -180,7 +183,7 @@
   
     
 
-  <div style="margin-left: 33px;margin-right: 100px;margin-top: 20px;">
+  <div style="margin-left: 33px;margin-right: 50px;margin-top: 20px;">
 
 
     <span>
@@ -220,7 +223,14 @@
         </button>
       </a>
 </span>
+<span>
+  <a class="text-success" style="width: 210px;" (click)="moveup()" >
 
+<button class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 210px;margin-top: 10px;" type="button"  >
+<i  style="margin-right: 20%;margin-top: 5px; margin-left: -19%;margin-bottom:5px; background-color: white;color: blue;"></i>
++ Add Course Section</button>
+</a>
+</span>
 
 
   <div style="margin-top: 10px;">
@@ -276,14 +286,12 @@
   </div>
   </div>
   <div>
-    <div style="margin-left: 10px;">
+    <div style="margin-left: 50px;">
       <div>
         <label> Relevent Link </label>
       </div>
       <div> <span ><a href="#"> . Add Course Category  </a> </span> </div>
-      
-        
-      </div>
+       </div>
 </div>
   
 </ion-content>

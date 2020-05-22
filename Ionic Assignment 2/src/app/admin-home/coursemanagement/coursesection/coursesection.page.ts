@@ -73,16 +73,16 @@ export class CoursesectionPage implements OnInit {
 
 expandContent = true;
 data1 = [{
-  'name': 'Medical Entrance Exam',
-  'course': 'Medical Entrance Exam',
+  'name': 'Physics',
+  'course': 'NEET-UG 20202',
   'expanded': false
 }, {
-  'name': 'Engineering Entrance Exam',
-  'course': 'Medical Entrance Exam',
+  'name': 'Chemistry',
+  'course': 'JEE 2021',
   'expanded': false
 }, {
-  'name': 'Architect Entrance Exam',
-  'course': 'Medical Entrance Exam',
+  'name': 'Biology',
+  'course': 'AIIMS-2021',
   
 },
 
@@ -127,26 +127,20 @@ data3 = [{
 
 
 data2 = [{
-  'whoseData': 'Medical Entrance Exam',
+  'whoseData': 'Physics',
   'datades': {
-    'name': 'Medical UG',
-    'course': 'singing',
+    'name': 'Physical world',
+    'course': 'NEET-UG 2021',
    
   }
 }, {
-  'whoseData': 'Medical Entrance Exam',
+  'whoseData': 'Physics',
   'datades': {
-    'name': 'Medical PG',
-    'course': 'singing',
+    'name': 'System of particles and Rotation',
+    'course': 'NEET-PG 2021',
    
   }
-}, {
-  'whoseData': 'Medical Entrance Exam',
-  'datades': {
-    'name': 'Medical Foundation',
-    'course': 'singing',
-  }
-  }, {
+},  {
     'whoseData': 'Engineering Entrance Exam',
     'datades': {
       'name': 'JEE Main',
