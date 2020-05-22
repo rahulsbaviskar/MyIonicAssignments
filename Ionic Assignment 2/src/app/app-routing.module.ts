@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { CoursemanagementPage } from './coursemanagement/coursemanagement.page';
-import { AdminHomePage } from './admin-home/admin-home.page';
-import { CoursecategoryPage } from './coursecategory/coursecategory.page';
+// import { AdminHomePage } from './admin-home/admin-home.page';
 import { LoginPage } from './login/login.page';
 
 const routes: Routes = [
@@ -67,40 +65,11 @@ const routes: Routes = [
     // ]
   },
   {
-    path:'login/admin-home',
+    path:'admin-home',
     loadChildren: () => import('./admin-home/admin-home.module').then( m => m.AdminHomePageModule),
     data: {
       breadcrumb: 'Home'
     }
-  },
-  
-  {
-    path: 'login/admin-home/coursemanagement/coursecategory',
-    loadChildren: () => import('./coursecategory/coursecategory.module').then( m => m.CoursecategoryPageModule),
-    data: {
-      breadcrumb: 'Course Caegory'
-    }
-  },
-  {
-    path: 'login/admin-home/coursemanagement',
-    loadChildren: () => import('./coursemanagement/coursemanagement.module').then( m => m.CoursemanagementPageModule),
-    data: {
-      breadcrumb: 'Course Management'
-    }
-  },
-  {
-    path: 'add-course-category',
-    loadChildren: () => import('./add-course-category/add-course-category.module').then( m => m.AddCourseCategoryPageModule),
-    data: {
-      breadcrumb: 'Add Course Category'
-    }
-  },  {
-    path: 'add-course',
-    loadChildren: () => import('./course/add-course/add-course.module').then( m => m.AddCoursePageModule)
-  },
-  {
-    path: 'add-course-section',
-    loadChildren: () => import('./coursesection/add-course-section/add-course-section.module').then( m => m.AddCourseSectionPageModule)
   },
 
 ];

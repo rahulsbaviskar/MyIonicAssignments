@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-course-category',
@@ -16,13 +17,13 @@ export class AddCourseCategoryPage implements OnInit {
   //   defaultOpen: false
   // }
   showMyContainer: boolean = false;
-  constructor(private navCtrl: NavController) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   next(){
-    this.navCtrl.navigateBack('./coursecategory');
+    this.router.navigateByUrl('/coursecategory');
   }
 
 }

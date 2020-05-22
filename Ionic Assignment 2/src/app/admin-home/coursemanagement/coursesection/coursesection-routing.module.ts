@@ -10,8 +10,12 @@ const routes: Routes = [
   },
   {
     path: 'add-course-section',
-    loadChildren: () => import('./add-course-section/add-course-section.module').then( m => m.AddCourseSectionPageModule)
-  }
+    loadChildren: () => import('./add-course-section/add-course-section.module').then( m => m.AddCourseSectionPageModule),
+    data: {
+      breadcrumb: 'Add Course Section'
+    }
+  },
+  
 ];
 
 @NgModule({

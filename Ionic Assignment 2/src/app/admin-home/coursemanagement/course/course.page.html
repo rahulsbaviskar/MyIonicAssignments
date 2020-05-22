@@ -89,7 +89,7 @@
   
  
   <div >
-    <span style="margin-right: 15px;margin-top: 10px;">  <ion-icon  class="icon-settings" style="font-size: 20px;margin-top: 10px;margin-bottom: -3px; color: rgb(99, 197, 236);margin-left: 15px;"
+    <span style="margin-right: 15px;margin-top: 10px; margin-left: -10px;">  <ion-icon  class="icon-settings" style="font-size: 20px;margin-top: 10px;margin-bottom: -3px; color: rgb(99, 197, 236);margin-left: 15px;"
            
       ></ion-icon></span>
      <span ><label>
@@ -103,7 +103,7 @@
       entries
     </label> </span> 
    
-   <span style="margin-left: 300px;height: 60px;"> 
+   <span style="margin-left: 340px;height: 60px;"> 
      
       <input  type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#xF002;  Search" style="font-family:Arial, FontAwesome;height: 35px; margin-left: 10%;">
    
@@ -112,7 +112,7 @@
    <!--  <span style="margin-left: 650px;" ><input type="text" [(ngModel)]="name" placeholder="Serach any fields"/></span> --> 
      <span >
       <a class="text-success" style="width: 200px;" >
-      <button  (click)="openSmallModal()" class="btn btn-primary btn-icon-text" style="margin-left: 30px;width: 220px;" type="button" >
+      <button  routerLink="./add-course" class="btn btn-primary btn-icon-text" style="margin-left: 30px;width: 220px;" type="button" >
       <i class="ion-reply"   style="margin-inline-start: 1px;"></i>
        +   Add Course</button>
       </a>

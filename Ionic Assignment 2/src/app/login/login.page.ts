@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
 
     if(this.username == "admin" && this.password == "admin")
      {
-      this.navCtrl.navigateForward('login/admin-home');
+      this.navCtrl.navigateForward('admin-home');
      }
      else {
 
