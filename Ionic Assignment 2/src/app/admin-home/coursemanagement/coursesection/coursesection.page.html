@@ -85,7 +85,7 @@
           <div class="row" style="margin-left: -90px;">
             <div class="col-12">
   <div class="table-responsive">
-    <div class="highlight" style="width: 85%; max-width: 1600px; margin-left: 100px; border: white">
+    <div class="highlight" style="width: 90%; max-width: 1600px; margin-left: 100px; border: white">
   
  
   <div >
@@ -225,114 +225,114 @@
   
     
 
-  <div style="margin-left: 33px;margin-right: 100px;margin-top: 20px;">
+    <div style="margin-left: 33px;margin-right: 100px;margin-top: 20px;">
 
 
-    <span>
-      <a >
-         <nav>
-             <ul class="col-md-4 col-sm-4 grid-margin stretch-card pagination flex-wrap pagination-rounded floatleft" style="margin-right: 13px;" >
-                    <li class="page-item"><a class="page-link"><i class="ti-angle-left"></i></a></li>
-                    <li class="page-item active"><a class="page-link">1</a></li>
-                    <li class="page-item"><a class="page-link">2</a></li>
-                    <li class="page-item"><a class="page-link">3</a></li>
-                    <li class="page-item"><a class="page-link">4</a></li>
-                    <li class="page-item"><a class="page-link"><i class="ti-angle-right"></i></a></li>
-                  </ul>
-                </nav>  
-         </a>
-     </span>
-
-   <span>
-    <a class="text-success" (click)="moveDown()" >
-    <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;margin-top:11px;margin-bottom:0px;width: 150px;" type="button"  >
-       <i class="icon-arrow-up-circle" style="margin-right: 19%; margin-left: -28%; background-color: white;color: blue;" ></i>
-      Move Up</button>
-</a>
-   </span>
       <span>
-        <a class="text-success" style="width: 150px;" (click)="moveup()" >
-     
-    <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 150px;margin-top: 10px;" type="button"  >
-      <i class="icon-arrow-down-circle" style="margin-right: 11%;margin-top: 5px; margin-left: -19%;margin-bottom:5px; background-color: white;color: blue;"></i>
-      Move Down</button>
-      </a>
-      </span>
-      
-    <span>
-      <a class="text-success" style="width: 150px;" >
-     
-        <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 150px;margin-top: 10px;" type="button"  >
-          <i class="icon-cursor" style="margin-right: 20%;margin-top: 5px; margin-left: -19%;margin-bottom:5px; background-color: white;color: blue;"></i>
-          Move To</button>
-          </a>
-</span>
-
-
-
-  <div style="margin-top: 10px;">
-    
-    <span >
-      <a class="text-success"  > 
-        <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;margin-bottom:24px;width: 150px;" type="button" [swal]= "warningWithCancel">  
-        <i class="icon-trash" style="margin-right: 26%; margin-left: -35%; background-color: white;color: blue;"></i>
-       Delete</button>
+        <a >
+           <nav>
+               <ul class="col-md-4 col-sm-4 grid-margin stretch-card pagination flex-wrap pagination-rounded floatright" style="margin-right: -10px;" >
+                      <li class="page-item"><a class="page-link"><i class="ti-angle-left"></i></a></li>
+                      <li class="page-item active"><a class="page-link">1</a></li>
+                      <li class="page-item"><a class="page-link">2</a></li>
+                      <li class="page-item"><a class="page-link">3</a></li>
+                      <li class="page-item"><a class="page-link">4</a></li>
+                      <li class="page-item"><a class="page-link"><i class="ti-angle-right"></i></a></li>
+                    </ul>
+                  </nav>  
+           </a>
+       </span>
+  
+     <span>
+      <a class="text-success" (click)="moveDown()" >
+      <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;margin-top:11px;margin-bottom:0px;width: 150px;" type="button"  >
+         <i class="icon-arrow-up-circle" style="margin-right: 19%; margin-left: -28%; background-color: white;color: blue;" ></i>
+        Move Up</button>
+  </a>
+     </span>
+        <span>
+          <a class="text-success" style="width: 150px;" (click)="moveup()" >
        
-    </a>
-    
-    </span>
-    <swal #warningWithCancel
-    icon= 'warning'
-    backdrop= 'overlay'
-    visible= 'true'
-    type= 'warning'
-    html= '<form >  
-     <div class="form-check">
-       <label >
-         <input type="radio" class="form-check-input" name="optradio">Delete Selected Entity and all its children?
-       </label>
-     </div>
-     <div class="form-check">
-       <label >
-         <input type="radio" class="form-check-input" name="optradio" style="align-left: 10%" >Delete Selected Entity but move all of its &nbsp; &nbsp;  <br>children to another entity?
-       </label>
-     </div>
-     
-   </form>'
-    showCancelButton= 'true'
-    cancelButtonClass= 'btn btn-danger'
-    (confirm) = 'delete()' class="swal-overlay"
-   >
- </swal>
-
-    <span >
-      <a class="text-success" style="width: 150px;" (click)="undo()" >
-      <button  class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 150px;margin-top: -21px;margin-bottom: 4px;" type="button" >
-      <i class="icon-action-undo"   style="margin-right: 30%;margin-bottom:10px; margin-left: -34%; background-color: white;color: blue;"></i>
-        Undo</button>
-      </a>
-    </span>
-  
-<!-- new added data-->
-
-  
-<!--end data-->
-   
-    
-
-  </div>
-  
-  </div>
-  <div>
-    <div style="margin-left: 50px;">
-      <div>
-        <label> Relevent Links </label>
-      </div>
-      <div> <span ><a href="#"> . Add Course Category  </a> </span> </div>
-      <div> <span ><a href="#"> . Add Course  </a> </span></div>
+      <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 150px;margin-top: 10px;" type="button"  >
+        <i class="icon-arrow-down-circle" style="margin-right: 11%;margin-top: 5px; margin-left: -19%;margin-bottom:5px; background-color: white;color: blue;"></i>
+        Move Down</button>
+        </a>
+        </span>
         
-      </div>
-
-  </div>
+      <span>
+        <a class="text-success" style="width: 150px;" >
+       
+          <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 150px;margin-top: 10px;" type="button"  >
+            <i class="icon-cursor" style="margin-right: 20%;margin-top: 5px; margin-left: -19%;margin-bottom:5px; background-color: white;color: blue;"></i>
+            Move To</button>
+            </a>
+  </span>
+  
+  
+  
+    <div style="margin-top: 10px;">
+      
+      <span >
+        <a class="text-success"  > 
+          <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;margin-bottom:24px;width: 150px;" type="button" [swal]= "warningWithCancel">  
+          <i class="icon-trash" style="margin-right: 26%; margin-left: -35%; background-color: white;color: blue;"></i>
+         Delete</button>
+         
+      </a>
+      
+      </span>
+      <swal #warningWithCancel
+      icon= 'warning'
+      backdrop= 'overlay'
+      visible= 'true'
+      type= 'warning'
+      html= '<form >  
+       <div class="form-check">
+         <label >
+           <input type="radio" class="form-check-input" name="optradio">Delete Selected Entity and all its children?
+         </label>
+       </div>
+       <div class="form-check">
+         <label >
+           <input type="radio" class="form-check-input" name="optradio" style="align-left: 10%" >Delete Selected Entity but move all of its &nbsp; &nbsp;  <br>children to another entity?
+         </label>
+       </div>
+       
+     </form>'
+      showCancelButton= 'true'
+      cancelButtonClass= 'btn btn-danger'
+      (confirm) = 'delete()' class="swal-overlay"
+     >
+   </swal>
+  
+      <span >
+        <a class="text-success" style="width: 150px;" (click)="undo()" >
+        <button  class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 150px;margin-top: -21px;margin-bottom: 4px;" type="button" >
+        <i class="icon-action-undo"   style="margin-right: 30%;margin-bottom:10px; margin-left: -34%; background-color: white;color: blue;"></i>
+          Undo</button>
+        </a>
+      </span>
+    
+  <!-- new added data-->
+  
+    
+  <!--end data-->
+     
+      
+  
+    </div>
+    
+    </div>
+    <div>
+      <div style="margin-left: 50px;">
+        <div>
+          <label> Relevent Links </label>
+        </div>
+        <div> <span ><a href="#"> . Add Course Category  </a> </span> </div>
+        <div> <span ><a href="#"> . Add Course  </a> </span></div>
+          
+        </div>
+  
+    </div>
  
 </ion-content>

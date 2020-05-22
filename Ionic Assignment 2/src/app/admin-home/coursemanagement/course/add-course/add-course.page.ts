@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCoursePage implements OnInit {
 
+  showMyContainer: boolean = false;
   constructor() { }
 
   ngOnInit() {

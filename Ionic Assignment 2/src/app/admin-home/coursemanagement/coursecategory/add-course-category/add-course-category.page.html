@@ -62,14 +62,12 @@
                         <p class="alert alert-danger" style="width: 230px;" *ngIf="required?.errors?.required">required</p>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputName1" style="margin-top: 12px;"><p style="font-size: 20px;margin-top: -11px;">Show/Hide Course Category</p></label><span class="required">* </span>                   
-                        
-                          <td>  <ion-icon (click)="showMyContainer=!showMyContainer" *ngIf="showMyContainer" class="mdi mdi-toggle-switch-off"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
+                        <label for="exampleInputName1"><p style="font-size: 20px;margin-bottom: -10px;margin-top: 12px;">Show/Hide Course Category</p></label><span class="required">*</span> <span style="margin-left:17px; bottom: 10px;" > 
+                            <ion-icon (click)="showMyContainer=!showMyContainer" *ngIf="showMyContainer" class="mdi mdi-toggle-switch-off"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
                             <ion-icon *ngIf="!showMyContainer" (click)="showMyContainer=!showMyContainer" class="mdi mdi-toggle-switch"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
-                            </td>
-                         
-                        
-                    </div>
+                           
+                          </span> 
+                     </div>
                     <div  class="form-group row" style="margin-left: 2px;">
                         <label for="exampleInputName1"><p style="font-size: 20px;">Use for Course Creation(y/n)</p></label><span class="required">*</span>
                         <div class="col-sm-2">
