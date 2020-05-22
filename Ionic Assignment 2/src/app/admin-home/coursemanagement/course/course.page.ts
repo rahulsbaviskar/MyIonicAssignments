@@ -79,25 +79,25 @@ data1 = [{
   'enddate': '31 May 2020',
   
 }, {
-  'course': 'NEET-UG 2020',
+  'course': 'NEET-UG 2021',
   'name': 'Medical Entrance Examination\Medical UG',
   'startdate': '01 Jan 2020',
   'enddate': '31 May 2021',
   
 }, {
-  'course': 'NEET-UG 2020',
+  'course': 'NEET-PG 2020',
   'name': 'Medical Entrance Examination\Medical UG',
   'startdate': '01 Jan 2020',
   'enddate': '31 May 2021',
   
 },{
-  'course': 'NEET-UG 2020',
-  'name': 'Medical Entrance Examination\Medical UG',
+  'course': 'JEE-2021',
+  'name': 'Engineering Entrance Examination\Medical UG',
   'startdate': '01 Jun 2020',
   'enddate': '31 Jun 2021',
   
 },{
-  'course': 'NEET-UG 2020',
+  'course': 'AIIMS-2021',
   'name': 'Medical Entrance Examination\Medical UG',
   'startdate': '01 Jun 2020',
   'enddate': '31 May 2022',
