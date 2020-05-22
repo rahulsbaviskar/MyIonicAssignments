@@ -8,6 +8,14 @@ const routes: Routes = [
     path: '',
     component: AdminHomePage
   },
+  {
+    path: 'coursemanagement',
+    loadChildren: () => import('./coursemanagement/coursemanagement.module').then( m => m.CoursemanagementPageModule),
+    data: {
+      breadcrumb: 'Course Management'
+    }
+  },
+
   
 ];
 

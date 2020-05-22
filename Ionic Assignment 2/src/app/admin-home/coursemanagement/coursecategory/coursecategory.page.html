@@ -1,0 +1,315 @@
+
+<app-home-header></app-home-header>
+<ion-content>
+  <!-- <br>
+  <div class="col-md grid-margin stretch-card" style="margin-top: 4%; color: blue;">
+    <div class="card-body">
+        <div> 
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-custom bg-inverse-primary">
+              <li class="breadcrumb-item" ><a >Home</a></li>
+              <li class="breadcrumb-item"><a>Course Management</a></li>
+              <li class="breadcrumb-item active"><a>Course Category</a></li> 
+            </ol>
+          </nav>
+        </div>
+   -  </div>
+  </div> -->
+
+  <!-- <app-breadcrumb></app-breadcrumb> -->
+
+<!-- new added-->
+
+<!--<div class="AddEmployeeTitleContainer">
+  <div class="addEmployeeTitleContainer">
+    <div >Add Employee</div>
+</div>
+<div class="addEmployeeBtnContainer">
+  <div class="addNewEmployeeBtn" (click)="addNewEmployeeBtn()">+</div>
+</div>
+</div>
+
+<div *ngIf="newEmployeeClicked">
+<div class="formWrapper">
+<form>
+  <div class="form-group name">
+     <label for="name">Name:</label> 
+    <input type="text"
+           class="form-control input"
+           id="name"
+           name="name"
+           [(ngModel)]="model.name"
+           placeholder="Name">
+  </div>
+  <div class="submitBtnContainer">
+    <button type="submit" class="saveBtn" (click)="addEmployee()">SAVE</button>
+  </div>
+</form>
+</div>
+</div> -->
+
+<!-- new Added-->
+
+
+<!-- New-->
+
+<ng-template #smallModalContent let-modal class="modal fade" aria-labelledby="exampleModalLabel-3">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel-3">Add Course Category</h5>
+      <button type="button" class="close" (click)="modal.dismiss()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p> <input type="text"
+        class="form-control input"
+        id="name"
+        name="name"
+        [(ngModel)]="model.name"
+        placeholder="Add New Course Category"></p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="addCategory()">Submit</button>
+      <button type="button" class="btn btn-light" (click)="modal.close()">Cancel</button>
+    </div>
+  </div>
+</ng-template>
+<!-- Modal Ends -->
+
+
+<!--ended-->
+
+
+
+          <div class="row" style="margin-left: -90px;">
+            <div class="col-12">
+  <div class="table-responsive">
+    <div class="highlight" style="width: 85%; max-width: 1600px; margin-left: 100px; border: white">
+  
+ 
+  <div >
+     <span ><label>
+      show
+      <select name="order-listing_length" aria-controls="order-listing" class >
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="30">30</option>
+        <option value="100">100</option>
+      </select>
+      entries
+    </label> </span> 
+   
+   <span style="margin-left: 300px;height: 60px;"> 
+     
+      <input  type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#xF002;  Search" style="font-family:Arial, FontAwesome;height: 35px; margin-left: 10%;">
+   
+     
+   </span>
+   <!--  <span style="margin-left: 650px;" ><input type="text" [(ngModel)]="name" placeholder="Serach any fields"/></span> --> 
+     <span >
+      <a class="text-success" style="width: 200px;" >
+      <button  routerLink="./add-course-category" class="btn btn-primary btn-icon-text" style="margin-left: 30px;width: 220px;" type="button" >
+      <i class="ion-reply"   style="margin-inline-start: 1px;"></i>
+       +   Add Course Category</button>
+      </a>
+    </span>
+
+     </div>
+
+
+
+
+
+      
+  <table  id="order-listing"  class="table" datatable [dtOptions]="dtOptions"  >
+  
+  <thead >
+      <tr>
+        <th><a style="color: rgb(89, 195, 236);">Select </a> </th>
+        <th>  </th>
+        <th><a style="color: rgb(89, 195, 236);">Course Category</a></th>
+       <th><a style="color: rgb(89, 195, 236);">Show/Hide</a></th>
+        <th><a style="color: rgb(89, 195, 236);">Action</a></th>
+      
+      </tr>
+    </thead>
+    <tbody>
+  
+      <ng-container *ngFor="let data of data1 | filter:searchText;let row of data1;let index = index;let i = index" (click)="setClickedRow(i)"  [class.active]="i == selectedRow">
+      
+        <tr style="height: 30px;" >
+         <!--  <td><div style="height: 10px;">  <ion-checkbox style="color: skyblue;"></ion-checkbox> </div> </td> -->
+         <td><div class="error" style="height: 10px;border-color: rgb(89, 195, 236);outline-color: rgb(89, 195, 236);">  <input type="checkbox" (click)="toggleSelection($event, i)" style="font-size: 2px;background-color: white;"
+          [checked]="checkboxes[i]"> </div> </td>
+          <td><div  (click)="data.expanded = !data.expanded"  *ngIf="!data.showMyContainer" style="height: 30px;"> {{ data.expanded ? '&ndash;' : '+'}}   </div></td>
+        <!--   <td><div  style="height: 30px;">  {{data.name}}  </div></td> -->
+        <td><div  style="height: 30px;"> <input style="border-top-style:hidden;border-left-style:hidden ;border-right-style:hidden ;border-bottom-style:hidden ;background-color: white;" class="no-outline" [(ngModel)]="data.name" [disabled]="!data.isEditable"/> </div></td>
+
+        
+         
+        <!--  <td> <div style="height: 10px;align-items: center;">   <ion-toggle checked="true" (click)="showMyContainer=!showMyContainer">Show/Hide</ion-toggle> </div> </td>  --> 
+       <!--    <td><div style="height: 30px;align-content: center;">  <ion-icon class="mdi mdi-toggle-switch" style="font-size: 30px; color: rgb(44, 93, 228)" > </ion-icon> </div></td> -->
+       <td>  <ion-icon (click)="data.showMyContainer=!data.showMyContainer" *ngIf="data.showMyContainer" class="mdi mdi-toggle-switch-off"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
+        <ion-icon *ngIf="!data.showMyContainer" (click)="data.showMyContainer=!data.showMyContainer" class="mdi mdi-toggle-switch"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
+        </td>
+
+           <td> <div style="height: 30px;align-items: center;" *ngIf="!data.showMyContainer">  <ion-icon class="icon-plus" (click)="openSmallModal()" style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
+            <ion-icon (click)="data.isEditable=!data.isEditable" *ngIf="!data.isEditable" class="icon-note"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
+            <ion-icon *ngIf="data.isEditable" (click)="data.isEditable=!data.isEditable" class="ti-check-box"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
+           
+            <ion-icon (click)="data.expanded= !data.expanded" class="icon-arrow-up" style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"
+           
+             ></ion-icon>
+            <ion-icon  (click)="data.expanded= !data.expanded" class="icon-arrow-down" style="font-size: 20px;color: rgb(99, 197, 236); border-color: skyblue;"
+           
+            ></ion-icon>
+           <!--  <button (click)="data.isEditable=!data.isEditable" *ngIf="!data.isEditable">Edit</button> -->
+           
+          </div>
+          </td>
+        
+        <td style="visibility: collapse;" > <div class="error" style="height: 10px;visibility: hidden;">  <input type="checkbox" (click)="toggleSelection($event, i)"
+          [checked]="checkboxes[i]"> </div> </td> 
+        </tr>
+
+
+       
+      
+        <ng-container *ngIf="data.expanded">
+          <tr *ngFor="let data of findDetails(data)">
+        
+  <td><div class="error" style="height: 30px;">  <input type="checkbox" (click)="toggleSelection($event, i)"
+          [checked]="checkboxes[i]"> </div> </td>
+           <td><div  *ngIf="!data.datades.showMyContainer" style="height: 30px;"> {{ '-'}}   </div></td> 
+          <td><div  style="height: 30px;"> <input style="border-top-style:hidden;border-left-style:hidden ;border-right-style:hidden ;border-bottom-style:hidden ;background-color: white;" class="no-outline" [(ngModel)]="data.datades.name" [disabled]="!data.datades.isEditable"/> </div></td>
+
+         <!--    <td style="padding-left: 12px"> {{data.datades.name}} </td> -->
+         <!--     <td><ion-toggle checked="true"></ion-toggle></td> -->
+      <!--   <td><div style="height: 10px;">  <ion-toggle checked="true" (click)="showMyContainer1=!showMyContainer1">Show/Hide</ion-toggle></div></td> -->
+       <!--   <td> <div style="height: 30px;align-items: center;">  <ion-icon class="mdi mdi-toggle-switch" style="font-size: 30px; color: rgb(44, 93, 228)" >  </ion-icon> </div> </td> -->
+       <td>  <ion-icon (click)="data.datades.showMyContainer=!data.datades.showMyContainer" *ngIf="data.datades.showMyContainer" class="mdi mdi-toggle-switch-off"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
+        <ion-icon *ngIf="!data.datades.showMyContainer" (click)="data.datades.showMyContainer=!data.datades.showMyContainer" class="mdi mdi-toggle-switch"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
+        </td> 
+         <td> <div  *ngIf="!data.datades.showMyContainer" style="height: 30px;">   <ion-icon class="icon-plus" style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
+          
+          <ion-icon (click)="data.datades.isEditable=!data.datades.isEditable" *ngIf="!data.datades.isEditable" class="icon-note"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
+          <ion-icon *ngIf="data.datades.isEditable" (click)="data.isEditable=!data.datades.isEditable" class="ti-check-box"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
+         
+          
+         <!-- <ion-icon class="icon-note" style="font-size: 20px;color: rgb(99, 197, 236);align-content: center;margin-left: 5px;"></ion-icon> -->
+           <!-- <ion-icon class="icon-arrow-up" style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;" ></ion-icon>
+             <ion-icon class="icon-arrow-down" style="font-size: 20px;color: rgb(99, 197, 236); border-color: skyblue;"></ion-icon> -->
+            </div>
+            </td>
+          </tr>
+        </ng-container>
+      </ng-container>
+        </tbody>
+      </table>
+  </div>
+  </div>
+    </div>
+    </div>
+  
+    
+
+  <div style="margin-left: 33px;margin-right: 100px;margin-top: 20px;">
+
+
+    <span>
+      <a >
+         <nav>
+             <ul class="col-md-4 col-sm-4 grid-margin stretch-card pagination flex-wrap pagination-rounded floatright" style="margin-right: 13px;" >
+                    <li class="page-item"><a class="page-link"><i class="ti-angle-left"></i></a></li>
+                    <li class="page-item active"><a class="page-link">1</a></li>
+                    <li class="page-item"><a class="page-link">2</a></li>
+                    <li class="page-item"><a class="page-link">3</a></li>
+                    <li class="page-item"><a class="page-link">4</a></li>
+                    <li class="page-item"><a class="page-link"><i class="ti-angle-right"></i></a></li>
+                  </ul>
+                </nav>  
+         </a>
+     </span>
+
+   <span>
+    <a class="text-success" (click)="moveDown()" >
+    <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;margin-top:11px;margin-bottom:0px;width: 210px;" type="button"  >
+       <i class="icon-arrow-up-circle" style="margin-right: 24%; margin-left: -28%; background-color: white;color: blue;" ></i>
+      Move Up</button>
+</a>
+   </span>
+      <span>
+        <a class="text-success" style="width: 210px;" (click)="moveup()" >
+     
+    <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 210px;margin-top: 10px;" type="button"  >
+      <i class="icon-arrow-down-circle" style="margin-right: 20%;margin-top: 5px; margin-left: -19%;margin-bottom:5px; background-color: white;color: blue;"></i>
+      Move Down</button>
+      </a>
+      </span>
+    <span>
+      <a  class="text-success" style="width: 200px;" >
+        <button class="btn btn-primary dropdown-toggle" style="margin-left: 10px; margin-top: 10px;" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Move to course Category
+        </button>
+      </a>
+</span>
+
+
+
+  <div style="margin-top: 10px;">
+    
+    <span >
+      <a class="text-success"  > 
+        <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;margin-bottom:24px;width: 210px;" type="button" [swal]= "warningWithCancel">  
+        <i class="icon-trash" style="margin-right: 26%; margin-left: -35%; background-color: white;color: blue;"></i>
+       Delete</button>
+       
+    </a>
+    
+    </span>
+    <swal #warningWithCancel
+    icon= 'warning'
+    backdrop= 'overlay'
+    visible= 'true'
+    type= 'warning'
+    html= '<form >  
+     <div class="form-check">
+       <label >
+         <input type="radio" class="form-check-input" name="optradio">Delete Selected Entity and all its children?
+       </label>
+     </div>
+     <div class="form-check">
+       <label >
+         <input type="radio" class="form-check-input" name="optradio" style="align-left: 10%" >Delete Selected Entity but move all of its &nbsp; &nbsp;  <br>children to another entity?
+       </label>
+     </div>
+     
+   </form>'
+    showCancelButton= 'true'
+    cancelButtonClass= 'btn btn-danger'
+    (confirm) = 'delete()' class="swal-overlay"
+   >
+ </swal>
+
+    <span >
+      <a class="text-success" style="width: 200px;" (click)="undo()" >
+      <button  class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 210px;margin-top: -21px;margin-bottom: 4px;" type="button" >
+      <i class="icon-action-undo"   style="margin-right: 30%;margin-bottom:10px; margin-left: -34%; background-color: white;color: blue;"></i>
+        Undo</button>
+      </a>
+    </span>
+  
+<!-- new added data-->
+
+  
+<!--end data-->
+   
+    
+
+  </div>
+  </div>
+
+  
+</ion-content>
+

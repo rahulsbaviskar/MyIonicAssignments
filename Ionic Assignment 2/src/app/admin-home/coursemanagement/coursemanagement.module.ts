@@ -1,0 +1,24 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import { IonicModule } from '@ionic/angular';
+import {NgxSummernoteModule} from 'ngx-summernote';
+
+import { CoursemanagementPageRoutingModule } from './coursemanagement-routing.module';
+
+import { CoursemanagementPage } from './coursemanagement.page';
+import { SharedModule } from 'src/app/shared/shared.module';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    NgxSummernoteModule,
+    SharedModule,
+    CoursemanagementPageRoutingModule
+  ],
+  declarations: [CoursemanagementPage]
+})
+export class CoursemanagementPageModule {}
