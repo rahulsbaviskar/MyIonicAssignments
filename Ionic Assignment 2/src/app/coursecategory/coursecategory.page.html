@@ -82,7 +82,7 @@
 
 
 
-          <div class="row">
+          <div class="row" style="margin-left: -90px;">
             <div class="col-12">
   <div class="table-responsive">
     <div class="highlight" style="width: 85%; max-width: 1600px; margin-left: 100px; border: white">
@@ -109,7 +109,7 @@
    <!--  <span style="margin-left: 650px;" ><input type="text" [(ngModel)]="name" placeholder="Serach any fields"/></span> --> 
      <span >
       <a class="text-success" style="width: 200px;" >
-      <button  (click)="openSmallModal(smallModalContent)" class="btn btn-primary btn-icon-text" style="margin-left: 30px;width: 220px;" type="button" >
+      <button  (click)="openSmallModal()" class="btn btn-primary btn-icon-text" style="margin-left: 30px;width: 220px;" type="button" >
       <i class="ion-reply"   style="margin-inline-start: 1px;"></i>
        +   Add Course Category</button>
       </a>
@@ -154,7 +154,7 @@
         <ion-icon *ngIf="!data.showMyContainer" (click)="data.showMyContainer=!data.showMyContainer" class="mdi mdi-toggle-switch"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
         </td>
 
-           <td> <div style="height: 30px;align-items: center;" *ngIf="!data.showMyContainer">  <ion-icon class="icon-plus" (click)="openSmallModal(smallModalContent)" style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
+           <td> <div style="height: 30px;align-items: center;" *ngIf="!data.showMyContainer">  <ion-icon class="icon-plus" (click)="openSmallModal()" style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
             <ion-icon (click)="data.isEditable=!data.isEditable" *ngIf="!data.isEditable" class="icon-note"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
             <ion-icon *ngIf="data.isEditable" (click)="data.isEditable=!data.isEditable" class="ti-check-box"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
            
@@ -214,7 +214,7 @@
   
     
 
-  <div style="margin-left: 100px;margin-right: 100px;margin-top: 20px;">
+  <div style="margin-left: 33px;margin-right: 100px;margin-top: 20px;">
 
 
     <span>
@@ -233,23 +233,23 @@
      </span>
 
    <span>
-    <a class="text-success" (click)="moveDown();"  >
-    <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 210px;" type="button"  >
+    <a class="text-success" (click)="moveDown()" >
+    <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;margin-top:11px;margin-bottom:0px;width: 210px;" type="button"  >
        <i class="icon-arrow-up-circle" style="margin-right: 24%; margin-left: -28%; background-color: white;color: blue;" ></i>
       Move Up</button>
 </a>
    </span>
       <span>
-        <a class="text-success" style="width: 210px;" (click)="moveup();" >
+        <a class="text-success" style="width: 210px;" (click)="moveup()" >
      
-    <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 210px;" type="button"  >
-      <i class="icon-arrow-down-circle" style="margin-right: 20%; margin-left: -19%; background-color: white;color: blue;"></i>
+    <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 210px;margin-top: 10px;" type="button"  >
+      <i class="icon-arrow-down-circle" style="margin-right: 20%;margin-top: 5px; margin-left: -19%;margin-bottom:5px; background-color: white;color: blue;"></i>
       Move Down</button>
       </a>
       </span>
     <span>
       <a  class="text-success" style="width: 200px;" >
-        <button class="btn btn-primary dropdown-toggle" style="margin-left: 10px;" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <button class="btn btn-primary dropdown-toggle" style="margin-left: 10px; margin-top: 10px;" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           Move to course Category
         </button>
       </a>
@@ -261,37 +261,41 @@
     
     <span >
       <a class="text-success"  > 
-        <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 210px;" type="button" [swal]= "warningWithCancel">  
+        <button class="btn btn-primary btn-icon-text" style="margin-left: 10px;margin-bottom:24px;width: 210px;" type="button" [swal]= "warningWithCancel">  
         <i class="icon-trash" style="margin-right: 26%; margin-left: -35%; background-color: white;color: blue;"></i>
        Delete</button>
-       <swal #warningWithCancel
-         icon= 'warning'
-         type= 'warning'
-         html= '<form >  
-          <div class="form-check">
-            <label >
-              <input type="radio" class="form-check-input" name="optradio">Delete Selected Entity and all its children?
-            </label>
-          </div>
-          <div class="form-check">
-            <label >
-              <input type="radio" class="form-check-input" name="optradio" style="align-left: 10%" >Delete Selected Entity but move all of its &nbsp; &nbsp;  <br>children to another entity?
-            </label>
-          </div>
-          
-        </form>'
-         showCancelButton= 'true'
-         cancelButtonClass= 'btn btn-danger'
-         (confirm) = 'delete()'
-        >
-      </swal>
+       
     </a>
+    
     </span>
-   
+    <swal #warningWithCancel
+    icon= 'warning'
+    backdrop= 'overlay'
+    visible= 'true'
+    type= 'warning'
+    html= '<form >  
+     <div class="form-check">
+       <label >
+         <input type="radio" class="form-check-input" name="optradio">Delete Selected Entity and all its children?
+       </label>
+     </div>
+     <div class="form-check">
+       <label >
+         <input type="radio" class="form-check-input" name="optradio" style="align-left: 10%" >Delete Selected Entity but move all of its &nbsp; &nbsp;  <br>children to another entity?
+       </label>
+     </div>
+     
+   </form>'
+    showCancelButton= 'true'
+    cancelButtonClass= 'btn btn-danger'
+    (confirm) = 'delete()' class="swal-overlay"
+   >
+ </swal>
+
     <span >
       <a class="text-success" style="width: 200px;" (click)="undo()" >
-      <button  class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 210px;" type="button" >
-      <i class="icon-action-undo"   style="margin-right: 30%; margin-left: -34%; background-color: white;color: blue;"></i>
+      <button  class="btn btn-primary btn-icon-text" style="margin-left: 10px;width: 210px;margin-top: -21px;margin-bottom: 4px;" type="button" >
+      <i class="icon-action-undo"   style="margin-right: 30%;margin-bottom:10px; margin-left: -34%; background-color: white;color: blue;"></i>
         Undo</button>
       </a>
     </span>

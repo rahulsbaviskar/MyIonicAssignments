@@ -48,7 +48,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
-
+import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 import { MenuService } from './menu.service';
 
 @NgModule({
@@ -68,7 +68,7 @@ import { MenuService } from './menu.service';
     CarouselModule,
     DropzoneModule,
     ColorPickerModule,
-  //  AngularDateTimePickerModule,
+   AngularDateTimePickerModule,
     AmazingTimePickerModule,
     TagInputModule,
     FormWizardModule,

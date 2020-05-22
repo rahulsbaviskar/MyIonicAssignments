@@ -8,6 +8,8 @@ import swal from 'sweetalert2/dist/sweetalert2.js'
  
 import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2.js';
+import { NavController } from '@ionic/angular';
+import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 //import {Filter} from '
 
 /** function hello() {
@@ -45,7 +47,7 @@ export class CoursecategoryPage implements OnInit {
   name="";
   aa:boolean=false;
 
-  selectedRow: number;
+  selectedRow: '';
   checkboxes: boolean[];
 
   showMyContainer: boolean = false;
@@ -57,7 +59,7 @@ export class CoursecategoryPage implements OnInit {
 
   newEmployeeClicked = false;
 
-  // @ViewChild('autoSwal') private autoSwal: SwalComponent;
+  @ViewChild('autoSwal') private autoSwal: SwalComponent;
 
   @ViewChild('modalClose') modalClose:ElementRef;
 
@@ -68,7 +70,7 @@ export class CoursecategoryPage implements OnInit {
   model: any = {};
   model2: any = {}; 
 
-  addEmployee() {
+  addCategory() {
     this.data1.push(this.model);
     this.model = {};
   }
@@ -169,8 +171,10 @@ findDetails(data: { name: string; }) {
   return this.data2.filter(x => x.whoseData === data.name);
 }
 
-openSmallModal( smallModalContent ) {
-  this.modalService.open( smallModalContent, { size : 'sm' } );
+openSmallModal() {
+  // smallModalContent
+  // this.modalService.open( smallModalContent, { size : 'sm' } );
+  this.navCtrl.navigateForward('add-course-category');
 }
 
 
@@ -250,7 +254,7 @@ itemCount = 0;
 params = {offset: 0, limit: 10}; //Static can be changed as per your need
 formFlag = 'add';
 
-  constructor(private modalService: NgbModal){
+  constructor(private modalService: NgbModal, private navCtrl: NavController){
     redoUndo.past = [...redoUndo.past, this.state];
     this.state = this.state + 1;
 
@@ -324,13 +328,13 @@ addRow(index): void {
   this.data1.splice(index, 0, currentElement);
   this.checkboxes.splice(index, 0, false);
 }
-enable() {
+/**  enable() {
   this.toggleButton = false
   setTimeout(() => { // this will make the execution after the above boolean has changed
     this.input.nativeElement.focus();
     this.selectedRow = 0;
   }, 0);
-}
+} */
 
 setClickedRow(index) {
   this.selectedRow = index;
@@ -370,20 +374,16 @@ moveup()
     alert("At least one row should be present.")
     return;
   }
-  for (let i = this.checkboxes.length-1; i >= 0; i--) {
-   // let i = this.checkboxes.length-1; i >= 0; i--
+ // for (let i = this.checkboxes.length-1; i >= 0; i--) {
+    let i = this.checkboxes.length-1; i >= 0; i--
     // If selected, then move up that row.
-    if (i > 0) {
+    if (i < this.data1.length-1) {
       
-     const temp = this.data1[i - 1];
-     this.data1[i - 1] = this.data1[i];
+     const temp = this.data1[i + 1];
+     this.data1[i + 1] = this.data1[i];
      this.data1[i] = temp;
-     
-     
-     
- }
-  
-}
+      }
+//}
 }
 
 
