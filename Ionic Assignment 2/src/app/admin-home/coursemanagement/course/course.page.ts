@@ -10,6 +10,8 @@ import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 import { NavController } from '@ionic/angular';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
+import { DataService } from 'src/core/data.service';
+import { course } from 'src/core/model/course.model';
 //import {Filter} from '
 
 /** function hello() {
@@ -72,7 +74,7 @@ export class CoursePage implements OnInit {
   }
 
 //expandContent = true;
-data1 = [{
+data6 = [{
   'course': 'NEET-UG 2020',
   'name': 'Medical Entrance Examination\Medical UG',
   'startdate': '01 Jun 2019',
@@ -268,7 +270,9 @@ itemCount = 0;
 params = {offset: 0, limit: 10}; //Static can be changed as per your need
 formFlag = 'add';
 
-  constructor(private modalService: NgbModal, private navCtrl: NavController){
+ data1 : course[];
+  constructor(private modalService: NgbModal, private navCtrl: NavController,private dataService : DataService){
+    this.data1 = this.dataService.course1;
     redoUndo.past = [...redoUndo.past, this.state];
     this.state = this.state + 1;
 

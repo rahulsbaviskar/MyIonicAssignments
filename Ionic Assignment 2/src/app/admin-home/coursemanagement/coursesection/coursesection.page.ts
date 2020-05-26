@@ -10,6 +10,8 @@ import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 import { NavController } from '@ionic/angular';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
+import { coursection } from 'src/core/model/coursesection.model';
+import { DataService } from 'src/core/data.service';
 //import {Filter} from '
 
 /** function hello() {
@@ -72,7 +74,7 @@ export class CoursesectionPage implements OnInit {
   }
 
 expandContent = true;
-data1 = [{
+data6 = [{
   'name': 'Physics',
   'course': 'NEET-UG 20202',
   'expanded': false
@@ -242,8 +244,10 @@ items = [];
 itemCount = 0;
 params = {offset: 0, limit: 10}; //Static can be changed as per your need
 formFlag = 'add';
+ data1 : coursection[];
+  constructor(private modalService: NgbModal, private navCtrl: NavController,private dataService : DataService){
+    this.data1 = this.dataService.courseSection;
 
-  constructor(private modalService: NgbModal, private navCtrl: NavController){
     redoUndo.past = [...redoUndo.past, this.state];
     this.state = this.state + 1;
 
