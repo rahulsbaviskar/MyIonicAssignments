@@ -11,7 +11,7 @@ import Swal from 'sweetalert2/dist/sweetalert2.js';
 import { NavController } from '@ionic/angular';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { DataService } from 'src/core/data.service';
-import { coursecategory } from 'src/core/model/coursecategory.model';
+import { coursecategory, coursesubcategory } from 'src/core/model/coursecategory.model';
 //import {Filter} from '
 
 /** function hello() {
@@ -133,7 +133,7 @@ data3 = [{
 
 
 
-data2 = [{
+data7 = [{
   'whoseData': 'Medical Entrance Exam',
   'datades': {
     'name': 'Medical UG',
@@ -257,9 +257,12 @@ params = {offset: 0, limit: 10}; //Static can be changed as per your need
 formFlag = 'add';
 
  data1 : coursecategory[];
+ data2 : coursesubcategory[];
 
   constructor(private modalService: NgbModal, private navCtrl: NavController,private dataService : DataService){
     this.data1 = this.dataService.courseCategory;
+    this.data2 = this.dataService.courseSubCategory;
+
 
     redoUndo.past = [...redoUndo.past, this.state];
     this.state = this.state + 1;

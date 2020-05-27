@@ -10,7 +10,7 @@ import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 import { NavController } from '@ionic/angular';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
-import { coursection } from 'src/core/model/coursesection.model';
+import { coursection, coursesubsection } from 'src/core/model/coursesection.model';
 import { DataService } from 'src/core/data.service';
 //import {Filter} from '
 
@@ -128,7 +128,7 @@ data3 = [{
 
 
 
-data2 = [{
+data7 = [{
   'whoseData': 'Physics',
   'datades': {
     'name': 'Physical world',
@@ -245,8 +245,11 @@ itemCount = 0;
 params = {offset: 0, limit: 10}; //Static can be changed as per your need
 formFlag = 'add';
  data1 : coursection[];
+ data2 : coursesubsection[];
+ 
   constructor(private modalService: NgbModal, private navCtrl: NavController,private dataService : DataService){
     this.data1 = this.dataService.courseSection;
+    this.data2 = this.dataService.courseSubSection;
 
     redoUndo.past = [...redoUndo.past, this.state];
     this.state = this.state + 1;
