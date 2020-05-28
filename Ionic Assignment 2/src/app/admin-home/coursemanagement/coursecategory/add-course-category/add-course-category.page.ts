@@ -3,6 +3,8 @@ import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { DataService } from 'src/core/data.service';
 import { coursecategory } from 'src/core/model/coursecategory.model';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-add-course-category',
@@ -20,7 +22,7 @@ export class AddCourseCategoryPage implements OnInit {
   // }
   courseCategory1: coursecategory;
   showMyContainer: boolean = false;
-  constructor(private router: Router, private service: DataService) {
+  constructor(private router: Router, private service: DataService, private location: Location) {
     this.courseCategory1 = new coursecategory();
    }
 
@@ -29,7 +31,12 @@ export class AddCourseCategoryPage implements OnInit {
 
   next(){
     // this.router.navigateByUrl('/coursecategory');
-    this.service.save(this.courseCategory1);
+    // console.log("before pushing");
+    // console.log(this.courseCategory1);
+    
+    this.service.saveCourseCategory(this.courseCategory1);
+    // console.log("after pushing");
+    this.location.back();
   }
 
 }

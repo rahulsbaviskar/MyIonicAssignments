@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/core/data.service';
+import { Location } from '@angular/common';
+import { coursection } from 'src/core/model/coursesection.model';
 
 @Component({
   selector: 'app-add-course-section',
@@ -8,9 +11,22 @@ import { Component, OnInit } from '@angular/core';
 export class AddCourseSectionPage implements OnInit {
 
   showMyContainer: boolean = false;
-  constructor() { }
+  courseSection1: coursection;
+  constructor(private service: DataService, private location: Location) {
+    this.courseSection1 = new coursection();
+   }
 
   ngOnInit() {
   }
 
+  next(){
+    // this.router.navigateByUrl('/coursecategory');
+    // console.log("before pushing");
+    // console.log(this.course1);
+    
+    this.service.saveCourseSection(this.courseSection1);
+    // console.log("after pushing");
+    // console.log(this.course1);
+    this.location.back();
+  }
 }

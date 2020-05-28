@@ -357,61 +357,83 @@ moveDown1(value, index) {
     }
 
 
-moveup()
-{
-  var atleastOneSelected = this.checkboxes.some(checkbox => checkbox === true);
-
-  var allSelected = this.checkboxes.every(checkbox => checkbox === true);
-  if (!atleastOneSelected) {
-    alert("No rows selected.")
-    return;
-  }
-  if (allSelected) {
-    alert("At least one row should be present.")
-    return;
-  }
- // for (let i = this.checkboxes.length-1; i >= 0; i--) {
-    let i = this.checkboxes.length-1; i >= 0; i--
-    // If selected, then move up that row.
-    if (i < this.data1.length-1) {
-      
-     const temp = this.data1[i + 1];
-     this.data1[i + 1] = this.data1[i];
-     this.data1[i] = temp;
-      }
-//}
-}
-
-
-moveDown(){
-  var atleastOneSelected = this.checkboxes.some(checkbox => checkbox === true);
-
-  var allSelected = this.checkboxes.every(checkbox => checkbox === true);
-
-  if (!atleastOneSelected) {
-    alert("No rows selected.")
-    return;
-  }
-
-  if (allSelected) {
-    alert("At least one row should be present.")
-    return;
-  }
-  
-  for (let i = 0;i <= this.checkboxes.length-1; i++) {
+    moveup()
+    {
+      var atleastOneSelected = this.checkboxes.some(checkbox => checkbox === true);
     
-    // If selected, then move up that row.
-    if (i > 0) {
-      
-     const temp = this.data1[i - 1];
-     this.data1[i - 1] = this.data1[i];
-     this.data1[i] = temp;
-     
-  }
-  
-  }
+      var allSelected = this.checkboxes.every(checkbox => checkbox === true);
+      if (!atleastOneSelected) {
+        alert("No rows selected.")
+        return;
+      }
+      if (allSelected) {
+        alert("At least one row should be present.")
+        return;
+      }
+     // for (let i = this.checkboxes.length-1; i >= 0; i--) {
+        // let i = this.checkboxes.length-1; i >= 0; i--
+        // // If selected, then move up that row.
+        // if (i < this.data1.length-1) {
+          
+        //  const temp = this.data1[i + 1];
+        //  this.data1[i + 1] = this.data1[i];
+        //  this.data1[i] = temp;
+        //   }
+    //}
+    for (let i = this.checkboxes.length-1; i >= 0; i--) {
+      // If selected, then delete that row.
+      if (this.checkboxes[i]) {
+        // this.data1.splice(i, 1);
+        const temp = this.data1[i];
+       this.data1[i] = this.data1[i + 1];
+       this.data1[i + 1] = temp;
+       this.checkboxes[i] = false;
+         this.checkboxes[i+1] = true;
+      }
+    }
+    }
 
-}
+
+    moveDown(){
+      var atleastOneSelected = this.checkboxes.some(checkbox => checkbox === true);
+    
+      var allSelected = this.checkboxes.every(checkbox => checkbox === true);
+    
+      if (!atleastOneSelected) {
+        alert("No rows selected.")
+        return;
+      }
+    
+      if (allSelected) {
+        alert("At least one row should be present.")
+        return;
+      }
+      
+      // for (let i = 0;i <= this.checkboxes.length-1; i++) {
+        
+      //   // If selected, then move up that row.
+      //   if (i > 0) {
+          
+      //    const temp = this.data1[i - 1];
+      //    this.data1[i - 1] = this.data1[i];
+      //    this.data1[i] = temp;
+         
+      // }
+      
+      // }
+      for (let i = 0 ; i <= this.checkboxes.length-1; i++) {
+        // If selected, then delete that row.
+        if (this.checkboxes[i]) {
+          // this.data1.splice(i, 1);
+          const temp = this.data1[i - 1];
+         this.data1[i - 1] = this.data1[i];
+         this.data1[i] = temp;
+         this.checkboxes[i-1] = true;
+         this.checkboxes[i] = false;
+        }
+      }
+    
+    }
 
 delete() {
   var atleastOneSelected = this.checkboxes.some(checkbox => checkbox === true);
