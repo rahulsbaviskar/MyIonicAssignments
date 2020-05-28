@@ -181,8 +181,8 @@
         
   <td><div class="error" style="height: 30px;">  <input type="checkbox" (click)="toggleSelection($event, i)"
           [checked]="checkboxes[i]"> </div> </td>
-           <td><div  *ngIf="!data.datades.showMyContainer" style="height: 30px;"> {{ '-'}}   </div></td> 
-          <td><div  style="height: 30px;"> <input style="border-top-style:hidden;border-left-style:hidden ;border-right-style:hidden ;border-bottom-style:hidden ;background-color: white;" class="no-outline" [(ngModel)]="data.datades.name" [disabled]="!data.datades.isEditable"/> </div></td>
+           <td><div  *ngIf="!data.datades.showMyContainer" style="height: 30px;margin-left: 20px;"> {{ '-'}}   </div></td> 
+          <td><div  style="height: 30px;"> <input style="border-top-style:hidden;border-left-style:hidden ;border-right-style:hidden ;border-bottom-style:hidden ;background-color: white;margin-left: 20px;" class="no-outline" [(ngModel)]="data.datades.name" [disabled]="!data.datades.isEditable"/> </div></td>
 
          <!--    <td style="padding-left: 12px"> {{data.datades.name}} </td> -->
          <!--     <td><ion-toggle checked="true"></ion-toggle></td> -->

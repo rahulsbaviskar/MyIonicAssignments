@@ -80,7 +80,7 @@ data6 = [{
   'expanded': false
 }, {
   'name': 'Chemistry',
-  'course': 'JEE 2021',
+  'course': 'JEE-2021',
   'expanded': false
 }, {
   'name': 'Biology',

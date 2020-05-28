@@ -9,6 +9,6 @@ export class coursection {
     whoseData: string;
     //datades : string;
     //name: string;
-    datades : {name:string};
+    datades : {name:string,course:string};
     
   }
