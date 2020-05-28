@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { coursecategory, coursesubcategory } from './model/coursecategory.model';
 import { course } from './model/course.model';
 import { coursection, coursesubsection } from './model/coursesection.model';
+import { Storage } from '@ionic/storage'
 
+const ITEMS_KEY = 'my-items';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +23,20 @@ export class DataService {
 
  
 
-  constructor() { }
+  constructor(private storage: Storage) { }
+
+  save(courseCat: coursecategory){
+      // this.storage.get(ITEMS_KEY).then(() =>{
+      //   if(this.courseCategory){
+      //     this.courseCategory.push(courseCat);
+      //     return this.storage.set(ITEMS_KEY, this.courseCategory);
+      //   }
+      //   else {
+      //     return this.storage.set(ITEMS_KEY, [courseCat]);
+      //   }
+      // });
+      this.courseCategory.push(courseCat);
+      console.log(this.courseCategory);
+  }
 }
 

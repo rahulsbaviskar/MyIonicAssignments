@@ -23,7 +23,8 @@ export class AdminHomePage implements OnInit {
   }
 
   onClick(){
-    window.location.reload();
+    // window.location.reload();
+    // this.router.navigate(['coursemanagement']);
     // window.document.location.reload();
     // this.navCtrl.navigateForward("admin-home/coursemanagement");
   }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { DataService } from 'src/core/data.service';
+import { coursecategory } from 'src/core/model/coursecategory.model';
 
 @Component({
   selector: 'app-add-course-category',
@@ -16,14 +18,18 @@ export class AddCourseCategoryPage implements OnInit {
   //   format: 'dd-mm-yyyy',
   //   defaultOpen: false
   // }
+  courseCategory1: coursecategory;
   showMyContainer: boolean = false;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private service: DataService) {
+    this.courseCategory1 = new coursecategory();
+   }
 
   ngOnInit() {
   }
 
   next(){
-    this.router.navigateByUrl('/coursecategory');
+    // this.router.navigateByUrl('/coursecategory');
+    this.service.save(this.courseCategory1);
   }
 
 }

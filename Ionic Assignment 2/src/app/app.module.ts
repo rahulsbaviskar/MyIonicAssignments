@@ -50,6 +50,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 import { MenuService } from './menu.service';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -61,6 +62,7 @@ import { MenuService } from './menu.service';
     HttpClientModule,
     NgbModule,
     Ng2SearchPipeModule,
+    IonicStorageModule.forRoot(),
     DragulaModule.forRoot(),
     ClipboardModule,
     ContextMenuModule.forRoot(),
