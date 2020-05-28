@@ -23,7 +23,7 @@ export class AddCoursePage implements OnInit {
     // this.router.navigateByUrl('/coursecategory');
     // console.log("before pushing");
     // console.log(this.course1);
-    
+    // this.course1.name = 'Medical Entrance Exam';
     this.service.saveCourse(this.course1);
     // console.log("after pushing");
     // console.log(this.course1);

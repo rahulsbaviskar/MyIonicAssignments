@@ -3,7 +3,5 @@ export class course {
     name: string;
     startdate: string;
     enddate: string;
-
-    
   }
   
