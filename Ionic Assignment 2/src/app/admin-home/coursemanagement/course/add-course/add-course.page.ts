@@ -25,6 +25,8 @@ export class AddCoursePage implements OnInit {
     // console.log("before pushing");
     // console.log(this.course1);
     // this.course1.name = 'Medical Entrance Exam';
+    this.course1.startdate = '01 Jun 2019';
+    this.course1.enddate = '31 May 2020';
     this.service.saveCourse(this.course1);
     this.router.navigateByUrl('/admin-home/coursemanagement/course');
     // console.log("after pushing");

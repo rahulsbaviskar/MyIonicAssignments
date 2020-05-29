@@ -385,6 +385,9 @@ moveDown1(value, index) {
       // If selected, then delete that row.
       if (this.checkboxes[i]) {
         // this.data1.splice(i, 1);
+        if(i == this.checkboxes.length-1){
+          continue;
+        }
         const temp = this.data1[i];
        this.data1[i] = this.data1[i + 1];
        this.data1[i + 1] = temp;
@@ -426,6 +429,9 @@ moveDown1(value, index) {
         // If selected, then delete that row.
         if (this.checkboxes[i]) {
           // this.data1.splice(i, 1);
+          if(i == 0){
+            continue;
+          }
           const temp = this.data1[i - 1];
          this.data1[i - 1] = this.data1[i];
          this.data1[i] = temp;
