@@ -36,7 +36,8 @@ export class AddCourseCategoryPage implements OnInit {
     
     this.service.saveCourseCategory(this.courseCategory1);
     // console.log("after pushing");
-    this.location.back();
+    // this.location.back();
+    this.router.navigateByUrl("/admin-home/coursemanagement/coursecategory");
   }
 
 }

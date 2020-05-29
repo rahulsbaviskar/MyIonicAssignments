@@ -14,6 +14,7 @@ import { filter, distinctUntilChanged } from 'rxjs/operators';
 export class BreadcrumbComponent implements OnInit{
   public breadcrumbs: IBreadCrumb[]
  
+  bread: string;
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -70,5 +71,14 @@ export class BreadcrumbComponent implements OnInit{
     return newBreadcrumbs;
   }
 
+  onClick(i: number){
+    // this.bread = '';
+    // for(let j=0;j<=i;j++){
+    //   this.bread = this.bread + '/' + this.breadcrumbs[j];
+    let newUrl = this.breadcrumbs[i].url;
+    this.router.navigate([newUrl]); 
+    }
+  }
 
-}
+
+

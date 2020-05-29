@@ -12,6 +12,7 @@ import { NavController } from '@ionic/angular';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { DataService } from 'src/core/data.service';
 import { coursecategory, coursesubcategory } from 'src/core/model/coursecategory.model';
+import { Router } from '@angular/router';
 //import {Filter} from '
 
 /** function hello() {
@@ -259,7 +260,7 @@ formFlag = 'add';
  data1 : coursecategory[];
  data2 : coursesubcategory[];
 
-  constructor(private modalService: NgbModal, private navCtrl: NavController,private dataService : DataService){
+  constructor(private modalService: NgbModal,private router:Router, private navCtrl: NavController,private dataService : DataService){
     this.data1 = this.dataService.courseCategory;
     this.data2 = this.dataService.courseSubCategory;
 
@@ -397,6 +398,9 @@ for (let i = this.checkboxes.length-1; i >= 0; i--) {
   // If selected, then delete that row.
   if (this.checkboxes[i]) {
     // this.data1.splice(i, 1);
+    if(i == this.checkboxes.length-1){
+      continue;
+    }
     const temp = this.data1[i];
    this.data1[i] = this.data1[i + 1];
    this.data1[i + 1] = temp;
@@ -438,6 +442,9 @@ moveDown(){
     // If selected, then delete that row.
     if (this.checkboxes[i]) {
       // this.data1.splice(i, 1);
+      if(i == 0){
+        continue;
+      }
       const temp = this.data1[i - 1];
      this.data1[i - 1] = this.data1[i];
      this.data1[i] = temp;
@@ -493,5 +500,9 @@ delete() {
 // // });
 // swal.fire('Hello');
   // swal("hello");
+
+  next(){
+    this.router.navigate(['/admin-home/coursemanagement/coursecategory/add-course-category']);
+  }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-coursemanagement',
@@ -8,13 +9,24 @@ import { NavController } from '@ionic/angular';
 })
 export class CoursemanagementPage implements OnInit {
 
-  constructor(private navCtrl: NavController) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  onClick(){
+  onClickCourseCategory(){
     // this.navCtrl.navigateForward("coursecategory");
+    this.router.navigateByUrl('/admin-home/coursemanagement/coursecategory');
+    // this.navCtrl.navigateForward("login/admin-home/coursemanagement/coursecategory");
+  }
+  onClickCourse(){
+    // this.navCtrl.navigateForward("coursecategory");
+    this.router.navigateByUrl('/admin-home/coursemanagement/course');
+    // this.navCtrl.navigateForward("login/admin-home/coursemanagement/coursecategory");
+  }
+  onClickCourseSection(){
+    // this.navCtrl.navigateForward("coursecategory");
+    this.router.navigateByUrl('/admin-home/coursemanagement/coursesection')
     // this.navCtrl.navigateForward("login/admin-home/coursemanagement/coursecategory");
   }
 

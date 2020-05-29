@@ -12,6 +12,7 @@ import { NavController } from '@ionic/angular';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { coursection, coursesubsection } from 'src/core/model/coursesection.model';
 import { DataService } from 'src/core/data.service';
+import { Router } from '@angular/router';
 //import {Filter} from '
 
 /** function hello() {
@@ -247,7 +248,7 @@ formFlag = 'add';
  data1 : coursection[];
  data2 : coursesubsection[];
  
-  constructor(private modalService: NgbModal, private navCtrl: NavController,private dataService : DataService){
+  constructor(private modalService: NgbModal,private router: Router, private navCtrl: NavController,private dataService : DataService){
     this.data1 = this.dataService.courseSection;
     this.data2 = this.dataService.courseSubSection;
 
@@ -480,4 +481,7 @@ delete() {
 // // });
 // swal.fire('Hello');
   // swal("hello");
+  next(){
+    this.router.navigateByUrl('/admin-home/coursemanagement/coursesection/add-course-section')
+  }
 }

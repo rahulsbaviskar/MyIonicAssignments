@@ -12,6 +12,7 @@ import { NavController } from '@ionic/angular';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { DataService } from 'src/core/data.service';
 import { course } from 'src/core/model/course.model';
+import { Router } from '@angular/router';
 //import {Filter} from '
 
 /** function hello() {
@@ -271,7 +272,7 @@ params = {offset: 0, limit: 10}; //Static can be changed as per your need
 formFlag = 'add';
 
  data1 : course[];
-  constructor(private modalService: NgbModal, private navCtrl: NavController,private dataService : DataService){
+  constructor(private modalService: NgbModal,private router: Router, private navCtrl: NavController,private dataService : DataService){
     this.data1 = this.dataService.course1;
     redoUndo.past = [...redoUndo.past, this.state];
     this.state = this.state + 1;
@@ -502,5 +503,9 @@ delete() {
 // // });
 // swal.fire('Hello');
   // swal("hello");
+
+  next(){
+    this.router.navigateByUrl('/admin-home/coursemanagement/course/add-course')
+  }
 
 }

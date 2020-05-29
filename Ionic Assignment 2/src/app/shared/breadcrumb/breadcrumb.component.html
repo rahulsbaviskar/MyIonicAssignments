@@ -23,11 +23,11 @@
 
 <div class="col" style="margin-top: 0.5%;" aria-label="breadcrumb" class="template-demo">
   <ol class='breadcrumb breadcrumb-custom bg-inverse-primary'>
-    <li class="breadcrumb-item" *ngFor='let breadcrumb of breadcrumbs;'>
+    <li class="breadcrumb-item" *ngFor='let breadcrumb of breadcrumbs;let i = index'>
       <!-- <a routerLink="breadcrumb.url" routerLinkActive="router-link-active">
         {{ breadcrumb.label }}
       </a> -->
-      <a routerLink="breadcrumb.url" routerLinkActive='active' routerLinkActiveOptions = "{exact: true}">{{ breadcrumb.label }}</a>
+      <a routerLink="breadcrumb.url" (click)="onClick(i)" routerLinkActive='active' routerLinkActiveOptions = "{exact: true}">{{ breadcrumb.label }}</a>
     </li>
   </ol>
 </div>  
