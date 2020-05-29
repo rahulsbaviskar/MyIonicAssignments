@@ -11,6 +11,7 @@ const ITEMS_KEY = 'my-items';
 })
 export class DataService {
 
+  loginDetail:string;
  
   courseSubSection : coursesubsection[] = [{ 'whoseData': 'Physics','datades': {'name': 'Medical UG','course': 'NEET-UG 2021'}},{'whoseData': 'Physics','datades': {'name': 'Medical UG','course': 'NEET-UG 2021'}},{'whoseData': 'Physics','datades': {'name': 'Medical UG','course': 'NEET-UG 2021'}}];
 
