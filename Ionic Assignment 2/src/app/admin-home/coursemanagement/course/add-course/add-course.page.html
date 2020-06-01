@@ -79,11 +79,11 @@
 
                <ion-item>
                     <ion-label>Start Date   <span class="required">*</span></ion-label> <ion-icon class="icon-calendar" style="color: skyblue;"> </ion-icon>
-                    <ion-datetime displayFormat="DD MMM YYYY" min="2000" max="2030" value="2020-02-02"></ion-datetime>
+                    <ion-datetime [(ngModel)]="course1.startdate" [ngModelOptions]="{standalone: true}" displayFormat="DD MMM YYYY" min="2000" max="2030" ></ion-datetime>
                   </ion-item>
                   <ion-item>
                     <ion-label>End Date  <span class="required">*</span></ion-label> <ion-icon class="icon-calendar" style="color: skyblue;"> </ion-icon>
-                    <ion-datetime displayFormat="DD MMM YYYY" min="2000" max="2030" value="2020-08-31"></ion-datetime>
+                    <ion-datetime [(ngModel)]="course1.enddate" [ngModelOptions]="{standalone: true}" displayFormat="DD MMM YYYY" min="2000" max="2030" value="2020-08-31"></ion-datetime>
                   </ion-item>
                   
                  
