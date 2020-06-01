@@ -11,14 +11,39 @@ import { Router } from '@angular/router';
 })
 export class AddCoursePage implements OnInit {
 
+  customYearValues = [2020, 2016, 2008, 2004, 2000, 1996];
+  customDayShortNames = ['s\u00f8n', 'man', 'tir', 'ons', 'tor', 'fre', 'l\u00f8r'];
+  customPickerOptions: any;
+
+  
   course1: course;
   showMyContainer: boolean = false;
   constructor(private service: DataService,private router: Router, private location: Location) {
     this.course1 = new course();
-   }
+
+    this.customPickerOptions = {
+      buttons: [{
+        text: 'Save',
+        handler: () => console.log('Clicked Save!')
+      }, {
+        text: 'Log',
+        handler: () => {
+          console.log('Clicked Log. Do not Dismiss.');
+          return false;
+        }
+      }]
+    }}
 
   ngOnInit() {
   }
+
+ 
+
+
+
+
+
+
 
   next(){
     // this.router.navigateByUrl('/admin-home/coursemanagement/course');
