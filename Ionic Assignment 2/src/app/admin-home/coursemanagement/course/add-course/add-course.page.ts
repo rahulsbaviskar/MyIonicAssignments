@@ -4,6 +4,7 @@ import { DataService } from 'src/core/data.service';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-add-course',
   templateUrl: './add-course.page.html',
@@ -11,9 +12,6 @@ import { Router } from '@angular/router';
 })
 export class AddCoursePage implements OnInit {
 
-  customYearValues = [2020, 2016, 2008, 2004, 2000, 1996];
-  customDayShortNames = ['s\u00f8n', 'man', 'tir', 'ons', 'tor', 'fre', 'l\u00f8r'];
-  customPickerOptions: any;
 
   
   course1: course;
@@ -21,31 +19,13 @@ export class AddCoursePage implements OnInit {
   constructor(private service: DataService,private router: Router, private location: Location) {
     this.course1 = new course();
 
-    this.customPickerOptions = {
-      buttons: [{
-        text: 'Save',
-        handler: () => console.log('Clicked Save!')
-      }, {
-        text: 'Log',
-        handler: () => {
-          console.log('Clicked Log. Do not Dismiss.');
-          return false;
-        }
-      }]
-    }}
+   }
 
   ngOnInit() {
   }
 
  
-
-
-
-
-
-
-
-  next(){
+ next(){
     // this.router.navigateByUrl('/admin-home/coursemanagement/course');
     // console.log("before pushing");
     // console.log(this.course1);

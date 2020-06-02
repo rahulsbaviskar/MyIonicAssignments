@@ -3,21 +3,14 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 import {filter} from 'rxjs/operators'
 import { last } from 'lodash';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-// import { SwalComponent } from '@toverux/ngx-sweetalert2';
 import swal from 'sweetalert2/dist/sweetalert2.js'
- 
-import 'sweetalert2/src/sweetalert2.scss'
+ import 'sweetalert2/src/sweetalert2.scss'
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 import { NavController } from '@ionic/angular';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { coursection, coursesubsection } from 'src/core/model/coursesection.model';
 import { DataService } from 'src/core/data.service';
 import { Router } from '@angular/router';
-//import {Filter} from '
-
-/** function hello() {
-  alert('Hello!!!');
-} */
 
 class RedoUndo<T> {
   past: T[] = [];
@@ -74,98 +67,14 @@ export class CoursesectionPage implements OnInit {
     this.newEmployeeClicked = !this.newEmployeeClicked;
   }
 
-expandContent = true;
-data6 = [{
-  'name': 'Physics',
-  'course': 'NEET-UG 20202',
-  'expanded': false
-}, {
-  'name': 'Chemistry',
-  'course': 'JEE-2021',
-  'expanded': false
-}, {
-  'name': 'Biology',
-  'course': 'AIIMS-2021',
-  
-},
 
-] 
-
-data3 = [{
-  'whoseData': 'john',
-  'datades': {
-    'name': 'john',
-    'hobbies': 'singing',
-    'profession': 'singer'
-  }
-}, {
-  'whoseData': 'Jay',
-  'datades': {
-    'name': 'jay',
-    'hobbies': 'coding',
-    'profession': 'coder'
-  }
-}, {
-  'whoseData': 'Jay',
-  'datades': {
-    'name': 'jay',
-    'hobbies': 'testing',
-    'profession': 'tester'
-  }
-}
-]
-
-/** data3 = [{
-  'name': 'New Added Medical Entrance Exam',
-  'expanded': false
-}, {
-  'name': 'New Added Engineering Entrance Exam',
-  'expanded': false
-}, {
-  'name': 'New added Architect Entrance Exam',
-  'expanded': false
-},
-] */
-
-
-
-data7 = [{
-  'whoseData': 'Physics',
-  'datades': {
-    'name': 'Physical world',
-    'course': 'NEET-UG 2021',
-   
-  }
-}, {
-  'whoseData': 'Physics',
-  'datades': {
-    'name': 'System of particles and Rotation',
-    'course': 'NEET-PG 2021',
-   
-  }
-},  {
-    'whoseData': 'Engineering Entrance Exam',
-    'datades': {
-      'name': 'JEE Main',
-      'course': 'singing',
-    }
- }, {
-      'whoseData': 'Engineering Entrance Exam',
-      'datades': {
-        'name': 'JEE Main',
-        'course': 'singing',
-      
-      }
-}
-]
 
 findDetails(data: { name: string; }) {
   return this.data2.filter(x => x.whoseData === data.name);
 }
 
 openSmallModal() {
-  // smallModalContent
-  // this.modalService.open( smallModalContent, { size : 'sm' } );
+  
   this.navCtrl.navigateForward('add-course-category');
 }
 
@@ -194,34 +103,9 @@ redo() {
   this.state = lastState;
 }
 
-
-
-
-
-
-/**add() {
-  if (this.data3.length > 0) {
-    const person = this.data3[0];
-    this.data1.push(person);
-    this.data3.splice(0, 1);
-  }
-}
-*/
-
-
-
-/**remove(id: any) {
-  this.data3.push(this.data1[id]);
-  this.data1.splice(id, 1);
-} */
-
-
   title = 'angulardatatables';
   dtOptions: DataTables.Settings = {};
   ngOnInit() {
-
-  //  hello();
-
     this.userForm = new FormGroup({
 		  'id': new FormControl(null),
 		  'name': new FormControl(null, Validators.required)
@@ -237,10 +121,7 @@ redo() {
     };
   
 }
-//new added
 
-//itemResource = new DataTableResource(this.data1
-  //);
 items = [];
 itemCount = 0;
 params = {offset: 0, limit: 10}; //Static can be changed as per your need
@@ -325,13 +206,6 @@ addRow(index): void {
   this.data1.splice(index, 0, currentElement);
   this.checkboxes.splice(index, 0, false);
 }
-/**  enable() {
-  this.toggleButton = false
-  setTimeout(() => { // this will make the execution after the above boolean has changed
-    this.input.nativeElement.focus();
-    this.selectedRow = 0;
-  }, 0);
-} */
 
 setClickedRow(index) {
   this.selectedRow = index;
@@ -340,23 +214,6 @@ setClickedRow(index) {
 toggleSelection(event, i) {
   this.checkboxes[i] = event.target.checked;
 }
-
-moveUp1(value, index) {
-  if (index > 0) {
-    const tmp = this.values[index - 1];
-    this.values[index - 1] = this.values[index];
-    this.values[index] = tmp;
-  }
-}
-
-moveDown1(value, index) {
-      if (index < this.values.length) {
-        const tmp = this.values[index + 1];
-        this.values[index + 1] = this.values[index];
-        this.values[index] = tmp;
-      }
-    }
-
 
     moveup()
     {
@@ -371,16 +228,7 @@ moveDown1(value, index) {
         alert("At least one row should be present.")
         return;
       }
-     // for (let i = this.checkboxes.length-1; i >= 0; i--) {
-        // let i = this.checkboxes.length-1; i >= 0; i--
-        // // If selected, then move up that row.
-        // if (i < this.data1.length-1) {
-          
-        //  const temp = this.data1[i + 1];
-        //  this.data1[i + 1] = this.data1[i];
-        //  this.data1[i] = temp;
-        //   }
-    //}
+    
     for (let i = this.checkboxes.length-1; i >= 0; i--) {
       // If selected, then delete that row.
       if (this.checkboxes[i]) {
@@ -413,18 +261,6 @@ moveDown1(value, index) {
         return;
       }
       
-      // for (let i = 0;i <= this.checkboxes.length-1; i++) {
-        
-      //   // If selected, then move up that row.
-      //   if (i > 0) {
-          
-      //    const temp = this.data1[i - 1];
-      //    this.data1[i - 1] = this.data1[i];
-      //    this.data1[i] = temp;
-         
-      // }
-      
-      // }
       for (let i = 0 ; i <= this.checkboxes.length-1; i++) {
         // If selected, then delete that row.
         if (this.checkboxes[i]) {
@@ -475,18 +311,6 @@ delete() {
   })
 }
 
-// swal.fire('hello');
-
-// Swal({
-//   #warningWithCancel,
-//    type="warning",
-//     title="Are you sure?",
-//      text="you wont be able to revert this!",
-//       showCancelButton="true",
-//        cancelButtonClass="btn btn-danger
-// // });
-// swal.fire('Hello');
-  // swal("hello");
   next(){
     this.router.navigateByUrl('/admin-home/coursemanagement/coursesection/add-course-section')
   }
