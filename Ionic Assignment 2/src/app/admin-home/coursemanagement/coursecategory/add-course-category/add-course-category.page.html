@@ -2,38 +2,7 @@
 <app-home-header></app-home-header>
 
 <ion-content >
-    <!-- <div >
-       
-        <div><h3>Add Course Category</h3></div>
-            
-        <div>
-            <label><p style="font-size: 23px;">Parent Course Category</p></label><span class="required">*</span>
-        </div>
-        <div class="btn btn-group" style="width: 25%;">
-                <button class="btn btn-secondary">Medical Entrance Exam</button>
-                <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-                    <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuSplitButton" ngbDropdownToggle>
-                        <span class="sr-only">Toggle Dropdown</span>
-                    </button>
-                    <!-- <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownMenuSplitButton4">
-                        <a class="dropdown-item">Medical Entrance Examination</a>
-                        <a class="dropdown-item">Engineering Entrance Examination</a>
-                        <a class="dropdown-item">Architect Entrance Examination</a>
-                    </div> 
-                </div>
-        </div>
-        
-        <br>
-
-        <div class="form-group" style="width: 18%;">
-            <label><p style="font-size: 23px;">Course Category Name</p></label><span class="required">*</span>
-            <input class="form-control" style="width: 100%" type="text" ngModel name="required" #required="ngModel" required/>
-            <p class="alert alert-danger" *ngIf="required?.errors?.required">required</p>
-        </div>
-        
-        
-    
-    </div> -->
+   
     <div class="d-flex align-items-center auth px-0" style="margin-top: -25px;">
         <div class="row w-100 mx-0">
             <div class="col-xl-6 mx-auto">
@@ -55,14 +24,9 @@
                                 </div> 
                             </div>
                         </div>
-                        <!-- <input list="hosting-plan" type="text" [(ngModel)]="courseCategory1.name" [ngModelOptions]="{standalone: true}">
- 
-                            <datalist  id="hosting-plan">
-                                <option >Medical Entrance Exam</option>
-                                <option >Engg Entrance Exam</option>
-                                <option >Architecture Entrance Exam</option>
-                            </datalist > -->
+                       
                     </div>
+                    <!--show hide-->
                     <div class="form-group">
                         <label for="exampleInputName1"><p style="font-size: 20px;">Course Category Name</p></label><span class="required">*</span>
                         <input class="form-control" style="width: 230px;" type="text" [(ngModel)]="courseCategory1.name" name="required" #required="ngModel" required/>
@@ -96,10 +60,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="form-group">
-                        <p>Click to open DP</p>
-                        <angular2-date-picker [(ngModel)]="date" [settings]="datePickerSettings"></angular2-date-picker>
-                    </div> -->
+                   
                     <div class="form-group">
                         <label for="exampleInputName1"><p style="font-size: 20px;">Course Category Description</p></label><span class="required">*</span>
                     </div>

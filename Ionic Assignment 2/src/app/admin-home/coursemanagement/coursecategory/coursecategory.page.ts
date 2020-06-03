@@ -60,7 +60,7 @@ export class CoursecategoryPage implements OnInit {
   model2: any = {}; 
 
   addCategory() {
-    this.data1.push(this.model);
+    this.courseCategoryData.push(this.model);
     this.model = {};
   }
 
@@ -70,7 +70,7 @@ export class CoursecategoryPage implements OnInit {
 
 
 findDetails(data: { name: string; }) {
-  return this.data2.filter(x => x.whoseData === data.name);
+  return this.courseCategorySubData.filter(x => x.whoseData === data.name);
 }
 
 openSmallModal() {
@@ -115,7 +115,7 @@ redo() {
 		  'name': new FormControl(null, Validators.required)
 		});
 
-    this.checkboxes = new Array(this.data1.length);
+    this.checkboxes = new Array(this.courseCategoryData.length);
     this.checkboxes.fill(false);
     
     this.dtOptions = {
@@ -131,23 +131,21 @@ itemCount = 0;
 params = {offset: 0, limit: 10}; //Static can be changed as per your need
 formFlag = 'add';
 
- data1 : coursecategory[];
- data2 : coursesubcategory[];
+ courseCategoryData : coursecategory[];
+ courseCategorySubData : coursesubcategory[];
 
   constructor(private modalService: NgbModal,private router:Router, private navCtrl: NavController,private dataService : DataService){
-    this.data1 = this.dataService.courseCategory;
-    this.data2 = this.dataService.courseSubCategory;
+    this.courseCategoryData = this.dataService.courseCategory;
+    this.courseCategorySubData = this.dataService.courseSubCategory;
 
 
     redoUndo.past = [...redoUndo.past, this.state];
     this.state = this.state + 1;
-
-    //this.itemResource.count().then(count => this.itemCount = count);
     this.reloadItems(this.params);
   }  
 
    reloadItems(params) {
-    //this.itemResource.query(params).then(items => this.items = items);
+  
   } 
 
   // special properties:
@@ -172,14 +170,14 @@ initUser(){
 saveUser(){
   if(this.formFlag == 'add')
   {
-    this.userForm.value.name= this.data1.length + 1;
-    this.data1.unshift(this.userForm.value);
+    this.userForm.value.name= this.courseCategoryData.length + 1;
+    this.courseCategoryData.unshift(this.userForm.value);
   }
   else
   {
-    var index = this.data1.findIndex(x => x.name== this.userForm.value.id);
+    var index = this.courseCategoryData.findIndex(x => x.name== this.userForm.value.id);
     if (index !== -1) {
-      this.data1[index] = this.userForm.value;
+      this.courseCategoryData[index] = this.userForm.value;
     }
   }
   this.reloadTableManually();
@@ -196,18 +194,18 @@ getData(item)
 }
 //Delete user's data
 delData(item){
-  this.data1.splice(this.data1.indexOf(item), 1);
+  this.courseCategoryData.splice(this.courseCategoryData.indexOf(item), 1);
   this.reloadTableManually();
 }
 //Reload table manually after add/edit
 reloadTableManually(){
   this.reloadItems(this.params);
-  //this.itemResource.count().then(count => this.itemCount = count);
+  
 }
 
 addRow(index): void {
-  var currentElement = this.data1[index];
-  this.data1.splice(index, 0, currentElement);
+  var currentElement = this.courseCategoryData[index];
+  this.courseCategoryData.splice(index, 0, currentElement);
   this.checkboxes.splice(index, 0, false);
 }
 
@@ -241,9 +239,9 @@ for (let i = this.checkboxes.length-1; i >= 0; i--) {
     if(i == this.checkboxes.length-1){
       continue;
     }
-    const temp = this.data1[i];
-   this.data1[i] = this.data1[i + 1];
-   this.data1[i + 1] = temp;
+    const temp = this.courseCategoryData[i];
+   this.courseCategoryData[i] = this.courseCategoryData[i + 1];
+   this.courseCategoryData[i + 1] = temp;
    this.checkboxes[i] = false;
      this.checkboxes[i+1] = true;
   }
@@ -273,9 +271,9 @@ moveDown(){
       if(i == 0){
         continue;
       }
-      const temp = this.data1[i - 1];
-     this.data1[i - 1] = this.data1[i];
-     this.data1[i] = temp;
+      const temp = this.courseCategoryData[i - 1];
+     this.courseCategoryData[i - 1] = this.courseCategoryData[i];
+     this.courseCategoryData[i] = temp;
      this.checkboxes[i-1] = true;
      this.checkboxes[i] = false;
     }
@@ -301,7 +299,7 @@ delete() {
   for (let i = this.checkboxes.length-1; i >= 0; i--) {
     // If selected, then delete that row.
     if (this.checkboxes[i]) {
-      this.data1.splice(i, 1);
+      this.courseCategoryData.splice(i, 1);
     }
   }
 

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-// import { AdminLogin } from 'src/core/model/login.model';
 import { LoginPage } from 'src/app/login/login.page';
 import { DataService } from 'src/core/data.service';
 
@@ -15,8 +14,7 @@ export class HomeHeaderComponent implements OnInit {
   loginDetail: string;
   constructor(private navCtrl: NavController, private loginPage: LoginPage, private service: DataService) {
     this.loginDetail = this.service.loginDetail;
-    // console.log(this.loginPage.adminLogin.username);
-    // console.log(this.loginDetail);
+   
   }
 
   ngOnInit() {}
@@ -31,7 +29,7 @@ export class HomeHeaderComponent implements OnInit {
   }
   onClick(){
     window.location.reload();
-    // window.document.location.reload();
+   
   }
 
 }

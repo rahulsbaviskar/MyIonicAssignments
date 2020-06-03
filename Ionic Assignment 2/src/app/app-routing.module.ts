@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-// import { AdminHomePage } from './admin-home/admin-home.page';
 import { LoginPage } from './login/login.page';
 
 const routes: Routes = [
@@ -17,52 +16,7 @@ const routes: Routes = [
     path: 'login',
     component: LoginPage,
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
-    // children: [
-    //   {
-    //     path: '',
-    //     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
-    //   },
-    //   {
-    //     path: 'admin-home',
-    //     component: AdminHomePage,
-    //     data: {
-    //       breadcrumb: 'Home'
-    //     },
-    //     children: [
-    //       {
-    //         path: '',
-    //         loadChildren: () => import('./admin-home/admin-home.module').then( m => m.AdminHomePageModule),
-    //       },
-    //       {
-    //         path: 'coursemanagement',
-    //         component: CoursemanagementPage,
-    //         data: {
-    //           breadcrumb: 'Course Management'
-    //         },
-    //         children: [
-    //           {
-    //             path: '',
-    //             loadChildren: () => import('./coursemanagement/coursemanagement.module').then( m => m.CoursemanagementPageModule),
-    //           },
-    //           {
-    //             path: 'coursecategory',
-    //             component: CoursecategoryPage,
-    //             children: [
-    //               {
-    //                 path: '',
-    //                 loadChildren: () => import('./coursecategory/coursecategory.module').then( m => m.CoursecategoryPageModule),
-    //                 data: {
-    //                   breadcrumb: 'Course Category'
-    //                 },
-    //               },
-    //             ]
-    //           },
-    //         ]
-    //       }
     
-    //     ]
-    //   },
-    // ]
   },
   {
     path:'admin-home',

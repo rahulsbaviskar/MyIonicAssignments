@@ -13,13 +13,7 @@ import { Location } from '@angular/common';
 })
 export class AddCourseCategoryPage implements OnInit {
 
-   // date: Date = new Date();
-  // datePickerSettings = {
-  //   bigBanner: true,
-  //   timePicker: true,
-  //   format: 'dd-mm-yyyy',
-  //   defaultOpen: false
-  // }
+ 
   courseCategory1: coursecategory;
   showMyContainer: boolean = false;
   constructor(private router: Router, private service: DataService, private location: Location) {
@@ -28,15 +22,10 @@ export class AddCourseCategoryPage implements OnInit {
 
   ngOnInit() {
   }
-
+// get data & go back to courseCategory page
   next(){
-    // this.router.navigateByUrl('/coursecategory');
-    // console.log("before pushing");
-    // console.log(this.courseCategory1);
     
     this.service.saveCourseCategory(this.courseCategory1);
-    // console.log("after pushing");
-    // this.location.back();
     this.router.navigateByUrl("/admin-home/coursemanagement/coursecategory");
   }
 

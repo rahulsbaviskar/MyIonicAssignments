@@ -7,8 +7,6 @@ export class coursection {
 
   export class coursesubsection {
     whoseData: string;
-    //datades : string;
-    //name: string;
     datades : {name:string,course:string};
     
   }

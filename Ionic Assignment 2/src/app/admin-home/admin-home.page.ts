@@ -14,7 +14,6 @@ export class AdminHomePage implements OnInit {
   constructor(private navCtrl: NavController, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    //this.list = this.menuService.getMenu()[1].children[0].loadChildren;
     
   }
 
@@ -23,10 +22,6 @@ export class AdminHomePage implements OnInit {
   }
 
   onClick(){
-    // window.location.reload();
-    // this.router.navigate(['coursemanagement']);
-    // window.document.location.reload();
-    // this.navCtrl.navigateForward("admin-home/coursemanagement");
   }
 
   login(){

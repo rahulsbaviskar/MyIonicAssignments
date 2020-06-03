@@ -6,8 +6,6 @@ export class coursecategory {
 
   export class coursesubcategory {
     whoseData: string;
-    //datades : string;
-    //name: string;
     datades : {name:string};
     
   }

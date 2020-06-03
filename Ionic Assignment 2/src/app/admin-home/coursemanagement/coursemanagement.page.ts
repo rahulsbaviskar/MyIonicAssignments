@@ -15,19 +15,16 @@ export class CoursemanagementPage implements OnInit {
   }
 
   onClickCourseCategory(){
-    // this.navCtrl.navigateForward("coursecategory");
     this.router.navigateByUrl('/admin-home/coursemanagement/coursecategory');
-    // this.navCtrl.navigateForward("login/admin-home/coursemanagement/coursecategory");
+    
   }
   onClickCourse(){
-    // this.navCtrl.navigateForward("coursecategory");
     this.router.navigateByUrl('/admin-home/coursemanagement/course');
-    // this.navCtrl.navigateForward("login/admin-home/coursemanagement/coursecategory");
+   
   }
   onClickCourseSection(){
-    // this.navCtrl.navigateForward("coursecategory");
     this.router.navigateByUrl('/admin-home/coursemanagement/coursesection')
-    // this.navCtrl.navigateForward("login/admin-home/coursemanagement/coursecategory");
+    
   }
 
 }

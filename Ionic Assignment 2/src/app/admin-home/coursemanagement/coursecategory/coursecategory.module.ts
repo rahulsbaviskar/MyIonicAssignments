@@ -3,12 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {DataTablesModule} from 'angular-datatables';
 import { SharedModule } from '../../../shared/shared.module';
-// import { SearchPipe } from './SearchPipe';
 import { DatePipe } from '@angular/common'
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-//  import Swal from 'sweetalert2/dist/sweetalert2';
-  import {filter} from 'rxjs/operators'
-// import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
+import {filter} from 'rxjs/operators'
 import {NgxSummernoteModule} from 'ngx-summernote';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { IonicModule } from '@ionic/angular';
@@ -26,7 +23,6 @@ import { CoursecategoryPage } from './coursecategory.page';
     CoursecategoryPageRoutingModule,
     DataTablesModule,
     SharedModule,
-    // SearchPipe,
     Ng2SearchPipeModule,
     SweetAlert2Module,
     NgxSummernoteModule

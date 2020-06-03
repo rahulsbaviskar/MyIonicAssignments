@@ -11,31 +11,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-course.page.scss'],
 })
 export class AddCoursePage implements OnInit {
-
-
-  
   course1: course;
   showMyContainer: boolean = false;
   constructor(private service: DataService,private router: Router, private location: Location) {
     this.course1 = new course();
+}
 
-   }
+  ngOnInit() { }
 
-  ngOnInit() {
-  }
-
- 
+// get data & Back to course page
  next(){
-    // this.router.navigateByUrl('/admin-home/coursemanagement/course');
-    // console.log("before pushing");
-    // console.log(this.course1);
-    // this.course1.name = 'Medical Entrance Exam';
-    // this.course1.startdate = '01 Jun 2019';
-    // this.course1.enddate = '31 May 2020';
     this.service.saveCourse(this.course1);
     this.router.navigateByUrl('/admin-home/coursemanagement/course');
-    // console.log("after pushing");
-    // console.log(this.course1);
-    // this.location.back();
   }
 }

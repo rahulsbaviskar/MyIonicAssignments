@@ -21,14 +21,7 @@ export class AddCourseSectionPage implements OnInit {
   }
 
   next(){
-    // this.router.navigateByUrl('/coursecategory');
-    // console.log("before pushing");
-    // console.log(this.course1);
-    
     this.service.saveCourseSection(this.courseSection1);
-    // console.log("after pushing");
-    // console.log(this.course1);
-    // this.location.back();
     this.router.navigateByUrl('/admin-home/coursemanagement/coursesection');
   }
 }

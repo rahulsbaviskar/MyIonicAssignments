@@ -72,9 +72,7 @@ export class BreadcrumbComponent implements OnInit{
   }
 
   onClick(i: number){
-    // this.bread = '';
-    // for(let j=0;j<=i;j++){
-    //   this.bread = this.bread + '/' + this.breadcrumbs[j];
+   
     let newUrl = this.breadcrumbs[i].url;
     this.router.navigate([newUrl]); 
     }

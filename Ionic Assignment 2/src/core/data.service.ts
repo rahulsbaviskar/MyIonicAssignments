@@ -27,17 +27,9 @@ export class DataService {
   constructor(private storage: Storage) { }
 
   saveCourseCategory(courseCat: coursecategory){
-      // this.storage.get(ITEMS_KEY).then(() =>{
-      //   if(this.courseCategory){
-      //     this.courseCategory.push(courseCat);
-      //     return this.storage.set(ITEMS_KEY, this.courseCategory);
-      //   }
-      //   else {
-      //     return this.storage.set(ITEMS_KEY, [courseCat]);
-      //   }
-      // });
+      
       this.courseCategory.push(courseCat);
-      // console.log(this.courseCategory);
+     
   }
 
   saveCourse(course: course){
