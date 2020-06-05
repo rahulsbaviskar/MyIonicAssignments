@@ -2,6 +2,7 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { AdminLogin } from 'src/core/model/login.model';
 import { DataService } from 'src/core/data.service';
+import { LogService } from '../log.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginPage implements OnInit {
 
     adminLogin: AdminLogin;
 
-  constructor(private navCtrl: NavController,private service: DataService) {
+  constructor(private navCtrl: NavController,private service: DataService,private logger: LogService) {
     this.adminLogin = new AdminLogin();
    }
 
@@ -32,8 +33,10 @@ export class LoginPage implements OnInit {
      }
      else {
 
-     console.log("wrong user name password");
+    // console.log("wrong user name password");
+     this.logger.debug('', 1);
      }
+    
 
   }
 

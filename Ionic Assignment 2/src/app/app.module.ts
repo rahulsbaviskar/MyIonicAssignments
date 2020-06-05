@@ -51,6 +51,7 @@ import { SharedModule } from './shared/shared.module';
 import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 import { MenuService } from './menu.service';
 import { IonicStorageModule } from '@ionic/storage';
+import { LogService } from './log.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -118,6 +119,7 @@ import { IonicStorageModule } from '@ionic/storage';
   providers: [
     StatusBar,
     MenuService,
+    LogService,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
