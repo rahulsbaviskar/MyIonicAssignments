@@ -40,6 +40,7 @@ import { SharedModule } from './shared/shared.module';
 import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 import { MenuService } from './menu.service';
 import { IonicStorageModule } from '@ionic/storage';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 @NgModule({
   declarations: [AppComponent],
@@ -47,6 +48,12 @@ import { IonicStorageModule } from '@ionic/storage';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    LoggerModule.forRoot({
+    //  serverLoggingUrl: '/api/logs', //  if you don’t need logs to be sen’t to server, delete this line
+      level: NgxLoggerLevel.TRACE,
+      serverLogLevel: NgxLoggerLevel.ERROR, //defines the minimum log level for server-side logging
+     // disableConsoleLogging: false //  flag which helps you to turn console logging completely off
+    }),
     SharedModule,
     HttpClientModule,
     NgbModule,

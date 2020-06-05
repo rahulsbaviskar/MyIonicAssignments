@@ -3,6 +3,7 @@ import { course } from 'src/core/model/course.model';
 import { DataService } from 'src/core/data.service';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
+import { NGXLogger } from 'ngx-logger';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { Router } from '@angular/router';
 export class AddCoursePage implements OnInit {
   course1: course;
   showMyContainer: boolean = false;
-  constructor(private service: DataService,private router: Router, private location: Location) {
+  constructor(private service: DataService,private router: Router, private location: Location,private logger: NGXLogger) {
     this.course1 = new course();
 }
 
@@ -23,5 +24,6 @@ export class AddCoursePage implements OnInit {
  next(){
     this.service.saveCourse(this.course1);
     this.router.navigateByUrl('/admin-home/coursemanagement/course');
+    this.logger.log("Navigate on other page");
   }
 }

@@ -11,6 +11,7 @@ import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { coursection, coursesubsection } from 'src/core/model/coursesection.model';
 import { DataService } from 'src/core/data.service';
 import { Router } from '@angular/router';
+import { NGXLogger } from 'ngx-logger';
 
 class RedoUndo<T> {
   past: T[] = [];
@@ -129,7 +130,7 @@ formFlag = 'add';
  courseSectionData : coursection[];
  courseSectionSubData : coursesubsection[];
  
-  constructor(private modalService: NgbModal,private router: Router, private navCtrl: NavController,private dataService : DataService){
+  constructor(private modalService: NgbModal,private logger : NGXLogger,private router: Router, private navCtrl: NavController,private dataService : DataService){
     this.courseSectionData = this.dataService.courseSection;
     this.courseSectionSubData = this.dataService.courseSubSection;
 
@@ -219,14 +220,17 @@ toggleSelection(event, i) {
       var allSelected = this.checkboxes.every(checkbox => checkbox === true);
       if (!atleastOneSelected) {
         alert("No rows selected.")
+        this.logger.error("No Row Selected, Please select atleast one row"); 
         return;
       }
       if (allSelected) {
         alert("At least one row should be present.")
+        this.logger.error("You have selected all rows data may lost in that case"); 
         return;
       }
     
     for (let i = this.checkboxes.length-1; i >= 0; i--) {
+     
       // If selected, then delete that row.
       if (this.checkboxes[i]) {
         if(i == this.checkboxes.length-1){
@@ -237,6 +241,8 @@ toggleSelection(event, i) {
        this.courseSectionData[i + 1] = temp;
        this.checkboxes[i] = false;
          this.checkboxes[i+1] = true;
+         this.logger.log("selected row==",this.courseSectionData[i]); 
+         this.logger.log("move up row==",this.courseSectionData[i+1]); 
       }
     }
     }
@@ -249,11 +255,13 @@ toggleSelection(event, i) {
     
       if (!atleastOneSelected) {
         alert("No rows selected.")
+        this.logger.error("No Row Selected, Please select atleast one row"); 
         return;
       }
     
       if (allSelected) {
         alert("At least one row should be present.")
+        this.logger.error("All Rows are Selected"); 
         return;
       }
       
@@ -268,6 +276,8 @@ toggleSelection(event, i) {
          this.courseSectionData[i] = temp;
          this.checkboxes[i-1] = true;
          this.checkboxes[i] = false;
+         this.logger.log("selected row==",this.courseSectionData[i]); 
+         this.logger.log("move up row==",this.courseSectionData[i+1]); 
         }
       }
     
@@ -280,15 +290,18 @@ delete() {
 
   if (!atleastOneSelected) {
     alert("No rows selected.")
+    this.logger.error("No Row Selected, Please select atleast one row"); 
     return;
   }
 
   if (allSelected) {
     alert("At least one row should be present.")
+    this.logger.error("You have selected all rows data may lost in that case");
     return;
   }
 
   for (let i = this.checkboxes.length-1; i >= 0; i--) {
+    this.logger.log("deleted row has true status ==", this.checkboxes[i],this.courseSectionData[i]); 
     // If selected, then delete that row.
     if (this.checkboxes[i]) {
       this.courseSectionData.splice(i, 1);

@@ -50,7 +50,7 @@
    
      
    </span>
-    
+   
      <span >
       <a class="text-success" style="width: 200px;" >
       <button  (click)="next()" class="btn btn-primary btn-icon-text" style="margin-left: 30px;width: 220px;" type="button" >
@@ -60,9 +60,6 @@
     </span>
 
      </div>
-
-
-
 
 
       
@@ -83,12 +80,13 @@
       <ng-container *ngFor="let data of courseCategoryData | filter:searchText;let row of data1;let index = index;let i = index" (click)="setClickedRow(i)"  [class.active]="i == selectedRow">
       
         <tr style="height: 30px;" >
-         
+        
          <td><div class="error" style="height: 10px;border-color: rgb(89, 195, 236);outline-color: rgb(89, 195, 236);">  <input type="checkbox" (click)="toggleSelection($event, i)" style="font-size: 2px;background-color: white;"
           [checked]="checkboxes[i]"> </div> </td>
           <td><div  (click)="data.expanded = !data.expanded"  *ngIf="!data.showMyContainer" style="height: 30px;"> {{ data.expanded ? '&ndash;' : '+'}}   </div></td>
         
         <td><div  style="height: 30px;"> <input style="border-top-style:hidden;border-left-style:hidden ;border-right-style:hidden ;border-bottom-style:hidden ;background-color: white;" class="no-outline" [(ngModel)]="data.name" [disabled]="!data.isEditable"/> </div></td>
+
        <td>  <ion-icon (click)="data.showMyContainer=!data.showMyContainer" *ngIf="data.showMyContainer" class="mdi mdi-toggle-switch-off"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
         <ion-icon *ngIf="!data.showMyContainer" (click)="data.showMyContainer=!data.showMyContainer" class="mdi mdi-toggle-switch"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
         </td>
@@ -103,8 +101,7 @@
             <ion-icon  (click)="data.expanded= !data.expanded" class="icon-arrow-down" style="font-size: 20px;color: rgb(99, 197, 236); border-color: skyblue;"
            
             ></ion-icon>
-          
-           
+         
           </div>
           </td>
         
@@ -123,14 +120,15 @@
            <td><div  *ngIf="!data.datades.showMyContainer" style="height: 30px;margin-left: 20px;"> {{ '-'}}   </div></td> 
           <td><div  style="height: 30px;"> <input style="border-top-style:hidden;border-left-style:hidden ;border-right-style:hidden ;border-bottom-style:hidden ;background-color: white;margin-left: 20px;" class="no-outline" [(ngModel)]="data.datades.name" [disabled]="!data.datades.isEditable"/> </div></td>
 
-        
        <td>  <ion-icon (click)="data.datades.showMyContainer=!data.datades.showMyContainer" *ngIf="data.datades.showMyContainer" class="mdi mdi-toggle-switch-off"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
         <ion-icon *ngIf="!data.datades.showMyContainer" (click)="data.datades.showMyContainer=!data.datades.showMyContainer" class="mdi mdi-toggle-switch"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
         </td> 
          <td> <div  *ngIf="!data.datades.showMyContainer" style="height: 30px;">   <ion-icon class="icon-plus" style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
-           <ion-icon (click)="data.datades.isEditable=!data.datades.isEditable" *ngIf="!data.datades.isEditable" class="icon-note"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
+          
+          <ion-icon (click)="data.datades.isEditable=!data.datades.isEditable" *ngIf="!data.datades.isEditable" class="icon-note"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
           <ion-icon *ngIf="data.datades.isEditable" (click)="data.isEditable=!data.datades.isEditable" class="ti-check-box"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
          
+          
             </div>
             </td>
           </tr>
@@ -230,7 +228,7 @@
         Undo</button>
       </a>
     </span>
-     
+
   </div>
   </div>
 

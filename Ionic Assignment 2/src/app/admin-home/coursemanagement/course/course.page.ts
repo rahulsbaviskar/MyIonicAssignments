@@ -11,6 +11,7 @@ import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { DataService } from 'src/core/data.service';
 import { course } from 'src/core/model/course.model';
 import { Router } from '@angular/router';
+import { NGXLogger } from 'ngx-logger';
 
 
 class RedoUndo<T> {
@@ -126,7 +127,7 @@ params = {offset: 0, limit: 10}; //Static can be changed as per your need
 formFlag = 'add';
 
  courseData : course[];
-  constructor(private modalService: NgbModal,private router: Router, private navCtrl: NavController,private dataService : DataService){
+  constructor(private modalService: NgbModal, private logger: NGXLogger, private router: Router, private navCtrl: NavController,private dataService : DataService){
     this.courseData = this.dataService.course1;
     redoUndo.past = [...redoUndo.past, this.state];
     this.state = this.state + 1;
@@ -215,10 +216,12 @@ toggleSelection(event, i) {
       var allSelected = this.checkboxes.every(checkbox => checkbox === true);
       if (!atleastOneSelected) {
         alert("No rows selected.")
+        this.logger.warn("No Row selected");
         return;
       }
       if (allSelected) {
         alert("At least one row should be present.")
+        this.logger.warn("all Rows selected");
         return;
       }
     
@@ -233,6 +236,8 @@ toggleSelection(event, i) {
        this.courseData[i + 1] = temp;
        this.checkboxes[i] = false;
          this.checkboxes[i+1] = true;
+         this.logger.log("selected row==",this.courseData[i]); 
+         this.logger.log("move up row==",this.courseData[i+1]); 
       }
     }
     }
@@ -245,11 +250,13 @@ moveDown(){
 
   if (!atleastOneSelected) {
     alert("No rows selected.")
+    this.logger.warn("No Row selected");
     return;
   }
 
   if (allSelected) {
     alert("At least one row should be present.")
+    this.logger.warn("All rows are selected");
     return;
   }
   
@@ -264,6 +271,8 @@ moveDown(){
      this.courseData[i] = temp;
      this.checkboxes[i-1] = true;
      this.checkboxes[i] = false;
+     this.logger.log("selected row==",this.courseData[i]); 
+     this.logger.log("move up row==",this.courseData[i+1]); 
     }
   }
 
@@ -276,15 +285,19 @@ delete() {
 
   if (!atleastOneSelected) {
     alert("No rows selected.")
+    this.logger.error("No Row Selected, Please select atleast one row"); 
     return;
   }
 
   if (allSelected) {
     alert("At least one row should be present.")
+   
+    this.logger.error("You have selected all rows data may lost in that case"); 
     return;
   }
 
   for (let i = this.checkboxes.length-1; i >= 0; i--) {
+    this.logger.log("deleted row has true status ==", this.checkboxes[i],this.courseData[i]); 
     // If selected, then delete that row.
     if (this.checkboxes[i]) {
       this.courseData.splice(i, 1);
@@ -304,6 +317,7 @@ delete() {
 
   next(){
     this.router.navigateByUrl('/admin-home/coursemanagement/course/add-course')
+    this.logger.log("Navigate on other page");
   }
 
 }
