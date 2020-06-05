@@ -3,6 +3,7 @@ import { NavController } from '@ionic/angular';
 import { AdminLogin } from 'src/core/model/login.model';
 import { DataService } from 'src/core/data.service';
 import { LogService } from '../log.service';
+import { NGXLogger } from 'ngx-logger';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginPage implements OnInit {
 
     adminLogin: AdminLogin;
 
-  constructor(private navCtrl: NavController,private service: DataService,private logger: LogService) {
+  constructor(private navCtrl: NavController,private service: DataService,private logger: LogService,private logger1: NGXLogger) {
     this.adminLogin = new AdminLogin();
    }
 
@@ -34,7 +35,8 @@ export class LoginPage implements OnInit {
      else {
 
     // console.log("wrong user name password");
-     this.logger.debug('', 1);
+     this.logger.error('hello', 1);
+     this.logger1.error("Error message");
      }
     
 

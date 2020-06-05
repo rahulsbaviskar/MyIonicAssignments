@@ -19,6 +19,7 @@ import { AmazingTimePickerModule } from 'amazing-time-picker';
 import { TagInputModule } from 'ngx-chips';
 import { FormWizardModule } from 'angular2-wizard';
 import { NgxSummernoteModule } from 'ngx-summernote';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 //import 'tinymce/plugins/image';
 //import { TinymceModule } from 'angular2-tinymce';
 import { AceEditorModule } from 'ng2-ace-editor';
@@ -62,6 +63,12 @@ import { LogService } from './log.service';
     SharedModule,
     HttpClientModule,
     NgbModule,
+    LoggerModule.forRoot({
+     // serverLoggingUrl: '/api/logs', // send logs to server
+      level: NgxLoggerLevel.TRACE,
+      serverLogLevel: NgxLoggerLevel.ERROR, //defines the minimum log level for server-side logging
+      disableConsoleLogging: false}), // a flag which helps you to turn console logging completely off.
+
     Ng2SearchPipeModule,
     IonicStorageModule.forRoot(),
     DragulaModule.forRoot(),
