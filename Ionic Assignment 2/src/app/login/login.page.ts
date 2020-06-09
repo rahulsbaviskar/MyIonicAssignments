@@ -27,8 +27,8 @@ export class LoginPage implements OnInit {
   
   login(){
 
-    this.logger.debug("username",this.adminLogin.username);
-    this.logger.debug("password",this.adminLogin.password);
+    this.logger.debug("username==",this.adminLogin.username);
+    this.logger.debug("password==",this.adminLogin.password);
     if(this.adminLogin.username == "admin" && this.adminLogin.password == "admin")
      {
       

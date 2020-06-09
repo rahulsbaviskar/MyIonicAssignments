@@ -5,6 +5,7 @@ import { MenuService } from '../../menu.service';
 import { IBreadCrumb } from '../../../interface/breadcrumb.interface';
 
 import { filter, distinctUntilChanged } from 'rxjs/operators';
+import { NGXLogger } from 'ngx-logger';
 
 @Component({
   selector: 'app-breadcrumb',
@@ -18,6 +19,7 @@ export class BreadcrumbComponent implements OnInit{
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
+    private logger: NGXLogger,
   ) {
     this.breadcrumbs = this.buildBreadCrumb(this.activatedRoute.root);
   }
@@ -75,6 +77,7 @@ export class BreadcrumbComponent implements OnInit{
    
     let newUrl = this.breadcrumbs[i].url;
     this.router.navigate([newUrl]); 
+    this.logger.log("Breadcrumbs URL==",[newUrl]);
     }
   }
 

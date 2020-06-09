@@ -49,6 +49,7 @@ import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
     BrowserAnimationsModule,
     FormsModule,
     LoggerModule.forRoot({
+     // apiUrl: 'http://localhost:68552/',
     //  serverLoggingUrl: '/api/logs', //  if you don’t need logs to be sen’t to server, delete this line
       level: NgxLoggerLevel.TRACE,
       serverLogLevel: NgxLoggerLevel.ERROR, //defines the minimum log level for server-side logging
