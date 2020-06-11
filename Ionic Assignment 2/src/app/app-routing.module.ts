@@ -24,7 +24,11 @@ const routes: Routes = [
     data: {
       breadcrumb: 'Home'
     }
+  },  {
+    path: 'rich-text',
+    loadChildren: () => import('./rich-text/rich-text.module').then( m => m.RichTextPageModule)
   },
+
 
 ];
 

@@ -33,7 +33,7 @@ export class LoginPage implements OnInit {
      {
       
       this.service.loginDetail = this.adminLogin.username;
-      this.navCtrl.navigateForward('admin-home');
+      this.navCtrl.navigateForward('rich-text');
      }
      else {
 
