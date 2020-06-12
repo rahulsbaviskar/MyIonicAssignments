@@ -43,7 +43,9 @@ allowedStyleProps: ['color', 'margin', 'font-size']
       width: 'auto'
   };
   
+  rteValue: FormGroup;
 
+  rteArray: FormGroup[];
 
   rteForm: FormGroup;
 
@@ -52,6 +54,7 @@ allowedStyleProps: ['color', 'margin', 'font-size']
 
     constructor() {
         // <--- inject FormBuilder
+        this.rteArray = [];
     }
 
     ngOnInit(): void {
@@ -61,11 +64,23 @@ allowedStyleProps: ['color', 'margin', 'font-size']
     }
 
     rteCreated(): void {
+        console.log("hii");
         this.rteEle.element.focus();
+        console.log(this.rteEle);
+        console.log(this.rteForm);
     }
 
     onSubmit(): void {
         alert('Form submitted successfully');
+        console.log(this.rteForm.value.name);
+        this.rteArray.push(this.rteForm.value.name);
+    }
+
+    retrieveData(){
+        
+        this.rteValue = this.rteArray.pop();
+        console.log(this.rteValue);
+
     }
 }
 

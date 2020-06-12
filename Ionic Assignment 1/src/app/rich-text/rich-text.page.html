@@ -1,76 +1,61 @@
-
-
 <ion-content>
 
- <div class="control-section">  
-      <div class="content-wrapper">      
-          <div id="content" class="box-form" style="margin: 0 auto; max-width:750px; padding:25px"> 
-                       <form [formGroup]="rteForm" (ngSubmit)="onSubmit()">    
-                                     <div class="form-group">  
-                                      <ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' [pasteCleanupSettings]="pasteCleanupSettings">
-                                        <ng-template #valueTemplate>
-                                          <p>RichTextEditor is a WYSIWYG editing control which will reduce the effort for users while trying to express their formatting word content as HTML or Markdown format.</p>
-                                          <p><b>Paste Cleanup properties:</b></p>
-                                          <ul>
-                                              <li>
-                                                  <p>prompt - specifies whether to enable the prompt when pasting in RichTextEditor.</p>
-                                              </li>
-                                              <li>
-                                                  <p>plainText - specifies whether to paste as plain text or not in RichTextEditor.</p>
-                                              </li>
-                                              <li>
-                                                  <p>keepFormat- specifies whether to keep or remove the format when pasting in RichTextEditor.</p>
-                                              </li>
-                                              <li>
-                                                  <p>deniedTags - specifies the tags to restrict when pasting in RichTextEditor.</p>
-                                              </li>
-                                              <li>
-                                                  <p>deniedAttributes - specifies the attributes to restrict when pasting in RichTextEditor.</p>
-                                              </li>
-                                              <li>
-                                                  <p>allowedStyleProperties - specifies the allowed style properties when pasting in RichTextEditor.</p>
-                                              </li>
-                                          </ul>
-                                        </ng-template>
-                                        </ejs-richtexteditor>   
-                       <div *ngIf="rteForm.invalid && rteForm.controls.name.touched" class="alert alert-danger">     
-                                            <div *ngIf="rteForm.controls.name.errors.required">                 
-                                                         Value is required.           
-                                                                     </div>       
-                                                                                 </div>     
-                                                                                           </div>     
-                                                                                                      <div class="form-group">  
-                                      <button type="submit" ejs-button [disabled]="!rteForm.valid">upload</button>                    <button type="reset" ejs-button (click)="rteForm.reset()" style="margin-left: 20px">Reset</button>     
-                      </div>   
-                     </form>    
-                        </div> 
-                         </div>
-                        </div>
-
-
-
-                        <div class="control-section">  
-                          <div class="content-wrapper">      
-                              <div id="content" class="box-form" style="margin: 0 auto; max-width:750px; padding:25px"> 
-                                            
-                                                         <div class="form-group">  
-                                                          <button style="margin-left: 100px;width: 150px;" ejs-button >Retrive Latest</button>
-                                                          <button style="margin-left: 215px;width: 150px;" ejs-button >Retrive All</button>
-                                                         </div>
-                                                         <div class="form-group"> 
-                        <ejs-richtexteditor id='inlineRTE' #inlineRTE [inlineMode]='inlineMode' [toolbarSettings]='toolbarSettings' [format]='format' [fontFamily]='fontFamily'>
-                          <ng-template #valueTemplate>
-                              <p>The sample is configured with inline mode of editor. Initially, the editor is rendered without a <a href="https://ej2.syncfusion.com/home/" target="_blank">toolbar</a>. The toolbar becomes visible only when the content is selected.</p>
-                          </ng-template>
+    <div class="control-section">
+        <div class="content-wrapper">
+            <div id="content" class="box-form" style="margin: 0 auto; max-width:750px; padding:25px">
+                <form [formGroup]="rteForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <ejs-richtexteditor #fromRTE formControlName="name" (created)="rteCreated()">
                         </ejs-richtexteditor>
+                        <div *ngIf="rteForm.invalid && rteForm.controls.name.touched" class="alert alert-danger">
+                            <div *ngIf="rteForm.controls.name.errors.required">
+                                Value is required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" ejs-button [disabled]="!rteForm.valid">upload</button> <button
+                            type="reset" ejs-button (click)="rteForm.reset()" style="margin-left: 20px">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-                        </div>
-                        <div class="form-group">  
-                          <button style="margin-left: 100px;width: 150px;" ejs-button >Previous</button>
-                          <button style="margin-left: 215px;width: 150px;" ejs-button >NEXT</button>
-                         </div>
-                        </div>
-                        </div>
-                        </div>
+
+
+    <div class="control-section">
+        <div class="content-wrapper">
+            <div id="content" class="box-form" style="margin: 0 auto; max-width:750px; padding:25px">
+
+                <div class="form-group">
+                    <button style="margin-left: 100px;width: 150px;" (click)="retrieveData()" ejs-button>Retrive Latest</button>
+                    <button style="margin-left: 215px;width: 150px;" ejs-button>Retrive All</button>
+                </div>
+                <div class="form-group">
+                    <!-- <ejs-richtexteditor [innerHTML] = "rteValue" id='inlineRTE' #inlineRTE [inlineMode]='inlineMode'
+                        [toolbarSettings]='toolbarSettings' [format]='format' [fontFamily]='fontFamily'>
+                        <!-- <ng-template #valueTemplate>
+                            <p>The sample is configured with inline mode of editor. Initially, the editor is rendered
+                                without a <a href="https://ej2.syncfusion.com/home/" target="_blank">toolbar</a>. The
+                                toolbar becomes visible only when the content is selected.</p>
+                        </ng-template> 
+                    </ejs-richtexteditor> -->
+                    <div [innerHTML] = "rteValue">
+                        <!-- {{rteValue}} -->
+                    </div> 
+
+                </div>
+                <div class="form-group">
+                    <button style="margin-left: 100px;width: 150px;" ejs-button>Previous</button>
+                    <button style="margin-left: 215px;width: 150px;" ejs-button>NEXT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div [innerHTML] = "rteValue">
+        {{rteValue}}
+    </div> -->
 
 </ion-content>
