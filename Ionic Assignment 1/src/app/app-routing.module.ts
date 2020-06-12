@@ -28,7 +28,15 @@ const routes: Routes = [
   {
     path: 'admin-home',
     loadChildren: () => import('./admin-home/admin-home.module').then( m => m.AdminHomePageModule)
+  },  {
+    path: 'rich-text',
+    loadChildren: () => import('./rich-text/rich-text.module').then( m => m.RichTextPageModule)
   },
+  {
+    path: 'rich-text',
+    loadChildren: () => import('./rich-text/rich-text.module').then( m => m.RichTextPageModule)
+  },
+
 
 ];
 
