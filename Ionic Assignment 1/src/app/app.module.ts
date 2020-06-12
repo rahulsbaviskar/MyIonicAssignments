@@ -31,7 +31,7 @@ import { ChartistModule } from 'ng-chartist';
 import { ToastrModule } from 'ngx-toastr';
 import { AgmCoreModule } from '@agm/core';
 import { BarRatingModule } from "ngx-bar-rating";
-//import { FullCalendarModule } from 'ng-fullcalendar';
+import { FullCalendarModule } from '@fullcalendar/angular';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -43,6 +43,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
+import { MiniCalendarModule } from 'mini-calendar';
+// import { RichTextEditorAllModule, RichTextEditor } from '@syncfusion/ej2-angular-richtexteditor';
+import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
+
 const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
   // Change this to your upload POST address:
    url: 'https://httpbin.org/post',
@@ -54,9 +58,13 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
   //entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     BrowserAnimationsModule,
+    MiniCalendarModule,
     FormsModule,
+    ButtonModule,
     SharedModule,
     HttpClientModule,
+    // RichTextEditorAllModule,
+    // RichTextEditor,
     NgbModule,
     DragulaModule.forRoot(),
     ClipboardModule,
@@ -108,7 +116,7 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     ToastrModule.forRoot(),
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyCnT63XUjqjPgXZ0lFTU_pdpfUX7swzTTM' }),
     BarRatingModule,
-  //  FullCalendarModule,
+   FullCalendarModule,
     ScrollToModule.forRoot()],
   providers: [
    

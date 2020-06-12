@@ -110,6 +110,14 @@ export class AppLandingPage
     this.navCtrl.navigateForward('login');
   }
 
+  toCalendar(){
+    this.navCtrl.navigateForward('calendar-page');
+  }
+
+  toRte(){
+    this.navCtrl.navigateForward('rtepage');
+  }
+
 }
 
 

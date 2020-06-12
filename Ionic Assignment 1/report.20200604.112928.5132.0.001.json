@@ -1,0 +1,382 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200604.112928.5132.0.001.json",
+    "dumpEventTime": "2020-06-04T11:29:28Z",
+    "dumpEventTimeStamp": "1591250368601",
+    "processId": 5132,
+    "cwd": "C:\\Users\\prs\\Documents\\Ionic\\MyIonicAssignments\\Ionic Assignment 1",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\prs\\Documents\\Ionic\\MyIonicAssignments\\Ionic Assignment 1\\node_modules\\@ngtools\\webpack\\src\\type_checker_worker.js",
+      "9d93e901-158a-4cf9-ba1b-2f0582ffcfeb"
+    ],
+    "nodejsVersion": "v12.14.1",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.14.1",
+      "v8": "7.7.299.13-node.16",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.14.1/node-v12.14.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.14.1/node-v12.14.1.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.14.1/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18363",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz",
+        "speed": 2904,
+        "user": 38362375,
+        "nice": 0,
+        "sys": 23933125,
+        "idle": 529331000,
+        "irq": 964375
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz",
+        "speed": 2904,
+        "user": 35306703,
+        "nice": 0,
+        "sys": 19632171,
+        "idle": 536687625,
+        "irq": 2618312
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "08:00:27:1b:08:b9",
+        "address": "fe80::3132:2a13:ed88:6132",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 6
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "08:00:27:1b:08:b9",
+        "address": "10.0.2.15",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "vEthernet (Default Switch)",
+        "internal": false,
+        "mac": "00:15:5d:f0:ad:61",
+        "address": "fe80::5859:23bd:87c1:97f0",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 12
+      },
+      {
+        "name": "vEthernet (Default Switch)",
+        "internal": false,
+        "mac": "00:15:5d:f0:ad:61",
+        "address": "192.168.19.161",
+        "netmask": "255.255.255.240",
+        "family": "IPv4"
+      }
+    ],
+    "host": "DESKTOP-LKEKEEE"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff681a51759",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff681a55b7c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff681a54b38",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff681b4433b",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff682348c5e",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff682330ca1",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6821fe56c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6821da563",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6821d885b",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff682203edd",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff682205be4",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6821fbcd3",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6821fa4a4",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff68221b775",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff681f878d7",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff68277463d",
+      "symbol": ""
+    },
+    {
+      "pc": "0x000000c762f71e2c",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 293068800,
+    "totalCommittedMemory": 293068800,
+    "usedMemory": 233939792,
+    "availableMemory": 1940177928,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 33554432,
+        "committedMemory": 33554432,
+        "capacity": 16759808,
+        "used": 217320,
+        "available": 16542488
+      },
+      "old_space": {
+        "memorySize": 209301504,
+        "committedMemory": 209301504,
+        "capacity": 192220936,
+        "used": 191894240,
+        "available": 326696
+      },
+      "code_space": {
+        "memorySize": 6455296,
+        "committedMemory": 6455296,
+        "capacity": 1736480,
+        "used": 1736480,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 4198400,
+        "committedMemory": 4198400,
+        "capacity": 924960,
+        "used": 924960,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 39247872,
+        "committedMemory": 39247872,
+        "capacity": 39130944,
+        "used": 39130944,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 3552,
+        "used": 3552,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 16759808,
+        "used": 0,
+        "available": 16759808
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 26.062,
+    "kernelCpuSeconds": 3.656,
+    "cpuConsumptionPercent": 22.1776,
+    "maxRss": 307286016,
+    "pageFaults": {
+      "IORequired": 225579,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 5605,
+      "writes": 87
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "allusersprofile": "C:\\ProgramData",
+    "appdata": "C:\\Users\\prs\\AppData\\Roaming",
+    "BROWSERSLIST_IGNORE_OLD_DATA": "1",
+    "colorterm": "truecolor",
+    "commonprogramfiles": "C:\\Program Files\\Common Files",
+    "commonprogramfiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "commonprogramw6432": "C:\\Program Files\\Common Files",
+    "computername": "DESKTOP-LKEKEEE",
+    "comspec": "C:\\WINDOWS\\system32\\cmd.exe",
+    "dp0": "C:\\Users\\prs\\Documents\\Ionic\\MyIonicAssignments\\Ionic Assignment 1\\node_modules\\.bin\\",
+    "driverdata": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "force_color": "1",
+    "git_askpass": "c:\\Users\\prs\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh",
+    "homedrive": "C:",
+    "homepath": "\\Users\\prs",
+    "ionic_cli_bin": "C:\\Users\\prs\\AppData\\Roaming\\npm\\node_modules\\ionic\\bin\\ionic",
+    "ionic_cli_lib": "C:\\Users\\prs\\AppData\\Roaming\\npm\\node_modules\\ionic",
+    "ionic_cli_local_error": "LOCAL_CLI_NOT_FOUND",
+    "lang": "en_US.UTF-8",
+    "localappdata": "C:\\Users\\prs\\AppData\\Local",
+    "logonserver": "\\\\DESKTOP-LKEKEEE",
+    "number_of_processors": "2",
+    "onedrive": "C:\\Users\\prs\\OneDrive",
+    "onedriveconsumer": "C:\\Users\\prs\\OneDrive",
+    "os": "Windows_NT",
+    "path": "C:\\Users\\prs\\Documents\\Ionic\\MyIonicAssignments\\Ionic Assignment 1\\node_modules\\.bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Users\\prs\\AppData\\Roaming\\npm;C:\\Users\\prs\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\prs\\AppData\\Local\\Microsoft\\WindowsApps;",
+    "pathext": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC;.CPL",
+    "processor_architecture": "AMD64",
+    "processor_identifier": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+    "processor_level": "6",
+    "processor_revision": "8e09",
+    "programdata": "C:\\ProgramData",
+    "programfiles": "C:\\Program Files",
+    "programfiles(x86)": "C:\\Program Files (x86)",
+    "programw6432": "C:\\Program Files",
+    "prompt": "$P$G",
+    "psmodulepath": "C:\\Users\\prs\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\",
+    "public": "C:\\Users\\Public",
+    "sessionname": "Console",
+    "systemdrive": "C:",
+    "systemroot": "C:\\WINDOWS",
+    "temp": "C:\\Users\\prs\\AppData\\Local\\Temp",
+    "term_program": "vscode",
+    "term_program_version": "1.45.1",
+    "tmp": "C:\\Users\\prs\\AppData\\Local\\Temp",
+    "userdomain": "DESKTOP-LKEKEEE",
+    "userdomain_roamingprofile": "DESKTOP-LKEKEEE",
+    "username": "prs",
+    "userprofile": "C:\\Users\\prs",
+    "vscode_git_askpass_main": "c:\\Users\\prs\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js",
+    "vscode_git_askpass_node": "C:\\Users\\prs\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+    "vscode_git_ipc_handle": "\\\\.\\pipe\\vscode-git-28ab02db16-sock",
+    "WEBPACK_DEV_SERVER": "true",
+    "windir": "C:\\WINDOWS",
+    "_prog": "node"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\MSASN1.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\System32\\profapi.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMMBASE.dll",
+    "C:\\WINDOWS\\System32\\cfgmgr32.dll",
+    "C:\\WINDOWS\\System32\\bcryptPrimitives.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\System32\\powrprof.dll",
+    "C:\\WINDOWS\\System32\\UMPDC.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\System32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll"
+  ]
+}
