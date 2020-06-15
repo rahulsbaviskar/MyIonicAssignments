@@ -158,8 +158,8 @@
        <td>  <ion-icon (click)="data.showMyContainer=!data.showMyContainer" *ngIf="data.showMyContainer" class="mdi mdi-toggle-switch-off"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
         <ion-icon *ngIf="!data.showMyContainer" (click)="data.showMyContainer=!data.showMyContainer" class="mdi mdi-toggle-switch"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
         </td>
-        <td> {{data.startdate}} </td>
-        <td> {{data.enddate}} </td>
+        <td> {{data.startdate | date : 'dd MMMM, yyyy'}} </td>
+        <td> {{data.enddate | date : 'dd MMMM, yyyy'}} </td>
            <td> <div style="height: 30px;align-items: center;" *ngIf="!data.showMyContainer">  
             <ion-icon (click)="data.isEditable=!data.isEditable" *ngIf="!data.isEditable" class="icon-note"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
             <ion-icon *ngIf="data.isEditable" (click)="data.isEditable=!data.isEditable" class="ti-check-box"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
@@ -168,8 +168,8 @@
            <!--  <button (click)="data.isEditable=!data.isEditable" *ngIf="!data.isEditable">Edit</button> -->
            
           </div>
-          </td>
-        
+                    </td>
+                    
         <td style="visibility: collapse;" > <div class="error" style="height: 10px;visibility: hidden;">  <input type="checkbox" (click)="toggleSelection($event, i)"
           [checked]="checkboxes[i]"> </div> </td> 
         </tr>
