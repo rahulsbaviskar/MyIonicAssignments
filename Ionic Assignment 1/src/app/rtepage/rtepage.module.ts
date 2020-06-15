@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { RTEpagePageRoutingModule } from './rtepage-routing.module';
 
 import { RTEpagePage } from './rtepage.page';
-// import { RichTextEditorAllModule, RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
+import { RichTextEditorAllModule, RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
 import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
 import { SharedModule } from '../shared/shared.module';
 
@@ -18,8 +18,8 @@ import { SharedModule } from '../shared/shared.module';
     ReactiveFormsModule,
     IonicModule,
     SharedModule,
-    // RichTextEditorModule,
-    // RichTextEditorAllModule,
+    RichTextEditorModule,
+    RichTextEditorAllModule,
     ButtonModule,
     RTEpagePageRoutingModule
   ],
