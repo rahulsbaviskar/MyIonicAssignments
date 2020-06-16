@@ -38,6 +38,8 @@ export class CoursesectionPage implements OnInit {
   selectedRow: '';
   checkboxes: boolean[];
 
+  filterCheckBoxes: boolean[];
+
   showMyContainer: boolean = false;
   showMyContainer1: boolean = true;
 
@@ -313,5 +315,9 @@ delete() {
 
   next(){
     this.router.navigateByUrl('/admin-home/coursemanagement/coursesection/add-course-section')
+  }
+
+  filterTableData(){
+    this.filterCheckBoxes = new Array();
   }
 }

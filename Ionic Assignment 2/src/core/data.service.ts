@@ -22,8 +22,6 @@ export class DataService {
   courseSection : coursection[] = [{'name': 'Physics','course': 'NEET-UG 20202'},{'name': 'Chemistry','course': 'JEE-2021'},{'name': 'Biology','course': 'AIIMS-2021'}];
 
 
- 
-
   constructor(private storage: Storage) { }
 
   saveCourseCategory(courseCat: coursecategory){

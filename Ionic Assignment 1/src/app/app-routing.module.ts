@@ -29,6 +29,14 @@ const routes: Routes = [
     path: 'admin-home',
     loadChildren: () => import('./admin-home/admin-home.module').then( m => m.AdminHomePageModule)
   },
+  {
+    path: 'calendar-page',
+    loadChildren: () => import('./calendar-page/calendar-page.module').then( m => m.CalendarPagePageModule)
+  },  {
+    path: 'rtepage',
+    loadChildren: () => import('./rtepage/rtepage.module').then( m => m.RTEpagePageModule)
+  },
+
 
 ];
 

@@ -15,9 +15,9 @@ export class HeaderComponent implements OnInit {
   login(){
     this.navCtrl.navigateForward('login');
   }
-  // onClick(){
-  //   window.location.reload();
-  //   // window.document.location.reload();
-  // }
+  onClick(){
+    window.location.reload();
+    // window.document.location.reload();
+  }
 
 }
