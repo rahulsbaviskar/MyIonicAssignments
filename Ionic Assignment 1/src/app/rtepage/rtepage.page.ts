@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ToolbarService, LinkService, ImageService, HtmlEditorService, RichTextEditorComponent } from '@syncfusion/ej2-angular-richtexteditor';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { RteModel } from '../shared/rte.model';
 
 @Component({
   selector: 'app-rtepage',
@@ -47,11 +48,15 @@ public fontFamily: Object = {
 
 rteValue: FormGroup[];
 
+butttonFlag: boolean = false;
+
 rteArray: FormGroup[];
 
 rteForm: FormGroup;
 
 length: number;
+
+// rteModel: RteModel[];
 
 @ViewChild('fromRTE')
 private rteEle: RichTextEditorComponent;
@@ -81,16 +86,18 @@ onSubmit(): void {
     console.log(this.rteForm.value);
     this.rteArray.push(this.rteForm.value.name);
     // this.rteValue = this.rteForm.value.name;
-    console.log(this.rteValue);
+    // console.log(this.rteValue);
     console.log(this.rteArray);
 }
 
 retrieveData() {
     console.log("retrieve data");
+    this.butttonFlag = false;
     this.rteValue = [];
     this.length = this.rteArray.length - 1;
     console.log(this.rteArray);
     this.rteValue.push(this.rteArray[this.rteArray.length - 1]);
+
     console.log(this.rteValue);
     console.log(this.rteArray);
 
@@ -98,27 +105,40 @@ retrieveData() {
 
 retrieveAllData() {
     console.log("retrieve all");
+    this.butttonFlag = true;
+    this.rteValue = [];
+    this.length = this.rteArray.length - 1;
     console.log(this.rteArray);
-    this.rteValue = this.rteArray;
+    this.rteValue.push(this.rteArray[this.rteArray.length - 1]);
+    console.log(this.rteValue);
+    console.log(this.rteArray);
 }
 
 prev() {
+    // this.buttton;
     if (this.length != 0) {
         this.rteValue = [];
         this.length = this.length - 1;
         this.rteValue.push(this.rteArray[this.length]);
     }
-    else
+    else{
+        // this.butttonFlag = false;
         alert("In the first element");
+    }
+        
 }
 next() {
+    // this.buttton;
     if (this.length != (this.rteArray.length - 1)) {
         this.rteValue = [];
         this.length = this.length + 1;
         this.rteValue.push(this.rteArray[this.length]);
     }
-    else
+    else{
+        // this.butttonFlag = false;
         alert("In the last element");
+    }
+        
 }
 
   // rteForm: FormGroup;

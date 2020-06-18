@@ -11,28 +11,29 @@ const routes: Routes = [
  
  {
     path: 'parent-home',
-    loadChildren: () => import('./parent-home/parent-home.module').then( m => m.ParentHomePageModule)
+    loadChildren: () => import('./pages/parent-home/parent-home.module').then( m => m.ParentHomePageModule)
   },
   {
     path: 'student-home',
-    loadChildren: () => import('./student-home/student-home.module').then( m => m.StudentHomePageModule)
+    loadChildren: () => import('./pages/student-home/student-home.module').then( m => m.StudentHomePageModule)
   },
   {
     path: 'app-landing',
-    loadChildren: () => import('./app-landing/app-landing.module').then( m => m.AppLandingPageModule)
+    loadChildren: () => import('./pages/app-landing/app-landing.module').then( m => m.AppLandingPageModule)
   },
   {
     path: 'institute-home',
-    loadChildren: () => import('./institute-home/institute-home.module').then( m => m.InstituteHomePageModule)
+    loadChildren: () => import('./pages/institute-home/institute-home.module').then( m => m.InstituteHomePageModule)
   },
   {
     path: 'admin-home',
-    loadChildren: () => import('./admin-home/admin-home.module').then( m => m.AdminHomePageModule)
+    loadChildren: () => import('./pages/admin-home/admin-home.module').then( m => m.AdminHomePageModule)
   },
   {
     path: 'calendar-page',
-    loadChildren: () => import('./calendar-page/calendar-page.module').then( m => m.CalendarPagePageModule)
-  },  {
+    loadChildren: () => import('./shared/calendar-page/calendar-page.module').then( m => m.CalendarPagePageModule)
+  },
+  {
     path: 'rtepage',
     loadChildren: () => import('./rtepage/rtepage.module').then( m => m.RTEpagePageModule)
   },
