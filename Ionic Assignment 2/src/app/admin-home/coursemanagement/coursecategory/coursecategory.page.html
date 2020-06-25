@@ -1,73 +1,21 @@
 
 <app-home-header></app-home-header>
 <ion-content>
-  <!-- <br>
-  <div class="col-md grid-margin stretch-card" style="margin-top: 4%; color: blue;">
-    <div class="card-body">
-        <div> 
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom bg-inverse-primary">
-              <li class="breadcrumb-item" ><a >Home</a></li>
-              <li class="breadcrumb-item"><a>Course Management</a></li>
-              <li class="breadcrumb-item active"><a>Course Category</a></li> 
-            </ol>
-          </nav>
-        </div>
-   -  </div>
-  </div> -->
-
-  <!-- <app-breadcrumb></app-breadcrumb> -->
-
-<!-- new added-->
-
-<!--<div class="AddEmployeeTitleContainer">
-  <div class="addEmployeeTitleContainer">
-    <div >Add Employee</div>
-</div>
-<div class="addEmployeeBtnContainer">
-  <div class="addNewEmployeeBtn" (click)="addNewEmployeeBtn()">+</div>
-</div>
-</div>
-
-<div *ngIf="newEmployeeClicked">
-<div class="formWrapper">
-<form>
-  <div class="form-group name">
-     <label for="name">Name:</label> 
-    <input type="text"
-           class="form-control input"
-           id="name"
-           name="name"
-           [(ngModel)]="model.name"
-           placeholder="Name">
-  </div>
-  <div class="submitBtnContainer">
-    <button type="submit" class="saveBtn" (click)="addEmployee()">SAVE</button>
-  </div>
-</form>
-</div>
-</div> -->
-
-<!-- new Added-->
-
-
-<!-- New-->
+ 
 
 <ng-template #smallModalContent let-modal class="modal fade" aria-labelledby="exampleModalLabel-3">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel-3">Add Course Category</h5>
+      <h5 class="modal-title" id="exampleModalLabel-3">Course Category</h5>
       <button type="button" class="close" (click)="modal.dismiss()" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
+
     <div class="modal-body">
-      <p> <input type="text"
-        class="form-control input"
-        id="name"
-        name="name"
-        [(ngModel)]="model.name"
-        placeholder="Add New Course Category"></p>
+      <ng-container *ngFor="let data of data1">
+        <div  style="height: 30px;">  {{data.name}}  </div>
+      </ng-container>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-primary" (click)="addCategory()">Submit</button>
@@ -76,9 +24,6 @@
   </div>
 </ng-template>
 <!-- Modal Ends -->
-
-
-<!--ended-->
 
 
 
@@ -128,7 +73,17 @@
       <tr>
         <th><a style="color: rgb(89, 195, 236);">Select </a> </th>
         <th>  </th>
-        <th><a style="color: rgb(89, 195, 236);">Course Category</a></th>
+        <th>  <a style="color: rgb(89, 195, 236);">Course Category</a> 
+          <select >
+            <option value="Select Category">Select Category</option>
+            <ng-container *ngFor="let data of data1">
+             
+          <option>  
+           
+            <div  style="color: rgb(89, 195, 236);">  {{data.name}}  </div>
+         </option>
+        </ng-container>
+        </select> </th>
        <th><a style="color: rgb(89, 195, 236);">Show/Hide</a></th>
         <th><a style="color: rgb(89, 195, 236);">Action</a></th>
       
@@ -154,7 +109,7 @@
         <ion-icon *ngIf="!data.showMyContainer" (click)="data.showMyContainer=!data.showMyContainer" class="mdi mdi-toggle-switch"  style="font-size: 30px; color: rgb(44, 93, 228)"></ion-icon> 
         </td>
 
-           <td> <div style="height: 30px;align-items: center;" *ngIf="!data.showMyContainer">  <ion-icon class="icon-plus" (click)="openSmallModal()" style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
+           <td> <div style="height: 30px;align-items: center;" *ngIf="!data.showMyContainer">  <ion-icon class="icon-plus"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
             <ion-icon (click)="data.isEditable=!data.isEditable" *ngIf="!data.isEditable" class="icon-note"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
             <ion-icon *ngIf="data.isEditable" (click)="data.isEditable=!data.isEditable" class="ti-check-box"  style="font-size: 20px;color: rgb(99, 197, 236);margin-left: 5px;"></ion-icon> 
            
@@ -178,9 +133,9 @@
       
         <ng-container *ngIf="data.expanded">
           <tr *ngFor="let data of findDetails(data)">
-        
-  <td><div class="error" style="height: 30px;">  <input type="checkbox" (click)="toggleSelection($event, i)"
-          [checked]="checkboxes[i]"> </div> </td>
+      
+   <td><div class="error" style="height: 30px;">  <input type="checkbox" 
+          [checked]="checkboxes[i]"> </div> </td> 
            <td><div  *ngIf="!data.datades.showMyContainer" style="height: 30px;margin-left: 20px;"> {{ '-'}}   </div></td> 
           <td><div  style="height: 30px;"> <input style="border-top-style:hidden;border-left-style:hidden ;border-right-style:hidden ;border-bottom-style:hidden ;background-color: white;margin-left: 20px;" class="no-outline" [(ngModel)]="data.datades.name" [disabled]="!data.datades.isEditable"/> </div></td>
 
@@ -249,7 +204,7 @@
       </span>
     <span>
       <a  class="text-success" style="width: 200px;" >
-        <button class="btn btn-primary dropdown-toggle" style="margin-left: 10px; margin-top: 10px;" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <button (click)="openSmallModal(smallModalContent)" class="btn btn-primary dropdown-toggle" style="margin-left: 10px; margin-top: 10px;" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           Move to course Category
         </button>
       </a>

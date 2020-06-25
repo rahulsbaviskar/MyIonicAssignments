@@ -73,9 +73,13 @@ findDetails(data: { name: string; }) {
   return this.data2.filter(x => x.whoseData === data.name);
 }
 
-openSmallModal() {
+//openSmallModal() {
 
-  this.navCtrl.navigateForward('add-course-category');
+  //this.navCtrl.navigateForward('add-course-category');
+//}
+
+openSmallModal( smallModalContent ) {
+  this.modalService.open( smallModalContent, { size : 'sm' } );
 }
 
 
