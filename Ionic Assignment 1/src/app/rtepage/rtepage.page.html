@@ -65,8 +65,8 @@
                   <!-- </form> -->
               </div>
               <div class="form-group">
-                  <button style="margin-left: 100px;width: 150px;" (click)="prev()" ejs-button>Previous</button>
-                  <button style="margin-left: 215px;width: 150px;" (click)="next()" ejs-button>NEXT</button>
+                  <button style="margin-left: 100px;width: 150px;" [disabled]="!butttonFlag" (click)="prev()" ejs-button>Previous</button>
+                  <button style="margin-left: 215px;width: 150px;" [disabled]="!butttonFlag" (click)="next()" ejs-button>NEXT</button>
               </div>
           </div>
       </div>

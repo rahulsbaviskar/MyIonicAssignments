@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { CalendarPagePageRoutingModule } from './calendar-page-routing.module';
 
 import { CalendarPagePage } from './calendar-page.page';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../shared.module';
 import { FullCalendarModule } from 'ng-fullcalendar';
 import { MiniCalendarModule } from 'mini-calendar';
 

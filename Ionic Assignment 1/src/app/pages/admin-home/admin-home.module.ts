@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AdminHomePageRoutingModule } from './admin-home-routing.module';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AdminHomePage } from './admin-home.page';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   imports: [
